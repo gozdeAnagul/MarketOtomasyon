@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using Market.Models.Entities;
+using System.Data.Entity;
 
 namespace Market.DAL
 {
@@ -8,5 +9,8 @@ namespace Market.DAL
         {
 
         }
+
+        public virtual DbSet<Kategori> Kategoriler { get; set; }
+        public virtual DbSet<Urun> Urunler { get; set; }
     }
 }

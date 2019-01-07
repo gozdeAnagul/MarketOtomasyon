@@ -7,12 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Kategoriler")]
-    public class Kategori : BaseEntity2<Guid, Guid>
+    public class Kategori : BaseEntity<Guid>
     {
         public Kategori()
         {
             Id = Guid.NewGuid();
-            Id2 = Guid.NewGuid();
         }
 
         [StringLength(50)]
@@ -26,7 +25,7 @@ namespace Market.Models.Entities
 
         [Required]
         public double Kdv { get; set; }
-        
+
 
 
         [ForeignKey("UstKategoriId")]
