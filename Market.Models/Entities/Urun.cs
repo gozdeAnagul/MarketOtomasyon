@@ -1,11 +1,7 @@
 ﻿using Market.Models.Abstracts;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Market.Models.Entities
 {
@@ -20,6 +16,10 @@ namespace Market.Models.Entities
         [Required]
         public string UrunAdi { get; set; }
 
-        public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
+        public Guid KategoriId { get; set; }
+
+        [ForeignKey("KategoriId")]
+        public Kategori Kategori { get; set; }
+
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="Abstracts\BaseEntity2.cs" />
     <Compile Include="Entities\Kategori.cs" />
     <Compile Include="Entities\Urun.cs" />
+    <Compile Include="Entities\UrunDetay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
