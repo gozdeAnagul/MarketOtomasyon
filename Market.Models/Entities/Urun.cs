@@ -16,9 +16,9 @@ namespace Market.Models.Entities
 
         [StringLength(50)]
         [Required]
+        [Index("IX_UrunAdi",IsUnique = true)]
         public string UrunAdi { get; set; }
-
-        [Required]
+        
         public int KategoriId { get; set; }
 
         [ForeignKey("KategoriId")]

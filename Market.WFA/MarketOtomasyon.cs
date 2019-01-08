@@ -47,15 +47,14 @@ namespace Market.WFA
             db.Kategoriler.Add(new Kategori
             {
                 KategoriAdi = "İçecekler",
-                Kdv = 1,
-                Aciklama = "İçecek"
+                Kdv = 1
             });
             db.SaveChanges();
 
             db.Urunler.Add(new Urun
             {
-                KategoriId = 1,
-                UrunAdi = "Kola"
+                UrunAdi = "Kola",
+                KategoriId = 1
             });
 
             db.UrunDetaylar.Add(new UrunDetay
@@ -66,6 +65,17 @@ namespace Market.WFA
                 SatisFiyat = 4,
                 KoliAdet = 10,
                 KoliIciAdet = 25
+            });
+            db.SaveChanges();
+
+            db.UrunDetaylar.Add(new UrunDetay
+            {
+                Aciklama = "abcdef",
+                UrunAdet = 4,
+                AlisFiyat = 5,
+                SatisFiyat = 6,
+                KoliAdet = 11,
+                KoliIciAdet = 30
             });
             db.SaveChanges();
 
