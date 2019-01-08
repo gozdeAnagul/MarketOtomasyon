@@ -24,6 +24,9 @@ namespace Market.Models.Entities
         [Required]
         public double Kdv { get; set; }
 
+        public bool IsActive { get; set; } = true;
+        public bool IsDeleted { get; set; } = false;
+
         public Guid? UstKategoriId { get; set; }
 
         [ForeignKey("UstKategoriId")]

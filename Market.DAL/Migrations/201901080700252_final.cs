@@ -52,6 +52,8 @@ namespace Market.DAL.Migrations
                 .ForeignKey("dbo.Urunler", t => t.UrunId, cascadeDelete: true)
                 .Index(t => t.UrunId);
             
+
+
         }
         
         public override void Down()
