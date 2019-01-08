@@ -53,16 +53,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MarketOtomasyon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MarketOtomasyon.Designer.cs">
+      <DependentUpon>MarketOtomasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MalKabul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MalKabul.Designer.cs">
+      <DependentUpon>MalKabul.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Satıs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıs.Designer.cs">
+      <DependentUpon>Satıs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MarketOtomasyon.resx">
+      <DependentUpon>MarketOtomasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalKabul.resx">
+      <DependentUpon>MalKabul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Satıs.resx">
+      <DependentUpon>Satıs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,7 +103,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Market.BLL\Market.BLL.csproj">
