@@ -18,7 +18,7 @@ namespace Market.DAL.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
+            CreateTable( 
                 "dbo.Satislar",
                 c => new
                     {
