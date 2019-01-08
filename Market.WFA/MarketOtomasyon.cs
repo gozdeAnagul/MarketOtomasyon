@@ -1,4 +1,5 @@
-﻿using Market.DAL;
+﻿using Market.BLL.Repository;
+using Market.DAL;
 using Market.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -42,25 +43,15 @@ namespace Market.WFA
 
         private void MarketOtomasyon_Load(object sender, EventArgs e)
         {
-            using (var db = new MyContext())
-            {
-                db.UrunDetaylar.Add(new UrunDetay
-                {
-                    Aciklama = "abcdefg",
-                    UrunAdet = 5,
-                    AlisFiyat = 6,
-                    SatisFiyat = 1,
-                    KoliAdet = 10,
-                    KoliIciAdet = 35,
-                    UrunId = 1
-                });
-
-                foreach (var item in db.UrunDetaylar)
+            var urundetaylar = new List<UrunDetay>();
+             urundetaylar = new UrunDetayRepo().GetAll();
+           
+                foreach (var item in urundetaylar)
                 {
                     item.Barkod = item.Urun.KategoriId + "" + item.UrunId + item.Id;
                 }
-                db.SaveChanges();
-            }
+                
+            
         }
     }
 }
