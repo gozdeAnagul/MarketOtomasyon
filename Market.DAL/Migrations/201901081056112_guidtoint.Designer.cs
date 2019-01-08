@@ -6,14 +6,14 @@ namespace Market.DAL.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class abcd : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    public sealed partial class guidtoint : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(abcd));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(guidtoint));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901071140539_abcd"; }
+            get { return "201901081056112_guidtoint"; }
         }
         
         string IMigrationMetadata.Source

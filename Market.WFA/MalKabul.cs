@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Market.WFA
 {
-    public partial class Form1 : Form
+    public partial class MalKabul : Form
     {
-        public Form1()
+        public MalKabul()
         {
             InitializeComponent();
         }
+
+ 
     }
 }

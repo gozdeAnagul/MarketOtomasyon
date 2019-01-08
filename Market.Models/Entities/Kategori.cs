@@ -7,12 +7,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Kategoriler")]
-    public class Kategori : BaseEntity<Guid>
+    public class Kategori : BaseEntity<int>
     {
-        public Kategori()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public Kategori()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
 
         [StringLength(50)]
         [Required]
@@ -21,12 +21,13 @@ namespace Market.Models.Entities
         [StringLength(50)]
         public string Aciklama { get; set; }
 
-        public Guid? UstKategoriId { get; set; }
-
         [Required]
         public double Kdv { get; set; }
 
+        public bool IsActive { get; set; } = true;
+        public bool IsDeleted { get; set; } = false;
 
+        public int? UstKategoriId { get; set; }
 
         [ForeignKey("UstKategoriId")]
         public virtual Kategori UstKategori { get; set; }
