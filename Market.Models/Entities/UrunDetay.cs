@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Market.Models.Abstracts;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Models.Entities
 {
     [Table("UrunDetaylar")]
-    public class UrunDetay
+    public class UrunDetay : BaseEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
         
         public Guid UrunId { get; set; }
         
