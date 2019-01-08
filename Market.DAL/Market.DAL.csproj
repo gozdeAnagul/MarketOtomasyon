@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201901081056112_guidtoint.Designer.cs">
       <DependentUpon>201901081056112_guidtoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901081138409_ekleme.cs" />
+    <Compile Include="Migrations\201901081138409_ekleme.Designer.cs">
+      <DependentUpon>201901081138409_ekleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901081056112_guidtoint.resx">
       <DependentUpon>201901081056112_guidtoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901081138409_ekleme.resx">
+      <DependentUpon>201901081138409_ekleme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

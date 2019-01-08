@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Market.DAL;
+using Market.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +38,42 @@ namespace Market.WFA
             }
             MalKabulForm.MdiParent = this;
             MalKabulForm.Show();
+        }
+
+        private void MarketOtomasyon_Load(object sender, EventArgs e)
+        {
+            var db = new MyContext();
+
+            db.Kategoriler.Add(new Kategori
+            {
+                KategoriAdi = "İçecekler",
+                Kdv = 1,
+                Aciklama = "İçecek"
+            });
+            db.SaveChanges();
+
+            db.Urunler.Add(new Urun
+            {
+                KategoriId = 1,
+                UrunAdi = "Kola"
+            });
+
+            db.UrunDetaylar.Add(new UrunDetay
+            {
+                Aciklama = "asdasd",
+                UrunAdet = 3,
+                AlisFiyat = 3,
+                SatisFiyat = 4,
+                KoliAdet = 10,
+                KoliIciAdet = 25
+            });
+            db.SaveChanges();
+
+            foreach (var item in db.UrunDetaylar)
+            {
+                item.Barkod = item.Urun.KategoriId + "" + item.UrunId + item.Id;
+            }
+            db.SaveChanges();
         }
     }
 }

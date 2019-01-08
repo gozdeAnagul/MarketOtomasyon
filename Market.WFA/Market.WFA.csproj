@@ -112,6 +112,10 @@
       <Project>{d070d610-2f12-465c-832c-46378fc22123}</Project>
       <Name>Market.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Market.DAL\Market.DAL.csproj">
+      <Project>{1DDE3DB6-EB4A-4E09-A873-59C62CA4300E}</Project>
+      <Name>Market.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Market.Models\Market.Models.csproj">
       <Project>{acf8786f-e27d-4f9a-bab2-fd2633083edb}</Project>
       <Name>Market.Models</Name>
