@@ -21,12 +21,10 @@ namespace Market.Models.Entities
         [StringLength(50)]
         public string Aciklama { get; set; }
 
-        public Guid? UstKategoriId { get; set; }
-
         [Required]
         public double Kdv { get; set; }
 
-
+        public Guid? UstKategoriId { get; set; }
 
         [ForeignKey("UstKategoriId")]
         public virtual Kategori UstKategori { get; set; }
