@@ -7,12 +7,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Urunler")]
-   public class Urun : BaseEntity<Guid>
+   public class Urun : BaseEntity<int>
     {
-        public Urun()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public Urun()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
+
         [StringLength(50)]
         [Required]
         public string UrunAdi { get; set; }

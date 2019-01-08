@@ -10,10 +10,14 @@ namespace Market.Models.Entities
     {
         //[Key]
         //public int Id { get; set; }
-        
+
         public Guid UrunId { get; set; }
-        
+
         public int KoliIciAdet { get; set; }
+
+        [StringLength(50)]
+        [Index("IX_Barkod", IsUnique = true)]
+        public string Barkod { get; set; }
 
         [StringLength(50)]
         public string Aciklama { get; set; }
@@ -30,6 +34,6 @@ namespace Market.Models.Entities
 
         [ForeignKey("UrunId")]
         public virtual Urun Urun { get; set; }
-        
+
     }
 }

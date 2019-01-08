@@ -7,12 +7,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Kategoriler")]
-    public class Kategori : BaseEntity<Guid>
+    public class Kategori : BaseEntity<int>
     {
-        public Kategori()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public Kategori()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
 
         [StringLength(50)]
         [Required]

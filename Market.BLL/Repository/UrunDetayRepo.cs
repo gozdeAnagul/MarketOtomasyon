@@ -9,7 +9,6 @@ namespace Market.BLL.Repository
 {
    public class UrunDetayRepo : RepositoryBase<UrunDetay,int>
     {
-
-
+        
     }
 }
