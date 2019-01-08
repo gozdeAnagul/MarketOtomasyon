@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Fisler")]
-   public class Fis
+   public class Fis : BaseEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
+       /* [Key]
+        public int Id { get; set; }*/
         
         public decimal GenelToplam { get; set; }
 

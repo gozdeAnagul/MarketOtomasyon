@@ -1,19 +1,18 @@
-﻿using System;
+﻿using Market.Models.Abstracts;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Models.Entities
 {
     [Table("UrunDetaylar")]
-    public class UrunDetay
+    public class UrunDetay : BaseEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
-
-        [Required]
+        //[Key]
+        //public int Id { get; set; }
+        
         public Guid UrunId { get; set; }
-
-        [Required]
+        
         public int KoliIciAdet { get; set; }
 
         [StringLength(50)]
@@ -30,7 +29,7 @@ namespace Market.Models.Entities
         public bool IsDeleted { get; set; } = false;
 
         [ForeignKey("UrunId")]
-        public Urun Urun { get; set; }
+        public virtual Urun Urun { get; set; }
         
     }
 }
