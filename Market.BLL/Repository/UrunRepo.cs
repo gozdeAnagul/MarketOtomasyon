@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Market.BLL.Repository
 {
-    class UrunRepo : RepositoryBase<Urun, Guid>
+    class UrunRepo : RepositoryBase<Urun, int>
     {
         public override List<Urun> GetAll()
         {

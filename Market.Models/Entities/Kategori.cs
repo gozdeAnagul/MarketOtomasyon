@@ -27,7 +27,7 @@ namespace Market.Models.Entities
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
 
-        public Guid? UstKategoriId { get; set; }
+        public int? UstKategoriId { get; set; }
 
         [ForeignKey("UstKategoriId")]
         public virtual Kategori UstKategori { get; set; }

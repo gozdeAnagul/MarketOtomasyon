@@ -11,7 +11,7 @@ namespace Market.Models.Entities
         //[Key]
         //public int Id { get; set; }
 
-        public Guid UrunId { get; set; }
+        public int UrunId { get; set; }
 
         public int KoliIciAdet { get; set; }
 

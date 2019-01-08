@@ -19,7 +19,7 @@ namespace Market.Models.Entities
         public string UrunAdi { get; set; }
 
         [Required]
-        public Guid KategoriId { get; set; }
+        public int KategoriId { get; set; }
 
         [ForeignKey("KategoriId")]
         public Kategori Kategori { get; set; }
