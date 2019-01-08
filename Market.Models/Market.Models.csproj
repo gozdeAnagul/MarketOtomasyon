@@ -50,9 +50,12 @@
   <ItemGroup>
     <Compile Include="Abstracts\BaseEntity.cs" />
     <Compile Include="Abstracts\BaseEntity2.cs" />
+    <Compile Include="Entities\Fis.cs" />
     <Compile Include="Entities\Kategori.cs" />
+    <Compile Include="Entities\Satis.cs" />
     <Compile Include="Entities\Urun.cs" />
     <Compile Include="Entities\UrunDetay.cs" />
+    <Compile Include="Enums\OdemeYontemi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +63,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enums\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
