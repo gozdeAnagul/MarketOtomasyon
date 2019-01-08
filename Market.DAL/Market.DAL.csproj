@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -48,13 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901071140539_abcd.cs" />
-    <Compile Include="Migrations\201901071140539_abcd.Designer.cs">
-      <DependentUpon>201901071140539_abcd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901080700252_final.cs" />
-    <Compile Include="Migrations\201901080700252_final.Designer.cs">
-      <DependentUpon>201901080700252_final.cs</DependentUpon>
+    <Compile Include="Migrations\201901080847122_tum.cs" />
+    <Compile Include="Migrations\201901080847122_tum.Designer.cs">
+      <DependentUpon>201901080847122_tum.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -71,11 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901071140539_abcd.resx">
-      <DependentUpon>201901071140539_abcd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901080700252_final.resx">
-      <DependentUpon>201901080700252_final.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901080847122_tum.resx">
+      <DependentUpon>201901080847122_tum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,11 +9,9 @@ namespace Market.Models.Entities
     {
         [Key]
         public int Id { get; set; }
-
-        [Required]
+        
         public Guid UrunId { get; set; }
-
-        [Required]
+        
         public int KoliIciAdet { get; set; }
 
         [StringLength(50)]
@@ -27,7 +25,7 @@ namespace Market.Models.Entities
         public decimal SatisFiyat { get; set; }
 
         [ForeignKey("UrunId")]
-        public Urun Urun { get; set; }
+        public virtual Urun Urun { get; set; }
         
     }
 }
