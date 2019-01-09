@@ -13,10 +13,8 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-        Kategori seciliKategori = new Kategori();
-        Urun seciliUrun = new Urun();
-        List<Kategori> kategoriler = new KategoriRepo().GetAll();
-        List<Urun> urunler = new UrunRepo().GetAll();
+        Kategori seciliKategori;
+        Urun seciliUrun;
         private void CRUD_Load(object sender, EventArgs e)
         {
             VerileriDoldur();
@@ -24,9 +22,9 @@ namespace Market.WFA
 
         private void VerileriDoldur()
         {
-            lstKategori.DataSource = kategoriler;
-            cmbKategoriler.DataSource = kategoriler;
-            cmbUrunKategoriler.DataSource = urunler;
+            lstKategori.DataSource = new KategoriRepo().GetAll();
+            cmbKategoriler.DataSource = new KategoriRepo().GetAll();
+            cmbUrunKategoriler.DataSource = new UrunRepo().GetAll();
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)
@@ -57,7 +55,12 @@ namespace Market.WFA
         
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbKategoriler.SelectedItem == null) return;
 
+            seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+
+            var urunler = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
+            lstUrunler.DataSource = urunler;
         }
 
         private void btnUrunEkle_Click(object sender, EventArgs e)

@@ -13,11 +13,11 @@ namespace Market.Models.Entities
         public int KoliIciAdet { get; set; }
 
         [StringLength(50)]
-        [Index("IX_Barkod", IsUnique = true)]
+        [Index(IsUnique = true)]
         public string Barkod { get; set; }
 
         [StringLength(50)]
-        [Index("IX_UrunDetay", IsUnique = true)]
+        [Index(IsUnique = true)]
         public string Aciklama { get; set; }
 
         [Required]
@@ -28,6 +28,7 @@ namespace Market.Models.Entities
         public int UrunAdet { get; set; }
 
         public decimal AlisFiyat { get; set; }
+
 
         public decimal SatisFiyat { get; set; }
 
