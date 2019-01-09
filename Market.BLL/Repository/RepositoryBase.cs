@@ -39,6 +39,7 @@ namespace Market.BLL.Repository
                     throw;
                 }
             }
+
             public virtual T GetById(TId id)
             {
                 try
@@ -99,6 +100,7 @@ namespace Market.BLL.Repository
                     throw;
                 }
             }
+
             public virtual IQueryable<T> Queryable()
             {
                 try

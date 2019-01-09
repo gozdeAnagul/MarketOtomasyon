@@ -3,7 +3,7 @@ namespace Market.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class guidtoint : DbMigration
+    public partial class a1 : DbMigration
     {
         public override void Up()
         {
@@ -42,6 +42,7 @@ namespace Market.DAL.Migrations
                         KoliIciAdet = c.Int(nullable: false),
                         Barkod = c.String(maxLength: 50),
                         Aciklama = c.String(maxLength: 50),
+                        Kdv = c.Double(nullable: false),
                         KoliAdet = c.Int(nullable: false),
                         UrunAdet = c.Int(nullable: false),
                         AlisFiyat = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -64,6 +65,7 @@ namespace Market.DAL.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Kategoriler", t => t.KategoriId, cascadeDelete: true)
+                .Index(t => t.UrunAdi, unique: true)
                 .Index(t => t.KategoriId);
             
             CreateTable(
@@ -73,7 +75,6 @@ namespace Market.DAL.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         KategoriAdi = c.String(nullable: false, maxLength: 50),
                         Aciklama = c.String(maxLength: 50),
-                        Kdv = c.Double(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UstKategoriId = c.Int(),
@@ -93,6 +94,7 @@ namespace Market.DAL.Migrations
             DropForeignKey("dbo.Satislar", "FisId", "dbo.Fisler");
             DropIndex("dbo.Kategoriler", new[] { "UstKategoriId" });
             DropIndex("dbo.Urunler", new[] { "KategoriId" });
+            DropIndex("dbo.Urunler", new[] { "UrunAdi" });
             DropIndex("dbo.UrunDetaylar", new[] { "Barkod" });
             DropIndex("dbo.UrunDetaylar", new[] { "UrunId" });
             DropIndex("dbo.Satislar", new[] { "FisId" });
