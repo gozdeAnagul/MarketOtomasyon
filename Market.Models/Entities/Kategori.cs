@@ -27,6 +27,7 @@ namespace Market.Models.Entities
         public virtual ICollection<Kategori> Kategoriler { get; set; } = new HashSet<Kategori>();
         public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
 
+        public override string ToString() => $@"{KategoriAdi}";
 
     }
 }

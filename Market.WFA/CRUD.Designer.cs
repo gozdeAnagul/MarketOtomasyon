@@ -37,10 +37,10 @@
             this.btnKatEkle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunDetayEkle = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtKategoriAciklama = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtUrunDetayAciklama = new System.Windows.Forms.RichTextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -112,6 +112,7 @@
             this.btnKatEkle.TabIndex = 6;
             this.btnKatEkle.Text = "Ekle";
             this.btnKatEkle.UseVisualStyleBackColor = true;
+            this.btnKatEkle.Click += new System.EventHandler(this.btnKatEkle_Click);
             // 
             // btnUrunEkle
             // 
@@ -131,13 +132,13 @@
             this.btnUrunDetayEkle.Text = "Ekle";
             this.btnUrunDetayEkle.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // txtKategoriAciklama
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(80, 210);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(155, 48);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.txtKategoriAciklama.Location = new System.Drawing.Point(80, 210);
+            this.txtKategoriAciklama.Name = "txtKategoriAciklama";
+            this.txtKategoriAciklama.Size = new System.Drawing.Size(155, 48);
+            this.txtKategoriAciklama.TabIndex = 9;
+            this.txtKategoriAciklama.Text = "";
             // 
             // comboBox1
             // 
@@ -155,13 +156,13 @@
             this.comboBox3.Size = new System.Drawing.Size(198, 21);
             this.comboBox3.TabIndex = 12;
             // 
-            // richTextBox2
+            // txtUrunDetayAciklama
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(589, 234);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(129, 56);
-            this.richTextBox2.TabIndex = 13;
-            this.richTextBox2.Text = "";
+            this.txtUrunDetayAciklama.Location = new System.Drawing.Point(589, 234);
+            this.txtUrunDetayAciklama.Name = "txtUrunDetayAciklama";
+            this.txtUrunDetayAciklama.Size = new System.Drawing.Size(129, 56);
+            this.txtUrunDetayAciklama.TabIndex = 13;
+            this.txtUrunDetayAciklama.Text = "";
             // 
             // numericUpDown1
             // 
@@ -308,10 +309,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.txtUrunDetayAciklama);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtKategoriAciklama);
             this.Controls.Add(this.btnUrunDetayEkle);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.btnKatEkle);
@@ -323,6 +324,7 @@
             this.Controls.Add(this.lstKategori);
             this.Name = "CRUD";
             this.Text = "CRUD";
+            this.Load += new System.EventHandler(this.CRUD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,10 +342,10 @@
         private System.Windows.Forms.Button btnKatEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunDetayEkle;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtKategoriAciklama;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtUrunDetayAciklama;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

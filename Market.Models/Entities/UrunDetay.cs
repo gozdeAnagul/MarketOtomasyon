@@ -36,5 +36,6 @@ namespace Market.Models.Entities
         [ForeignKey("UrunId")]
         public virtual Urun Urun { get; set; }
 
+        public override string ToString() => $@"{Aciklama} {SatisFiyat} {Kdv} {UrunAdet}";
     }
 }
