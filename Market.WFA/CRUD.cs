@@ -68,12 +68,12 @@ namespace Market.WFA
             try
             {
                 if (seciliKategori == null) return;
-
+                Random rnd = new Random();
                 var urun = new Urun
                 {
                     UrunAdi = txtUrunAdi.Text,
                     KategoriId = seciliKategori.Id,
-                    Barkod = txtUrunBarkod.Text
+                    Barkod = Convert.ToString(rnd.Next(1000000, 99999999))
                 };
 
                 if (new UrunRepo().Insert(urun) > 0)
@@ -97,18 +97,18 @@ namespace Market.WFA
             {
                 seciliUrun = cmbUrunKategoriler.SelectedItem as Urun;
                 if (seciliUrun == null) return;
-
+                Random rnd = new Random();
                 var urunDetay = new UrunDetay
                 {
-                   UrunId = seciliUrun.Id,
-                   Aciklama = txtUrunDetayAciklama.Text,
-                   KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
-                   AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
-                   SatisFiyat = Convert.ToDecimal(txtSatisFiyati.Text),
-                   Kdv = Convert.ToDouble(txtKdv.Text),
-                   KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
-                   UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
-                   Barkod = txtUrunDetayBarkod.Text
+                    UrunId = seciliUrun.Id,
+                    Aciklama = txtUrunDetayAciklama.Text,
+                    KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
+                    AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
+                    SatisFiyat = Convert.ToDecimal(txtSatisFiyati.Text),
+                    Kdv = Convert.ToDouble(txtKdv.Text),
+                    KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
+                    UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
+                    Barkod = Convert.ToString(rnd.Next(1000000, 99999999))
                 };
                    
                 if (new UrunDetayRepo().Insert(urunDetay) > 0)
