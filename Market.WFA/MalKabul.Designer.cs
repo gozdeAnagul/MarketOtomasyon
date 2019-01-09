@@ -148,6 +148,7 @@
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(248, 20);
             this.txtAra.TabIndex = 36;
+            this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAra_KeyUp);
             // 
             // txtBarkod
             // 
@@ -194,6 +195,7 @@
             this.Controls.Add(this.lstUrunler);
             this.Name = "MalKabul";
             this.Text = "MalKabul";
+            this.Load += new System.EventHandler(this.MalKabul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudKar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKutu)).EndInit();
             this.ResumeLayout(false);

@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201901091136310_a1.cs" />
+    <Compile Include="Migrations\201901091136310_a1.Designer.cs">
+      <DependentUpon>201901091136310_a1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +65,11 @@
       <Project>{acf8786f-e27d-4f9a-bab2-fd2633083edb}</Project>
       <Name>Market.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901091136310_a1.resx">
+      <DependentUpon>201901091136310_a1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
