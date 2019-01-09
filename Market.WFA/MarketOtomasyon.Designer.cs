@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.malGirişToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.işlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +39,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.malGirişToolStripMenuItem,
-            this.satışToolStripMenuItem});
+            this.satışToolStripMenuItem,
+            this.işlemlerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(902, 24);
@@ -58,6 +60,13 @@
             this.satışToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.satışToolStripMenuItem.Text = "Satış";
             this.satışToolStripMenuItem.Click += new System.EventHandler(this.satışToolStripMenuItem_Click);
+            // 
+            // işlemlerToolStripMenuItem
+            // 
+            this.işlemlerToolStripMenuItem.Name = "işlemlerToolStripMenuItem";
+            this.işlemlerToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.işlemlerToolStripMenuItem.Text = "İşlemler";
+            this.işlemlerToolStripMenuItem.Click += new System.EventHandler(this.işlemlerToolStripMenuItem_Click);
             // 
             // MarketOtomasyon
             // 
@@ -82,6 +91,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem malGirişToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem satışToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem işlemlerToolStripMenuItem;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using Market.DAL;
+﻿using Market.BLL.Repository;
+using Market.DAL;
 using Market.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Market.WFA
         }
         private Satıs satisForm;
         private MalKabul MalKabulForm;
+        private CRUD CrudIslemleriForm;
         private void satışToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (satisForm == null || satisForm.IsDisposed)
@@ -42,7 +44,25 @@ namespace Market.WFA
 
         private void MarketOtomasyon_Load(object sender, EventArgs e)
         {
+            var urundetaylar = new List<UrunDetay>();
+             urundetaylar = new UrunDetayRepo().GetAll();
+           
+                foreach (var item in urundetaylar)
+                {
+                    item.Barkod = item.Urun.KategoriId + "" + item.UrunId + item.Id;
+                }
+                
             
+        }
+
+        private void işlemlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (CrudIslemleriForm == null || CrudIslemleriForm.IsDisposed)
+            {
+                CrudIslemleriForm = new CRUD();
+            }
+            CrudIslemleriForm.MdiParent = this;
+            CrudIslemleriForm.Show();
         }
     }
 }

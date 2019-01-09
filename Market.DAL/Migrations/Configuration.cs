@@ -2,6 +2,7 @@ namespace Market.DAL.Migrations
 {
     using Market.Models.Entities;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Market.DAL.MyContext>
     {
@@ -16,7 +17,6 @@ namespace Market.DAL.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
-            
         }
     }
 }
