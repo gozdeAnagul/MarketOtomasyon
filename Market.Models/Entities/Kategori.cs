@@ -9,11 +9,6 @@ namespace Market.Models.Entities
     [Table("Kategoriler")]
     public class Kategori : BaseEntity<int>
     {
-        //public Kategori()
-        //{
-        //    Id = Guid.NewGuid();
-        //}
-
         [StringLength(50)]
         [Required]
         public string KategoriAdi { get; set; }
@@ -32,6 +27,7 @@ namespace Market.Models.Entities
         public virtual ICollection<Kategori> Kategoriler { get; set; } = new HashSet<Kategori>();
         public virtual ICollection<Urun> Urunler { get; set; } = new HashSet<Urun>();
 
+        public override string ToString() => $@"{KategoriAdi}";
 
     }
 }

@@ -10,9 +10,6 @@ namespace Market.Models.Entities
     [Table("Fisler")]
    public class Fis : BaseEntity<int>
     {
-       /* [Key]
-        public int Id { get; set; }*/
-        
         public decimal GenelToplam { get; set; }
 
         public OdemeYontemi OdemeYontemi { get; set; }

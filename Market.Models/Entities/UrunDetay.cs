@@ -8,13 +8,10 @@ namespace Market.Models.Entities
     [Table("UrunDetaylar")]
     public class UrunDetay : BaseEntity<int>
     {
-        //[Key]
-        //public int Id { get; set; }
-
         public int UrunId { get; set; }
 
         public int KoliIciAdet { get; set; }
-
+        
         [StringLength(50)]
         [Index("IX_Barkod", IsUnique = true)]
         public string Barkod { get; set; }
@@ -39,5 +36,6 @@ namespace Market.Models.Entities
         [ForeignKey("UrunId")]
         public virtual Urun Urun { get; set; }
 
+        public override string ToString() => $@"{Aciklama} {SatisFiyat} {Kdv} {UrunAdet}";
     }
 }

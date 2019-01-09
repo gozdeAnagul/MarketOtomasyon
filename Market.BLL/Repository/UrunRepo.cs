@@ -2,12 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Market.BLL.Repository
 {
-    class UrunRepo : RepositoryBase<Urun, int>
+   public class UrunRepo : RepositoryBase<Urun, int>
     {
         public override List<Urun> GetAll()
         {

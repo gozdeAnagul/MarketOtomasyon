@@ -1,17 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Market.Models.Entities;
 
 namespace Market.BLL.Repository
 {
     public class UrunDetayRepo : RepositoryBase<UrunDetay,int>
     {
+        public override List<UrunDetay> GetAll()
+        {
+            return base.GetAll().OrderBy(x=>x.Aciklama).ToList();
+        }
+
         public override int Insert(UrunDetay entity)
         {
             try
             {
-                if (base.Insert(entity)>0)
+                if (base.Insert(entity) > 0)
                 {
                     BarkodBas(entity);
+                }
+                else
+                {
+                    throw new Exception("Ekleme Hatası.");
                 }
                return base.Insert(entity);
             }
@@ -34,6 +45,10 @@ namespace Market.BLL.Repository
                 {
                     throw;
                 }
+            }
+            else
+            {
+                throw new Exception("Urun bulunamadi veya Barkodu zaten var.");
             }
         }
     }

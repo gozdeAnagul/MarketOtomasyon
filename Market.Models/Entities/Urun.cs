@@ -9,11 +9,6 @@ namespace Market.Models.Entities
     [Table("Urunler")]
    public class Urun : BaseEntity<int>
     {
-        //public Urun()
-        //{
-        //    Id = Guid.NewGuid();
-        //}
-
         [StringLength(50)]
         [Required]
         [Index("IX_UrunAdi",IsUnique = true)]
@@ -26,5 +21,6 @@ namespace Market.Models.Entities
 
         public virtual ICollection<UrunDetay> UrunDetaylar { get; set; } = new HashSet<UrunDetay>();
 
+        public override string ToString() => $@"{UrunAdi}";
     }
 }
