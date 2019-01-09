@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -111,6 +111,10 @@
     <ProjectReference Include="..\Market.BLL\Market.BLL.csproj">
       <Project>{d070d610-2f12-465c-832c-46378fc22123}</Project>
       <Name>Market.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Market.DAL\Market.DAL.csproj">
+      <Project>{1DDE3DB6-EB4A-4E09-A873-59C62CA4300E}</Project>
+      <Name>Market.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Market.Models\Market.Models.csproj">
       <Project>{acf8786f-e27d-4f9a-bab2-fd2633083edb}</Project>

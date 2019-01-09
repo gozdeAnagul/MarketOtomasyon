@@ -7,18 +7,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Market.Models.Entities
 {
     [Table("Urunler")]
-   public class Urun : BaseEntity<Guid>
+   public class Urun : BaseEntity<int>
     {
-        public Urun()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public Urun()
+        //{
+        //    Id = Guid.NewGuid();
+        //}
+
         [StringLength(50)]
         [Required]
+        [Index("IX_UrunAdi",IsUnique = true)]
         public string UrunAdi { get; set; }
-
-        [Required]
-        public Guid KategoriId { get; set; }
+        
+        public int KategoriId { get; set; }
 
         [ForeignKey("KategoriId")]
         public Kategori Kategori { get; set; }

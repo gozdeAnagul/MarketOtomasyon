@@ -1,4 +1,5 @@
-﻿using Market.Models.Entities;
+﻿using Market.Models.Abstracts;
+using Market.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace Market.BLL.Repository
 {
-   public class KategoriRepo : RepositoryBase<Kategori , int >
+    class FisRepo : RepositoryBase<Fis,int>
     {
+
+
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Market.BLL.Repository;
+using Market.DAL;
+using Market.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +39,19 @@ namespace Market.WFA
             }
             MalKabulForm.MdiParent = this;
             MalKabulForm.Show();
+        }
+
+        private void MarketOtomasyon_Load(object sender, EventArgs e)
+        {
+            var urundetaylar = new List<UrunDetay>();
+             urundetaylar = new UrunDetayRepo().GetAll();
+           
+                foreach (var item in urundetaylar)
+                {
+                    item.Barkod = item.Urun.KategoriId + "" + item.UrunId + item.Id;
+                }
+                
+            
         }
     }
 }

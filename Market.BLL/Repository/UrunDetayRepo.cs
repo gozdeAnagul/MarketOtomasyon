@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Market.BLL.Repository
 {
-   public class KategoriRepo : RepositoryBase<Kategori , int >
+   public class UrunDetayRepo : RepositoryBase<UrunDetay,int>
     {
+        
     }
 }
