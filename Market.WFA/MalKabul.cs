@@ -21,18 +21,18 @@ namespace Market.WFA
 
         private void MalKabul_Load(object sender, EventArgs e)
         {
-            lstUrunler.DataSource = new UrunDetayRepo().GetAll();
+            lstUrunler.DataSource = new UrunRepo().GetAll();
         }
-        List<UrunDetay> aramalar;
-        List<UrunDetay> urunDetaylar;
+        List<Urun> aramalar;
+        List<Urun> urunDetaylar;
 
         private void txtAra_KeyUp(object sender, KeyEventArgs e)
         {
             string ara = txtAra.Text.ToLower();
 
-            aramalar = new UrunDetayRepo().GetAll();
+            aramalar = new UrunRepo().GetAll();
             urunDetaylar = null;
-            urunDetaylar.Where(urun => urun.Aciklama.ToLower().Contains(ara)).ToList().ForEach(urun => aramalar.Add(urun));
+            urunDetaylar.Where(urun => urun.UrunAdi.ToLower().Contains(ara)).ToList().ForEach(urun => aramalar.Add(urun));
             lstUrunler.DataSource = null;
             lstUrunler.DataSource = aramalar;
         }

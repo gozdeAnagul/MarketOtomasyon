@@ -14,7 +14,6 @@ namespace Market.WFA
             InitializeComponent();
         }
         Kategori seciliKategori;
-        Urun seciliUrun;
         private void CRUD_Load(object sender, EventArgs e)
         {
             VerileriDoldur();
@@ -24,7 +23,6 @@ namespace Market.WFA
         {
             lstKategori.DataSource = new KategoriRepo().GetAll();
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
-            cmbUrunKategoriler.DataSource = new UrunRepo().GetAll();
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)
@@ -52,55 +50,24 @@ namespace Market.WFA
             }
             VerileriDoldur();
         }
-        
-        private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbKategoriler.SelectedItem == null) return;
 
+        private void cmbKategoriler_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (seciliKategori == null) return;
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
 
             var urunler = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
-            lstUrunler.DataSource = urunler;
+            lstUrunler.DataSource = urunler.ToList();
         }
-
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
+            if (cmbKategoriler.SelectedItem == null) return;
             try
-            {
-                if (seciliKategori == null) return;
+            {            
                 Random rnd = new Random();
-                var urun = new Urun
+                var urunDetay = new Urun
                 {
                     UrunAdi = txtUrunAdi.Text,
-                    KategoriId = seciliKategori.Id,
-                    Barkod = Convert.ToString(rnd.Next(1000000, 99999999))
-                };
-
-                if (new UrunRepo().Insert(urun) > 0)
-                {
-                    MessageBox.Show($@"{urun.Kategori} kategorisine {urun.UrunAdi} eklendi.");
-                }
-                else
-                {
-                    MessageBox.Show("Urun Ekleme hatasi.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            VerileriDoldur();
-        }
-        private void btnUrunDetayEkle_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                seciliUrun = cmbUrunKategoriler.SelectedItem as Urun;
-                if (seciliUrun == null) return;
-                Random rnd = new Random();
-                var urunDetay = new UrunDetay
-                {
-                    UrunId = seciliUrun.Id,
                     Aciklama = txtUrunDetayAciklama.Text,
                     KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
                     AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
@@ -108,10 +75,11 @@ namespace Market.WFA
                     Kdv = Convert.ToDouble(txtKdv.Text),
                     KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
                     UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
-                    Barkod = Convert.ToString(rnd.Next(1000000, 99999999))
+                    KoliBarkod = Convert.ToString(rnd.Next(1000000, 99999999)),
+                    UrunBarkod = Convert.ToString(rnd.Next(1000000, 99999999))
                 };
-                   
-                if (new UrunDetayRepo().Insert(urunDetay) > 0)
+
+                if (new UrunRepo().Insert(urunDetay) > 0)
                 {
                     MessageBox.Show($@"{urunDetay.Aciklama} ürünü eklendi.");
                 }
@@ -125,7 +93,8 @@ namespace Market.WFA
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
+
+      
     }
 }

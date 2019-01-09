@@ -20,7 +20,7 @@ namespace Market.Models.Entities
         public Fis Fis { get; set; }
 
         [ForeignKey("UrunDetayId")]
-        public UrunDetay UrunDetay { get; set; }
+        public Urun UrunDetay { get; set; }
 
 
     }

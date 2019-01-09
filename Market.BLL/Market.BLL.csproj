@@ -52,7 +52,6 @@
     <Compile Include="Repository\FisRepo.cs" />
     <Compile Include="Repository\KategoriRepo.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
-    <Compile Include="Repository\UrunDetayRepo.cs" />
     <Compile Include="Repository\UrunRepo.cs" />
   </ItemGroup>
   <ItemGroup>

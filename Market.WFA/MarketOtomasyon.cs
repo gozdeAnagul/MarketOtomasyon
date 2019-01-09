@@ -44,12 +44,12 @@ namespace Market.WFA
 
         private void MarketOtomasyon_Load(object sender, EventArgs e)
         {
-            var urundetaylar = new List<UrunDetay>();
-             urundetaylar = new UrunDetayRepo().GetAll();
+            var urundetaylar = new List<Urun>();
+             urundetaylar = new UrunRepo().GetAll();
            
                 foreach (var item in urundetaylar)
                 {
-                    item.Barkod = item.Urun.KategoriId + "" + item.UrunId + item.Id;
+                    item.KoliBarkod = item.KategoriId + "" + item.Id + item.Id;
                 }
                 
             
