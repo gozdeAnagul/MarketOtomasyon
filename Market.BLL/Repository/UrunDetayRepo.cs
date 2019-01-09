@@ -18,13 +18,12 @@ namespace Market.BLL.Repository
             {
                 if (base.Insert(entity) > 0)
                 {
-                    BarkodBas(entity);
+                   return BarkodBas(entity);
                 }
                 else
                 {
                     throw new Exception("Ekleme Hatası.");
                 }
-               return base.Insert(entity);
             }
             catch
             {
@@ -32,14 +31,14 @@ namespace Market.BLL.Repository
             }
         }
 
-        private void BarkodBas(UrunDetay entity)
+        private int BarkodBas(UrunDetay entity)
         {
             if (entity != null && entity.Barkod==null)
             {
                 try
                 {
                     entity.Barkod = entity.Urun.KategoriId + "" + entity.UrunId + entity.Id;
-                    Update();
+                    return Update();
                 }
                 catch
                 {

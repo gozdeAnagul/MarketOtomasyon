@@ -14,6 +14,7 @@ namespace Market.WFA
             InitializeComponent();
         }
         Kategori seciliKategori = new Kategori();
+        Urun seciliUrun = new Urun();
         List<Kategori> kategoriler = new KategoriRepo().GetAll();
         List<Urun> urunler = new UrunRepo().GetAll();
         private void CRUD_Load(object sender, EventArgs e)
@@ -25,6 +26,7 @@ namespace Market.WFA
         {
             lstKategori.DataSource = kategoriler;
             cmbKategoriler.DataSource = kategoriler;
+            cmbUrunKategoriler.DataSource = urunler;
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)
@@ -84,6 +86,41 @@ namespace Market.WFA
                 MessageBox.Show(ex.Message);
             }
             VerileriDoldur();
+        }
+        private void btnUrunDetayEkle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                seciliUrun = cmbUrunKategoriler.SelectedItem as Urun;
+                if (seciliUrun == null) return;
+
+                var urunDetay = new UrunDetay
+                {
+                   UrunId = seciliUrun.Id,
+                   Aciklama = txtUrunDetayAciklama.Text,
+                   KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
+                   AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
+                   SatisFiyat = Convert.ToDecimal(txtSatisFiyati.Text),
+                   Kdv = Convert.ToDouble(txtKdv.Text),
+                   KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
+                   UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
+                };
+                   
+                if (new UrunDetayRepo().Insert(urunDetay) > 0)
+                {
+                    MessageBox.Show($@"{urunDetay.Aciklama} ürünü eklendi.");
+                }
+                else
+                {
+                    MessageBox.Show("Urun Ekleme hatasi.");
+                }
+                VerileriDoldur();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

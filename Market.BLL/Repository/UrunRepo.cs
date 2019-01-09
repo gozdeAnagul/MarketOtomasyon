@@ -18,7 +18,7 @@ namespace Market.BLL.Repository
             {
                 var category = db.Kategoriler.Find(entity.KategoriId);
                 if (category == null)
-                    throw new Exception("Kategori bulunamadi");
+                    throw new Exception("Urun ekleme hatasi.");
                 if (category.Kategoriler.Any())
                     throw new Exception("Ust kategorilere urun ekleyemezsiniz");
                 return base.Insert(entity);

@@ -33,18 +33,16 @@
             this.lstUrunDetay = new System.Windows.Forms.ListBox();
             this.txtKategori = new System.Windows.Forms.TextBox();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.txtUrunDetay = new System.Windows.Forms.TextBox();
             this.btnKatEkle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunDetayEkle = new System.Windows.Forms.Button();
             this.txtKategoriAciklama = new System.Windows.Forms.RichTextBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
-            this.cmbUrunDetay = new System.Windows.Forms.ComboBox();
+            this.cmbUrunKategoriler = new System.Windows.Forms.ComboBox();
             this.txtUrunDetayAciklama = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nuKoliAdet = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
@@ -56,7 +54,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtUrunAdet = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.txtKdv = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nuKoliAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // lstKategori
@@ -97,13 +97,6 @@
             this.txtUrunAdi.Size = new System.Drawing.Size(153, 20);
             this.txtUrunAdi.TabIndex = 4;
             // 
-            // txtUrunDetay
-            // 
-            this.txtUrunDetay.Location = new System.Drawing.Point(589, 208);
-            this.txtUrunDetay.Name = "txtUrunDetay";
-            this.txtUrunDetay.Size = new System.Drawing.Size(129, 20);
-            this.txtUrunDetay.TabIndex = 5;
-            // 
             // btnKatEkle
             // 
             this.btnKatEkle.Location = new System.Drawing.Point(35, 274);
@@ -126,12 +119,13 @@
             // 
             // btnUrunDetayEkle
             // 
-            this.btnUrunDetayEkle.Location = new System.Drawing.Point(673, 332);
+            this.btnUrunDetayEkle.Location = new System.Drawing.Point(673, 370);
             this.btnUrunDetayEkle.Name = "btnUrunDetayEkle";
             this.btnUrunDetayEkle.Size = new System.Drawing.Size(198, 42);
             this.btnUrunDetayEkle.TabIndex = 8;
             this.btnUrunDetayEkle.Text = "Ekle";
             this.btnUrunDetayEkle.UseVisualStyleBackColor = true;
+            this.btnUrunDetayEkle.Click += new System.EventHandler(this.btnUrunDetayEkle_Click);
             // 
             // txtKategoriAciklama
             // 
@@ -150,28 +144,28 @@
             this.cmbKategoriler.TabIndex = 10;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
-            // cmbUrunDetay
+            // cmbUrunKategoriler
             // 
-            this.cmbUrunDetay.FormattingEnabled = true;
-            this.cmbUrunDetay.Location = new System.Drawing.Point(673, 12);
-            this.cmbUrunDetay.Name = "cmbUrunDetay";
-            this.cmbUrunDetay.Size = new System.Drawing.Size(198, 21);
-            this.cmbUrunDetay.TabIndex = 12;
+            this.cmbUrunKategoriler.FormattingEnabled = true;
+            this.cmbUrunKategoriler.Location = new System.Drawing.Point(544, 12);
+            this.cmbUrunKategoriler.Name = "cmbUrunKategoriler";
+            this.cmbUrunKategoriler.Size = new System.Drawing.Size(327, 21);
+            this.cmbUrunKategoriler.TabIndex = 12;
             // 
             // txtUrunDetayAciklama
             // 
-            this.txtUrunDetayAciklama.Location = new System.Drawing.Point(589, 234);
+            this.txtUrunDetayAciklama.Location = new System.Drawing.Point(589, 202);
             this.txtUrunDetayAciklama.Name = "txtUrunDetayAciklama";
             this.txtUrunDetayAciklama.Size = new System.Drawing.Size(129, 56);
             this.txtUrunDetayAciklama.TabIndex = 13;
             this.txtUrunDetayAciklama.Text = "";
             // 
-            // numericUpDown1
+            // nuKoliAdet
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(607, 296);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(111, 20);
-            this.numericUpDown1.TabIndex = 14;
+            this.nuKoliAdet.Location = new System.Drawing.Point(607, 274);
+            this.nuKoliAdet.Name = "nuKoliAdet";
+            this.nuKoliAdet.Size = new System.Drawing.Size(111, 20);
+            this.nuKoliAdet.TabIndex = 14;
             // 
             // label1
             // 
@@ -191,19 +185,10 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Ürün";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(541, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Detay";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(533, 245);
+            this.label4.Location = new System.Drawing.Point(533, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 18;
@@ -285,11 +270,27 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(541, 303);
+            this.label10.Location = new System.Drawing.Point(541, 281);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 28;
             this.label10.Text = "Koli Adet";
+            // 
+            // txtKdv
+            // 
+            this.txtKdv.Location = new System.Drawing.Point(801, 318);
+            this.txtKdv.Name = "txtKdv";
+            this.txtKdv.Size = new System.Drawing.Size(70, 20);
+            this.txtKdv.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(759, 321);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Kdv";
             // 
             // CRUD
             // 
@@ -301,24 +302,24 @@
             this.Controls.Add(this.txtUrunAdet);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtKoliIciAdet);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtKdv);
             this.Controls.Add(this.txtSatisFiyati);
             this.Controls.Add(this.txtAlisFiyati);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nuKoliAdet);
             this.Controls.Add(this.txtUrunDetayAciklama);
-            this.Controls.Add(this.cmbUrunDetay);
+            this.Controls.Add(this.cmbUrunKategoriler);
             this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.txtKategoriAciklama);
             this.Controls.Add(this.btnUrunDetayEkle);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.btnKatEkle);
-            this.Controls.Add(this.txtUrunDetay);
             this.Controls.Add(this.txtUrunAdi);
             this.Controls.Add(this.txtKategori);
             this.Controls.Add(this.lstUrunDetay);
@@ -327,7 +328,7 @@
             this.Name = "CRUD";
             this.Text = "CRUD";
             this.Load += new System.EventHandler(this.CRUD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuKoliAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,18 +341,16 @@
         private System.Windows.Forms.ListBox lstUrunDetay;
         private System.Windows.Forms.TextBox txtKategori;
         private System.Windows.Forms.TextBox txtUrunAdi;
-        private System.Windows.Forms.TextBox txtUrunDetay;
         private System.Windows.Forms.Button btnKatEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunDetayEkle;
         private System.Windows.Forms.RichTextBox txtKategoriAciklama;
         private System.Windows.Forms.ComboBox cmbKategoriler;
-        private System.Windows.Forms.ComboBox cmbUrunDetay;
+        private System.Windows.Forms.ComboBox cmbUrunKategoriler;
         private System.Windows.Forms.RichTextBox txtUrunDetayAciklama;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nuKoliAdet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAlisFiyati;
@@ -363,5 +362,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtUrunAdet;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtKdv;
+        private System.Windows.Forms.Label label3;
     }
 }

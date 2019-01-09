@@ -11,12 +11,13 @@ namespace Market.Models.Entities
         public int UrunId { get; set; }
 
         public int KoliIciAdet { get; set; }
-        
+
         [StringLength(50)]
         [Index("IX_Barkod", IsUnique = true)]
         public string Barkod { get; set; }
 
         [StringLength(50)]
+        [Index("IX_UrunDetay", IsUnique = true)]
         public string Aciklama { get; set; }
 
         [Required]
