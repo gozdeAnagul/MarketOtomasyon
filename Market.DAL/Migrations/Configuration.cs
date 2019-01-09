@@ -7,7 +7,7 @@ namespace Market.DAL.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Market.DAL.MyContext context)

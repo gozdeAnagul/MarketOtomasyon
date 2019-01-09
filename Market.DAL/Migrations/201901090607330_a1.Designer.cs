@@ -7,13 +7,13 @@ namespace Market.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class guidtoint : IMigrationMetadata
+    public sealed partial class a1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(guidtoint));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(a1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901081056112_guidtoint"; }
+            get { return "201901090607330_a1"; }
         }
         
         string IMigrationMetadata.Source

@@ -48,21 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901081056112_guidtoint.cs" />
-    <Compile Include="Migrations\201901081056112_guidtoint.Designer.cs">
-      <DependentUpon>201901081056112_guidtoint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901081138409_ekleme.cs" />
-    <Compile Include="Migrations\201901081138409_ekleme.Designer.cs">
-      <DependentUpon>201901081138409_ekleme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901081152045_ekleme1.cs" />
-    <Compile Include="Migrations\201901081152045_ekleme1.Designer.cs">
-      <DependentUpon>201901081152045_ekleme1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901081154403_ekleme2.cs" />
-    <Compile Include="Migrations\201901081154403_ekleme2.Designer.cs">
-      <DependentUpon>201901081154403_ekleme2.cs</DependentUpon>
+    <Compile Include="Migrations\201901090607330_a1.cs" />
+    <Compile Include="Migrations\201901090607330_a1.Designer.cs">
+      <DependentUpon>201901090607330_a1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -79,17 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901081056112_guidtoint.resx">
-      <DependentUpon>201901081056112_guidtoint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901081138409_ekleme.resx">
-      <DependentUpon>201901081138409_ekleme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901081152045_ekleme1.resx">
-      <DependentUpon>201901081152045_ekleme1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901081154403_ekleme2.resx">
-      <DependentUpon>201901081154403_ekleme2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901090607330_a1.resx">
+      <DependentUpon>201901090607330_a1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

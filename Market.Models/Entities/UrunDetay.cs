@@ -22,7 +22,11 @@ namespace Market.Models.Entities
         [StringLength(50)]
         public string Aciklama { get; set; }
 
+        [Required]
+        public double Kdv { get; set; }
+
         public int KoliAdet { get; set; }
+
         public int UrunAdet { get; set; }
 
         public decimal AlisFiyat { get; set; }
