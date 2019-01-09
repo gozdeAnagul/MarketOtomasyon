@@ -21,5 +21,6 @@ namespace Market.Models.Entities
 
         public virtual ICollection<UrunDetay> UrunDetaylar { get; set; } = new HashSet<UrunDetay>();
 
+        public override string ToString() => $@"{UrunAdi}";
     }
 }

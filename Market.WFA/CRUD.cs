@@ -1,6 +1,8 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -11,29 +13,77 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-
+        Kategori seciliKategori = new Kategori();
+        List<Kategori> kategoriler = new KategoriRepo().GetAll();
+        List<Urun> urunler = new UrunRepo().GetAll();
         private void CRUD_Load(object sender, EventArgs e)
         {
-            var kategoriler = new KategoriRepo().GetAll();
+            VerileriDoldur();
+        }
+
+        private void VerileriDoldur()
+        {
             lstKategori.DataSource = kategoriler;
+            cmbKategoriler.DataSource = kategoriler;
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)
         {
-            var kategori = new Kategori
+            try
             {
-                KategoriAdi = txtKategori.Text,
-                Aciklama = txtKategoriAciklama.Text
-            };
-            var kategoriE = new KategoriRepo().Insert(kategori);
-            if (kategoriE>0)
-            {
-                MessageBox.Show("Başarılı.");
+                var kategori = new Kategori
+                {
+                    KategoriAdi = txtKategori.Text,
+                    Aciklama = txtKategoriAciklama.Text
+                };
+
+                if (new KategoriRepo().Insert(kategori) > 0)
+                {
+                    MessageBox.Show("Kategori eklendi.");
+                }
+                else
+                {
+                    MessageBox.Show("Kategori Ekleme hatasi.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Kategori ekleme hatasi.");
+                MessageBox.Show(ex.Message);
             }
+            VerileriDoldur();
+        }
+        
+        private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUrunEkle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seciliKategori == null) return;
+                
+                var urun = new Urun
+                {
+                    UrunAdi = txtUrunAdi.Text,
+                    KategoriId = seciliKategori.Id
+                };
+
+                if (new UrunRepo().Insert(urun) > 0)
+                {
+                    MessageBox.Show($@"{urun.Kategori} kategorisine {urun.UrunAdi} eklendi.");
+                }
+                else
+                {
+                    MessageBox.Show("Urun Ekleme hatasi.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            VerileriDoldur();
         }
     }
 }

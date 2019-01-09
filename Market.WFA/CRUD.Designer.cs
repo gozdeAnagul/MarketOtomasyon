@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.lstKategori = new System.Windows.Forms.ListBox();
-            this.lstUrun = new System.Windows.Forms.ListBox();
+            this.lstUrunler = new System.Windows.Forms.ListBox();
             this.lstUrunDetay = new System.Windows.Forms.ListBox();
             this.txtKategori = new System.Windows.Forms.TextBox();
-            this.txtUrun = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.txtUrunDetay = new System.Windows.Forms.TextBox();
             this.btnKatEkle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunDetayEkle = new System.Windows.Forms.Button();
             this.txtKategoriAciklama = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbKategoriler = new System.Windows.Forms.ComboBox();
+            this.cmbUrunDetay = new System.Windows.Forms.ComboBox();
             this.txtUrunDetayAciklama = new System.Windows.Forms.RichTextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAlisFiyati = new System.Windows.Forms.TextBox();
+            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtKoliIciAdet = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtUrunAdet = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -67,13 +67,13 @@
             this.lstKategori.Size = new System.Drawing.Size(198, 147);
             this.lstKategori.TabIndex = 0;
             // 
-            // lstUrun
+            // lstUrunler
             // 
-            this.lstUrun.FormattingEnabled = true;
-            this.lstUrun.Location = new System.Drawing.Point(290, 39);
-            this.lstUrun.Name = "lstUrun";
-            this.lstUrun.Size = new System.Drawing.Size(198, 147);
-            this.lstUrun.TabIndex = 1;
+            this.lstUrunler.FormattingEnabled = true;
+            this.lstUrunler.Location = new System.Drawing.Point(290, 39);
+            this.lstUrunler.Name = "lstUrunler";
+            this.lstUrunler.Size = new System.Drawing.Size(198, 147);
+            this.lstUrunler.TabIndex = 1;
             // 
             // lstUrunDetay
             // 
@@ -90,16 +90,16 @@
             this.txtKategori.Size = new System.Drawing.Size(153, 20);
             this.txtKategori.TabIndex = 3;
             // 
-            // txtUrun
+            // txtUrunAdi
             // 
-            this.txtUrun.Location = new System.Drawing.Point(335, 203);
-            this.txtUrun.Name = "txtUrun";
-            this.txtUrun.Size = new System.Drawing.Size(153, 20);
-            this.txtUrun.TabIndex = 4;
+            this.txtUrunAdi.Location = new System.Drawing.Point(335, 203);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(153, 20);
+            this.txtUrunAdi.TabIndex = 4;
             // 
             // txtUrunDetay
             // 
-            this.txtUrunDetay.Location = new System.Drawing.Point(589, 203);
+            this.txtUrunDetay.Location = new System.Drawing.Point(589, 208);
             this.txtUrunDetay.Name = "txtUrunDetay";
             this.txtUrunDetay.Size = new System.Drawing.Size(129, 20);
             this.txtUrunDetay.TabIndex = 5;
@@ -122,6 +122,7 @@
             this.btnUrunEkle.TabIndex = 7;
             this.btnUrunEkle.Text = "Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // btnUrunDetayEkle
             // 
@@ -140,21 +141,22 @@
             this.txtKategoriAciklama.TabIndex = 9;
             this.txtKategoriAciklama.Text = "";
             // 
-            // comboBox1
+            // cmbKategoriler
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(290, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cmbKategoriler.FormattingEnabled = true;
+            this.cmbKategoriler.Location = new System.Drawing.Point(290, 12);
+            this.cmbKategoriler.Name = "cmbKategoriler";
+            this.cmbKategoriler.Size = new System.Drawing.Size(198, 21);
+            this.cmbKategoriler.TabIndex = 10;
+            this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cmbUrunDetay
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(673, 12);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 21);
-            this.comboBox3.TabIndex = 12;
+            this.cmbUrunDetay.FormattingEnabled = true;
+            this.cmbUrunDetay.Location = new System.Drawing.Point(673, 12);
+            this.cmbUrunDetay.Name = "cmbUrunDetay";
+            this.cmbUrunDetay.Size = new System.Drawing.Size(198, 21);
+            this.cmbUrunDetay.TabIndex = 12;
             // 
             // txtUrunDetayAciklama
             // 
@@ -216,19 +218,19 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Açıklama";
             // 
-            // textBox1
+            // txtAlisFiyati
             // 
-            this.textBox1.Location = new System.Drawing.Point(801, 261);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 20);
-            this.textBox1.TabIndex = 20;
+            this.txtAlisFiyati.Location = new System.Drawing.Point(801, 261);
+            this.txtAlisFiyati.Name = "txtAlisFiyati";
+            this.txtAlisFiyati.Size = new System.Drawing.Size(70, 20);
+            this.txtAlisFiyati.TabIndex = 20;
             // 
-            // textBox2
+            // txtSatisFiyati
             // 
-            this.textBox2.Location = new System.Drawing.Point(801, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(70, 20);
-            this.textBox2.TabIndex = 21;
+            this.txtSatisFiyati.Location = new System.Drawing.Point(801, 292);
+            this.txtSatisFiyati.Name = "txtSatisFiyati";
+            this.txtSatisFiyati.Size = new System.Drawing.Size(70, 20);
+            this.txtSatisFiyati.TabIndex = 21;
             // 
             // label6
             // 
@@ -248,12 +250,12 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Satış Fiyatı";
             // 
-            // textBox3
+            // txtKoliIciAdet
             // 
-            this.textBox3.Location = new System.Drawing.Point(801, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 20);
-            this.textBox3.TabIndex = 24;
+            this.txtKoliIciAdet.Location = new System.Drawing.Point(801, 230);
+            this.txtKoliIciAdet.Name = "txtKoliIciAdet";
+            this.txtKoliIciAdet.Size = new System.Drawing.Size(70, 20);
+            this.txtKoliIciAdet.TabIndex = 24;
             // 
             // label8
             // 
@@ -273,12 +275,12 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Ürün Adeti";
             // 
-            // textBox4
+            // txtUrunAdet
             // 
-            this.textBox4.Location = new System.Drawing.Point(801, 199);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 20);
-            this.textBox4.TabIndex = 26;
+            this.txtUrunAdet.Location = new System.Drawing.Point(801, 199);
+            this.txtUrunAdet.Name = "txtUrunAdet";
+            this.txtUrunAdet.Size = new System.Drawing.Size(70, 20);
+            this.txtUrunAdet.TabIndex = 26;
             // 
             // label10
             // 
@@ -296,13 +298,13 @@
             this.ClientSize = new System.Drawing.Size(898, 424);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtUrunAdet);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtKoliIciAdet);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSatisFiyati);
+            this.Controls.Add(this.txtAlisFiyati);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -310,17 +312,17 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.txtUrunDetayAciklama);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbUrunDetay);
+            this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.txtKategoriAciklama);
             this.Controls.Add(this.btnUrunDetayEkle);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.btnKatEkle);
             this.Controls.Add(this.txtUrunDetay);
-            this.Controls.Add(this.txtUrun);
+            this.Controls.Add(this.txtUrunAdi);
             this.Controls.Add(this.txtKategori);
             this.Controls.Add(this.lstUrunDetay);
-            this.Controls.Add(this.lstUrun);
+            this.Controls.Add(this.lstUrunler);
             this.Controls.Add(this.lstKategori);
             this.Name = "CRUD";
             this.Text = "CRUD";
@@ -334,17 +336,17 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstKategori;
-        private System.Windows.Forms.ListBox lstUrun;
+        private System.Windows.Forms.ListBox lstUrunler;
         private System.Windows.Forms.ListBox lstUrunDetay;
         private System.Windows.Forms.TextBox txtKategori;
-        private System.Windows.Forms.TextBox txtUrun;
+        private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.TextBox txtUrunDetay;
         private System.Windows.Forms.Button btnKatEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunDetayEkle;
         private System.Windows.Forms.RichTextBox txtKategoriAciklama;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbKategoriler;
+        private System.Windows.Forms.ComboBox cmbUrunDetay;
         private System.Windows.Forms.RichTextBox txtUrunDetayAciklama;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
@@ -352,14 +354,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAlisFiyati;
+        private System.Windows.Forms.TextBox txtSatisFiyati;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtKoliIciAdet;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtUrunAdet;
         private System.Windows.Forms.Label label10;
     }
 }
