@@ -9,11 +9,6 @@ namespace Market.Models.Entities
     [Table("Urunler")]
    public class Urun : BaseEntity<int>
     {
-        //public Urun()
-        //{
-        //    Id = Guid.NewGuid();
-        //}
-
         [StringLength(50)]
         [Required]
         [Index("IX_UrunAdi",IsUnique = true)]

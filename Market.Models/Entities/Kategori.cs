@@ -9,11 +9,6 @@ namespace Market.Models.Entities
     [Table("Kategoriler")]
     public class Kategori : BaseEntity<int>
     {
-        //public Kategori()
-        //{
-        //    Id = Guid.NewGuid();
-        //}
-
         [StringLength(50)]
         [Required]
         public string KategoriAdi { get; set; }

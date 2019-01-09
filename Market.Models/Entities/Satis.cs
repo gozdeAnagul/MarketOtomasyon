@@ -7,11 +7,6 @@ namespace Market.Models.Entities
     [Table("Satislar")]
     public class Satis : BaseEntity<int>
     {
-        //public Satis()
-        //{
-        //    this.Id = Guid.NewGuid();
-        //}
-
         public int UrunDetayId { get; set; }
 
         public int SatisAdeti { get; set; }
