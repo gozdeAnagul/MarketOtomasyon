@@ -11,26 +11,6 @@ namespace Market.BLL.Repository
         {
             return base.GetAll().OrderBy(x=>x.Aciklama).ToList();
         }
-
-        public override int Insert(UrunDetay entity)
-        {
-            try
-            {
-                if (base.Insert(entity) > 0)
-                {
-                   return BarkodBas(entity);
-                }
-                else
-                {
-                    throw new Exception("Ekleme Hatası.");
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         private int BarkodBas(UrunDetay entity)
         {
             if (entity != null && entity.Barkod==null)

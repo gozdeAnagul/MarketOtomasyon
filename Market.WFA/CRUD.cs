@@ -68,11 +68,12 @@ namespace Market.WFA
             try
             {
                 if (seciliKategori == null) return;
-                
+
                 var urun = new Urun
                 {
                     UrunAdi = txtUrunAdi.Text,
-                    KategoriId = seciliKategori.Id
+                    KategoriId = seciliKategori.Id,
+                    Barkod = txtUrunBarkod.Text
                 };
 
                 if (new UrunRepo().Insert(urun) > 0)
@@ -107,6 +108,7 @@ namespace Market.WFA
                    Kdv = Convert.ToDouble(txtKdv.Text),
                    KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
                    UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
+                   Barkod = txtUrunDetayBarkod.Text
                 };
                    
                 if (new UrunDetayRepo().Insert(urunDetay) > 0)

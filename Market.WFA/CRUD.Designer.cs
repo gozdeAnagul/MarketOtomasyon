@@ -32,7 +32,7 @@
             this.lstUrunler = new System.Windows.Forms.ListBox();
             this.lstUrunDetay = new System.Windows.Forms.ListBox();
             this.txtKategori = new System.Windows.Forms.TextBox();
-            this.txtUrunAdi = new System.Windows.Forms.TextBox();
+            this.txtUrunBarkod = new System.Windows.Forms.TextBox();
             this.btnKatEkle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunDetayEkle = new System.Windows.Forms.Button();
@@ -56,6 +56,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtKdv = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUrunDetayBarkod = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nuKoliAdet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,12 +94,12 @@
             this.txtKategori.Size = new System.Drawing.Size(153, 20);
             this.txtKategori.TabIndex = 3;
             // 
-            // txtUrunAdi
+            // txtUrunBarkod
             // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(335, 203);
-            this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(153, 20);
-            this.txtUrunAdi.TabIndex = 4;
+            this.txtUrunBarkod.Location = new System.Drawing.Point(335, 203);
+            this.txtUrunBarkod.Name = "txtUrunBarkod";
+            this.txtUrunBarkod.Size = new System.Drawing.Size(153, 20);
+            this.txtUrunBarkod.TabIndex = 4;
             // 
             // btnKatEkle
             // 
@@ -109,7 +113,7 @@
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(290, 238);
+            this.btnUrunEkle.Location = new System.Drawing.Point(290, 274);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(198, 42);
             this.btnUrunEkle.TabIndex = 7;
@@ -154,7 +158,7 @@
             // 
             // txtUrunDetayAciklama
             // 
-            this.txtUrunDetayAciklama.Location = new System.Drawing.Point(589, 202);
+            this.txtUrunDetayAciklama.Location = new System.Drawing.Point(589, 232);
             this.txtUrunDetayAciklama.Name = "txtUrunDetayAciklama";
             this.txtUrunDetayAciklama.Size = new System.Drawing.Size(129, 56);
             this.txtUrunDetayAciklama.TabIndex = 13;
@@ -162,7 +166,7 @@
             // 
             // nuKoliAdet
             // 
-            this.nuKoliAdet.Location = new System.Drawing.Point(607, 274);
+            this.nuKoliAdet.Location = new System.Drawing.Point(607, 304);
             this.nuKoliAdet.Name = "nuKoliAdet";
             this.nuKoliAdet.Size = new System.Drawing.Size(111, 20);
             this.nuKoliAdet.TabIndex = 14;
@@ -179,16 +183,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 206);
+            this.label2.Location = new System.Drawing.Point(287, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Ürün";
+            this.label2.Text = "Barkod";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(533, 213);
+            this.label4.Location = new System.Drawing.Point(533, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 18;
@@ -205,14 +209,14 @@
             // 
             // txtAlisFiyati
             // 
-            this.txtAlisFiyati.Location = new System.Drawing.Point(801, 261);
+            this.txtAlisFiyati.Location = new System.Drawing.Point(801, 291);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
             this.txtAlisFiyati.Size = new System.Drawing.Size(70, 20);
             this.txtAlisFiyati.TabIndex = 20;
             // 
             // txtSatisFiyati
             // 
-            this.txtSatisFiyati.Location = new System.Drawing.Point(801, 292);
+            this.txtSatisFiyati.Location = new System.Drawing.Point(801, 322);
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.Size = new System.Drawing.Size(70, 20);
             this.txtSatisFiyati.TabIndex = 21;
@@ -220,7 +224,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(735, 264);
+            this.label6.Location = new System.Drawing.Point(735, 294);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 22;
@@ -229,7 +233,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(735, 295);
+            this.label7.Location = new System.Drawing.Point(735, 325);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 23;
@@ -237,7 +241,7 @@
             // 
             // txtKoliIciAdet
             // 
-            this.txtKoliIciAdet.Location = new System.Drawing.Point(801, 230);
+            this.txtKoliIciAdet.Location = new System.Drawing.Point(801, 260);
             this.txtKoliIciAdet.Name = "txtKoliIciAdet";
             this.txtKoliIciAdet.Size = new System.Drawing.Size(70, 20);
             this.txtKoliIciAdet.TabIndex = 24;
@@ -245,7 +249,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(735, 233);
+            this.label8.Location = new System.Drawing.Point(735, 263);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 25;
@@ -254,7 +258,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(735, 203);
+            this.label9.Location = new System.Drawing.Point(735, 233);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 27;
@@ -262,7 +266,7 @@
             // 
             // txtUrunAdet
             // 
-            this.txtUrunAdet.Location = new System.Drawing.Point(801, 199);
+            this.txtUrunAdet.Location = new System.Drawing.Point(801, 229);
             this.txtUrunAdet.Name = "txtUrunAdet";
             this.txtUrunAdet.Size = new System.Drawing.Size(70, 20);
             this.txtUrunAdet.TabIndex = 26;
@@ -270,7 +274,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(541, 281);
+            this.label10.Location = new System.Drawing.Point(541, 306);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 28;
@@ -278,7 +282,7 @@
             // 
             // txtKdv
             // 
-            this.txtKdv.Location = new System.Drawing.Point(801, 318);
+            this.txtKdv.Location = new System.Drawing.Point(801, 348);
             this.txtKdv.Name = "txtKdv";
             this.txtKdv.Size = new System.Drawing.Size(70, 20);
             this.txtKdv.TabIndex = 21;
@@ -286,11 +290,43 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(759, 321);
+            this.label3.Location = new System.Drawing.Point(759, 351);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "Kdv";
+            // 
+            // txtUrunAdi
+            // 
+            this.txtUrunAdi.Location = new System.Drawing.Point(335, 233);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(153, 20);
+            this.txtUrunAdi.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(299, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Ürün";
+            // 
+            // txtUrunDetayBarkod
+            // 
+            this.txtUrunDetayBarkod.Location = new System.Drawing.Point(589, 203);
+            this.txtUrunDetayBarkod.Name = "txtUrunDetayBarkod";
+            this.txtUrunDetayBarkod.Size = new System.Drawing.Size(153, 20);
+            this.txtUrunDetayBarkod.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(541, 206);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Barkod";
             // 
             // CRUD
             // 
@@ -310,6 +346,8 @@
             this.Controls.Add(this.txtAlisFiyati);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nuKoliAdet);
@@ -321,6 +359,8 @@
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.btnKatEkle);
             this.Controls.Add(this.txtUrunAdi);
+            this.Controls.Add(this.txtUrunDetayBarkod);
+            this.Controls.Add(this.txtUrunBarkod);
             this.Controls.Add(this.txtKategori);
             this.Controls.Add(this.lstUrunDetay);
             this.Controls.Add(this.lstUrunler);
@@ -340,7 +380,7 @@
         private System.Windows.Forms.ListBox lstUrunler;
         private System.Windows.Forms.ListBox lstUrunDetay;
         private System.Windows.Forms.TextBox txtKategori;
-        private System.Windows.Forms.TextBox txtUrunAdi;
+        private System.Windows.Forms.TextBox txtUrunBarkod;
         private System.Windows.Forms.Button btnKatEkle;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunDetayEkle;
@@ -364,5 +404,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtKdv;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUrunAdi;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtUrunDetayBarkod;
+        private System.Windows.Forms.Label label12;
     }
 }
