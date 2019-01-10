@@ -19,9 +19,11 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
+
         private Satıs satisForm;
         private MalKabul MalKabulForm;
         private CRUD CrudIslemleriForm;
+
         private void satışToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (satisForm == null || satisForm.IsDisposed)
