@@ -44,15 +44,6 @@ namespace Market.WFA
 
         private void MarketOtomasyon_Load(object sender, EventArgs e)
         {
-            var urundetaylar = new List<Urun>();
-             urundetaylar = new UrunRepo().GetAll();
-           
-                foreach (var item in urundetaylar)
-                {
-                    item.KoliBarkod = item.KategoriId + "" + item.Id + item.Id;
-                }
-                
-            
         }
 
         private void işlemlerToolStripMenuItem_Click(object sender, EventArgs e)

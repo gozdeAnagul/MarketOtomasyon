@@ -1,13 +1,6 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -18,22 +11,18 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
+        private string seciliBarkod;
+        private Urun seciliUrun;
+        private Kategori seciliKategori;
 
         private void MalKabul_Load(object sender, EventArgs e)
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
         }
        
-
-
-        private void txtAra_KeyUp(object sender, KeyEventArgs e)
-        {
-           
-        }
-
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+            seciliKategori = cmbKategoriler.SelectedItem as Kategori;
 
             if (seciliKategori == null) return;
 
@@ -43,10 +32,39 @@ namespace Market.WFA
 
         private void lstUrunler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Urun seciliUrun = lstUrunler.SelectedItem as Urun;
+            seciliUrun = lstUrunler.SelectedItem as Urun;
+
             if (seciliUrun == null) return;
 
-            txtBarkod.Text = seciliUrun.KoliBarkod;
+            seciliBarkod = seciliUrun.KoliBarkod;
+            txtBarkod.Text = seciliBarkod;
+            
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
+        }
+        
+        private void btnStogaEkle_Click(object sender, EventArgs e)
+        {
+            if (seciliBarkod == null) return;
+
+            try
+            {
+                seciliUrun.KoliAdet += (int)nuKutu.Value;
+                new UrunRepo().Update();
+                MessageBox.Show($"{seciliUrun.UrunAdi} ürününün stoğu {seciliUrun.Stok} oldu.");
+                ListeyiYenile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void ListeyiYenile()
+        {
+            lstUrunler.DataSource = null;
+            lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
         }
     }
 }
