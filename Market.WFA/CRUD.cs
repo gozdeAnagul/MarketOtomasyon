@@ -85,7 +85,7 @@ namespace Market.WFA
 
                 if (new UrunRepo().Insert(urun) > 0)
                 {
-                    MessageBox.Show($@"{urun.Aciklama} ürünü eklendi.");
+                    MessageBox.Show($@"{urun.UrunAdi} ürünü eklendi.");
                 }
                 else
                 {

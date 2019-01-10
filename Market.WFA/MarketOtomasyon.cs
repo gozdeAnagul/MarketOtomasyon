@@ -1,14 +1,4 @@
-﻿using Market.BLL.Repository;
-using Market.DAL;
-using Market.Models.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -33,6 +23,7 @@ namespace Market.WFA
             }
             satisForm.MdiParent = this;
             satisForm.Show();
+            satisForm.WindowState = FormWindowState.Maximized;
         }
 
         private void malGirişToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +34,7 @@ namespace Market.WFA
             }
             MalKabulForm.MdiParent = this;
             MalKabulForm.Show();
+            MalKabulForm.WindowState = FormWindowState.Maximized;
         }
 
         private void MarketOtomasyon_Load(object sender, EventArgs e)
@@ -57,6 +49,7 @@ namespace Market.WFA
             }
             CrudIslemleriForm.MdiParent = this;
             CrudIslemleriForm.Show();
+            CrudIslemleriForm.WindowState = FormWindowState.Maximized;
         }
 
         private void azalanUrunlerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +60,7 @@ namespace Market.WFA
             }
             azalanUrunlerForm.MdiParent = this;
             azalanUrunlerForm.Show();
+            azalanUrunlerForm.WindowState = FormWindowState.Maximized;
         }
     }
 }

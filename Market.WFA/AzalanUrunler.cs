@@ -45,7 +45,7 @@ namespace Market.WFA
             {
                 seciliUrun.KoliAdet += (int)nuKutu.Value;
                 new UrunRepo().Update();
-                MessageBox.Show($"{seciliUrun.UrunAdi} ürününün stoğu {seciliUrun.Stok} oldu.");
+                MessageBox.Show($"{seciliUrun.UrunAdi} ürününe {(int)nuKutu.Value} koli eklendi. Stok {seciliUrun.Stok} olarak güncellendi.");
                 ListeyiYenile();
             }
             catch (Exception ex)
