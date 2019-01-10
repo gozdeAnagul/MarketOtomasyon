@@ -19,6 +19,8 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
+
+        private AzalanUrunler azalanUrunlerForm;
         private Satis satisForm;
         private MalKabul MalKabulForm;
         private CRUD CrudIslemleriForm;
@@ -54,6 +56,16 @@ namespace Market.WFA
             }
             CrudIslemleriForm.MdiParent = this;
             CrudIslemleriForm.Show();
+        }
+
+        private void azalanUrunlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (azalanUrunlerForm == null || azalanUrunlerForm.IsDisposed)
+            {
+                azalanUrunlerForm = new AzalanUrunler();
+            }
+            azalanUrunlerForm.MdiParent = this;
+            azalanUrunlerForm.Show();
         }
     }
 }

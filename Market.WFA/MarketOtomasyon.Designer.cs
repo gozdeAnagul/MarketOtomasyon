@@ -32,6 +32,7 @@
             this.malGirişToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.işlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.azalanUrunlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.malGirişToolStripMenuItem,
             this.satışToolStripMenuItem,
-            this.işlemlerToolStripMenuItem});
+            this.işlemlerToolStripMenuItem,
+            this.azalanUrunlerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(902, 24);
@@ -68,6 +70,13 @@
             this.işlemlerToolStripMenuItem.Text = "İşlemler";
             this.işlemlerToolStripMenuItem.Click += new System.EventHandler(this.işlemlerToolStripMenuItem_Click);
             // 
+            // azalanUrunlerToolStripMenuItem
+            // 
+            this.azalanUrunlerToolStripMenuItem.Name = "azalanUrunlerToolStripMenuItem";
+            this.azalanUrunlerToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.azalanUrunlerToolStripMenuItem.Text = "Azalan Urunler";
+            this.azalanUrunlerToolStripMenuItem.Click += new System.EventHandler(this.azalanUrunlerToolStripMenuItem_Click);
+            // 
             // MarketOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +101,7 @@
         private System.Windows.Forms.ToolStripMenuItem malGirişToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem satışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem işlemlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem azalanUrunlerToolStripMenuItem;
     }
 }
 
