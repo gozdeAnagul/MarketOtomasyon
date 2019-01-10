@@ -11,7 +11,7 @@ namespace Market.WFA
         }
 
         private AzalanUrunler azalanUrunlerForm;
-        private Satis satisForm;
+        private SatisForm satisForm;
         private MalKabul MalKabulForm;
         private CRUD CrudIslemleriForm;
 
@@ -19,7 +19,7 @@ namespace Market.WFA
         {
             if (satisForm == null || satisForm.IsDisposed)
             {
-                satisForm = new Satis();
+                satisForm = new SatisForm();
             }
             satisForm.MdiParent = this;
             satisForm.Show();

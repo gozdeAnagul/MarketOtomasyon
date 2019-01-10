@@ -13,15 +13,15 @@ using System.Windows.Forms;
 
 namespace Market.WFA
 {
-    public partial class Satis : Form
+    public partial class SatisForm : Form
     {
-        public Satis()
+        public SatisForm()
         {
             InitializeComponent();
             Models = new UrunKontrolViewModels();
         }
         public UrunKontrolViewModels Models;
-        
+        public Urun seciliUrun;
         private void Satis_Load(object sender, EventArgs e)
         {
             KategorileriGetir();
@@ -52,7 +52,7 @@ namespace Market.WFA
 
         private void BarkoduGetir()
         {
-            var seciliUrun = cmbUrunler.SelectedItem as Urun;
+            seciliUrun = cmbUrunler.SelectedItem as Urun;
             if (seciliUrun == null) return;
 
             txtBarkod.Text = seciliUrun.UrunBarkod;
@@ -67,9 +67,6 @@ namespace Market.WFA
         {
             var seciliBarkod = txtBarkod.Text;
             if (seciliBarkod == null) return;
-            
-
-
             
         }
     }

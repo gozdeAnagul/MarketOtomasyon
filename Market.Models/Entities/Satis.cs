@@ -10,7 +10,7 @@ namespace Market.Models.Entities
     {
         public int SatisAdeti { get; set; }
 
-        // public decimal AltToplam { get; set; }  Computed olması gerek.
+        public decimal AltToplam { get; set; } = 0;
 
         public int UrunId { get; set; }
 

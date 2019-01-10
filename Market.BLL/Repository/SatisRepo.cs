@@ -2,7 +2,8 @@
 
 namespace Market.BLL.Repository
 {
-   public class FisRepo : RepositoryBase<Fis,int>
+    public class SatisRepo : RepositoryBase<Satis, int>
     {
+
     }
 }

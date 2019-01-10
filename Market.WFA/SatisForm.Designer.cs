@@ -1,6 +1,6 @@
 ﻿namespace Market.WFA
 {
-    partial class Satis
+    partial class SatisForm
     {
         /// <summary>
         /// Required designer variable.
