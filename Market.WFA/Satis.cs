@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Market.WFA
 {
-    public partial class Satıs : Form
+    public partial class Satis : Form
     {
-        public Satıs()
+        public Satis()
         {
             InitializeComponent();
         }

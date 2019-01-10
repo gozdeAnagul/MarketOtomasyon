@@ -1,6 +1,6 @@
 ﻿namespace Market.WFA
 {
-    partial class Satıs
+    partial class Satis
     {
         /// <summary>
         /// Required designer variable.
