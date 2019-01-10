@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market.WFA
+namespace Market.WFA.Dialog
 {
-    public partial class Satıs : Form
+    public partial class SatisDialog : Form
     {
-        public Satıs()
+        public SatisDialog()
         {
             InitializeComponent();
         }
