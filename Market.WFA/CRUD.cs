@@ -76,7 +76,7 @@ namespace Market.WFA
                     KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
                     KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
                     Aciklama = txtUrunAciklama.Text,
-                    Kdv = Convert.ToDouble(txtKdv.Text),
+                    Kdv = Convert.ToDecimal(txtKdv.Text),
                     KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
                     UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
                     AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),

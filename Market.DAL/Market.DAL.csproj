@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901100617306_Computed.cs" />
-    <Compile Include="Migrations\201901100617306_Computed.Designer.cs">
-      <DependentUpon>201901100617306_Computed.cs</DependentUpon>
+    <Compile Include="Migrations\201901100639077_ComputedFiyat2.cs" />
+    <Compile Include="Migrations\201901100639077_ComputedFiyat2.Designer.cs">
+      <DependentUpon>201901100639077_ComputedFiyat2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901100618143_Computed2.cs" />
-    <Compile Include="Migrations\201901100618143_Computed2.Designer.cs">
-      <DependentUpon>201901100618143_Computed2.cs</DependentUpon>
+    <Compile Include="Migrations\201901100658523_asdaısjd.cs" />
+    <Compile Include="Migrations\201901100658523_asdaısjd.Designer.cs">
+      <DependentUpon>201901100658523_asdaısjd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -71,11 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901100617306_Computed.resx">
-      <DependentUpon>201901100617306_Computed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901100639077_ComputedFiyat2.resx">
+      <DependentUpon>201901100639077_ComputedFiyat2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901100618143_Computed2.resx">
-      <DependentUpon>201901100618143_Computed2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901100658523_asdaısjd.resx">
+      <DependentUpon>201901100658523_asdaısjd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
