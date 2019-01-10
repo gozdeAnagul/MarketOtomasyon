@@ -21,20 +21,32 @@ namespace Market.WFA
 
         private void MalKabul_Load(object sender, EventArgs e)
         {
-            lstUrunler.DataSource = new UrunRepo().GetAll();
+            cmbKategoriler.DataSource = new KategoriRepo().GetAll();
         }
-        List<Urun> aramalar;
-        List<Urun> urunDetaylar;
+       
+
 
         private void txtAra_KeyUp(object sender, KeyEventArgs e)
         {
-            string ara = txtAra.Text.ToLower();
+           
+        }
 
-            aramalar = new UrunRepo().GetAll();
-            urunDetaylar = null;
-            urunDetaylar.Where(urun => urun.UrunAdi.ToLower().Contains(ara)).ToList().ForEach(urun => aramalar.Add(urun));
-            lstUrunler.DataSource = null;
-            lstUrunler.DataSource = aramalar;
+        private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+
+            if (seciliKategori == null) return;
+
+            lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
+
+        }
+
+        private void lstUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Urun seciliUrun = lstUrunler.SelectedItem as Urun;
+            if (seciliUrun == null) return;
+
+            txtBarkod.Text = seciliUrun.KoliBarkod;
         }
     }
 }
