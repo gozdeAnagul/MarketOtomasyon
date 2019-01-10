@@ -44,6 +44,7 @@ namespace Market.WFA
         private void lstUrunler_SelectedIndexChanged(object sender, EventArgs e)
         {
             Urun seciliUrun = lstUrunler.SelectedItem as Urun;
+
             if (seciliUrun == null) return;
 
             txtBarkod.Text = seciliUrun.KoliBarkod;
