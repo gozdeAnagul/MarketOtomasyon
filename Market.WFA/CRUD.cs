@@ -16,6 +16,7 @@ namespace Market.WFA
         private void CRUD_Load(object sender, EventArgs e)
         {
             VerileriDoldur();
+            lstUrunler.DataSource = null;
         }
 
         private void VerileriDoldur()
@@ -54,6 +55,7 @@ namespace Market.WFA
 
         private void cmbKategoriler_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+           
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
 
             if (seciliKategori == null) return;

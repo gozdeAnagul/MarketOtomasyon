@@ -66,8 +66,8 @@ namespace Market.WFA
             var seciliKategori = cmbKategoriler.SelectedItem as Kategori;
             Urun urun = new Urun();
             lstKategoriUrunleri.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
-           
-         //  lblKatUrunAdeti.Text = $"{seciliKategori.ToString()} içerisinde toplam {db.Urunler.Count(x=>x.Stok)}";
+           // lblKatUrunAdeti.Text = new UrunRepo().GetAll(x=>x.KategoriId==seciliKategori.Id).Count.ToString();
+            lblKatUrunAdeti.Text = $"{seciliKategori.ToString()} içerisinde toplam {new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id).Count.ToString()} adet ürün vardır";
          //RaporViewModel
         }
     }

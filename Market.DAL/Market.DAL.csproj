@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201901100750486_c.cs" />
-    <Compile Include="Migrations\201901100750486_c.Designer.cs">
-      <DependentUpon>201901100750486_c.cs</DependentUpon>
+    <Compile Include="Migrations\201901101632550_deneme.cs" />
+    <Compile Include="Migrations\201901101632550_deneme.Designer.cs">
+      <DependentUpon>201901101632550_deneme.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -67,8 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901100750486_c.resx">
-      <DependentUpon>201901100750486_c.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901101632550_deneme.resx">
+      <DependentUpon>201901101632550_deneme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
