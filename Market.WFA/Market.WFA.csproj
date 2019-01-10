@@ -68,6 +68,12 @@
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\SatisDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\SatisDialog.Designer.cs">
+      <DependentUpon>SatisDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarketOtomasyon.cs">
       <SubType>Form</SubType>
     </Compile>

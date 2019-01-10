@@ -39,8 +39,6 @@ namespace Market.WFA
             seciliBarkod = seciliUrun.KoliBarkod;
             txtBarkod.Text = seciliBarkod;
             
-            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
         }
         
         private void btnStogaEkle_Click(object sender, EventArgs e)
@@ -49,22 +47,33 @@ namespace Market.WFA
 
             try
             {
-                seciliUrun.KoliAdet += (int)nuKutu.Value;
+                var koli = (int)nuKoli.Value;
+                seciliUrun.KoliAdet += koli;
                 new UrunRepo().Update();
-                MessageBox.Show($"{seciliUrun.UrunAdi} ürününün stoğu {seciliUrun.Stok} oldu.");
+                MessageBox.Show($"{seciliUrun.UrunAdi} ürününe {koli} koli eklendi. Stok {seciliUrun.Stok} olarak güncellendi.");
                 ListeyiYenile();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void ListeyiYenile()
         {
             lstUrunler.DataSource = null;
             lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
+        }
+        private void btnBarkodGetir_Click(object sender, EventArgs e)
+        {
+           
+            if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text)==null)
+            {
+              
+            }
+
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
         }
     }
 }

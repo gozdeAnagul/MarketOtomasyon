@@ -1,5 +1,6 @@
 ﻿using Market.Models.Abstracts;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -29,11 +30,11 @@ namespace Market.Models.Entities
         [Required]
         public decimal Kdv { get; set; }
 
-        [StringLength(50)]
+        [StringLength(7)]
         [Index(IsUnique = true)]
         public string KoliBarkod { get; set; }
 
-        [StringLength(50)]
+        [StringLength(8)]
         [Index(IsUnique = true)]
         public string UrunBarkod { get; set; }
 
@@ -49,6 +50,8 @@ namespace Market.Models.Entities
         
         [ForeignKey("KategoriId")]
         public virtual Kategori Kategori { get; set; }
+
+        public virtual ICollection<Satis> Satislar { get; set; } = new HashSet<Satis>();
 
         public override string ToString() => $@"{UrunAdi} {Aciklama} {Stok}";
     }
