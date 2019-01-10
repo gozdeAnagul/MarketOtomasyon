@@ -8,11 +8,12 @@ namespace Market.Models.Entities
     [Table("Urunler")]
     public class Urun : BaseEntity<int>
     {
-
+        
         [StringLength(50)]
         [Required]
         [Index(IsUnique = true)]
         public string UrunAdi { get; set; }
+        public int KategoriId { get; set; }
 
         [StringLength(50)]
         public string Aciklama { get; set; }
@@ -48,8 +49,7 @@ namespace Market.Models.Entities
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
 
-        public int KategoriId { get; set; }
-
+        
         [ForeignKey("KategoriId")]
         public virtual Kategori Kategori { get; set; }
 

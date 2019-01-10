@@ -73,14 +73,13 @@ namespace Market.WFA
                 {
                     KategoriId = seciliKategori.Id,
                     UrunAdi = txtUrunAdi.Text,
+                    Aciklama = txtUrunAciklama.Text,
                     KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
                     KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
-                    Aciklama = txtUrunAciklama.Text,
                     Kdv = Convert.ToDecimal(txtKdv.Text),
                     KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
                     UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
                     AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
-                    SatisFiyat = Convert.ToDecimal(txtSatisFiyati.Text),
                 };
 
                 if (new UrunRepo().Insert(urun) > 0)
