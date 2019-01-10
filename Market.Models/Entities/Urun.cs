@@ -28,7 +28,7 @@ namespace Market.Models.Entities
         }
         
         [Required]
-        public double Kdv { get; set; }
+        public decimal Kdv { get; set; }
 
         [StringLength(50)]
         [Index(IsUnique = true)]
@@ -40,8 +40,10 @@ namespace Market.Models.Entities
 
         public decimal AlisFiyat { get; set; }
 
-
-        public decimal SatisFiyat { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public decimal SatisFiyat {
+            get => AlisFiyat + (AlisFiyat*Kdv) + (AlisFiyat/10);
+            set { } }
 
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
