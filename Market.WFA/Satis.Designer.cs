@@ -46,6 +46,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunCikar = new System.Windows.Forms.Button();
+            this.cmbUrunler = new System.Windows.Forms.ComboBox();
+            this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,14 +55,14 @@
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Location = new System.Drawing.Point(20, 29);
+            this.txtBarkod.Location = new System.Drawing.Point(21, 94);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(215, 20);
             this.txtBarkod.TabIndex = 0;
             // 
             // pbBarkod
             // 
-            this.pbBarkod.Location = new System.Drawing.Point(20, 55);
+            this.pbBarkod.Location = new System.Drawing.Point(21, 120);
             this.pbBarkod.Name = "pbBarkod";
             this.pbBarkod.Size = new System.Drawing.Size(215, 111);
             this.pbBarkod.TabIndex = 1;
@@ -194,27 +196,48 @@
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(20, 173);
+            this.btnUrunEkle.Location = new System.Drawing.Point(21, 238);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(92, 36);
             this.btnUrunEkle.TabIndex = 8;
             this.btnUrunEkle.Text = "Ürün Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // btnUrunCikar
             // 
-            this.btnUrunCikar.Location = new System.Drawing.Point(143, 173);
+            this.btnUrunCikar.Location = new System.Drawing.Point(144, 238);
             this.btnUrunCikar.Name = "btnUrunCikar";
             this.btnUrunCikar.Size = new System.Drawing.Size(92, 36);
             this.btnUrunCikar.TabIndex = 9;
             this.btnUrunCikar.Text = "Ürün Çıkar";
             this.btnUrunCikar.UseVisualStyleBackColor = true;
             // 
+            // cmbUrunler
+            // 
+            this.cmbUrunler.FormattingEnabled = true;
+            this.cmbUrunler.Location = new System.Drawing.Point(21, 55);
+            this.cmbUrunler.Name = "cmbUrunler";
+            this.cmbUrunler.Size = new System.Drawing.Size(215, 21);
+            this.cmbUrunler.TabIndex = 10;
+            this.cmbUrunler.SelectedIndexChanged += new System.EventHandler(this.cmbUrunler_SelectedIndexChanged);
+            // 
+            // cmbKategoriler
+            // 
+            this.cmbKategoriler.FormattingEnabled = true;
+            this.cmbKategoriler.Location = new System.Drawing.Point(21, 28);
+            this.cmbKategoriler.Name = "cmbKategoriler";
+            this.cmbKategoriler.Size = new System.Drawing.Size(215, 21);
+            this.cmbKategoriler.TabIndex = 11;
+            this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
+            // 
             // Satis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.cmbKategoriler);
+            this.Controls.Add(this.cmbUrunler);
             this.Controls.Add(this.btnUrunCikar);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.panel2);
@@ -227,6 +250,7 @@
             this.Controls.Add(this.txtBarkod);
             this.Name = "Satis";
             this.Text = "Satıs";
+            this.Load += new System.EventHandler(this.Satis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -257,5 +281,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunCikar;
+        private System.Windows.Forms.ComboBox cmbUrunler;
+        private System.Windows.Forms.ComboBox cmbKategoriler;
     }
 }

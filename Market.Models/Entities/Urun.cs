@@ -1,5 +1,6 @@
 ﻿using Market.Models.Abstracts;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -49,6 +50,8 @@ namespace Market.Models.Entities
         
         [ForeignKey("KategoriId")]
         public virtual Kategori Kategori { get; set; }
+
+        public virtual ICollection<Satis> Satislar { get; set; } = new HashSet<Satis>();
 
         public override string ToString() => $@"{UrunAdi} {Aciklama} {Stok}";
     }
