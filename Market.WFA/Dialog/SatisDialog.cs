@@ -1,5 +1,4 @@
-﻿using Market.Models.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Market.WFA
+namespace Market.WFA.Dialog
 {
-    public partial class Satis : Form
+    public partial class SatisDialog : Form
     {
-        public Satis()
+        public SatisDialog()
         {
             InitializeComponent();
-            Models = new UrunKontrolViewModels();
         }
-        public UrunKontrolViewModels Models;
     }
 }

@@ -29,11 +29,11 @@ namespace Market.Models.Entities
         [Required]
         public decimal Kdv { get; set; }
 
-        [StringLength(50)]
+        [StringLength(7)]
         [Index(IsUnique = true)]
         public string KoliBarkod { get; set; }
 
-        [StringLength(50)]
+        [StringLength(8)]
         [Index(IsUnique = true)]
         public string UrunBarkod { get; set; }
 
