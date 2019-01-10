@@ -10,7 +10,6 @@ namespace Market.DAL
 
         }
        
-
         public virtual DbSet<Kategori> Kategoriler { get; set; }
         public virtual DbSet<Urun> Urunler { get; set; }      
         public virtual DbSet<Satis> Satislar { get; set; }

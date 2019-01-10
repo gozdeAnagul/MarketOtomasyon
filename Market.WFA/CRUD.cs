@@ -1,7 +1,6 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -21,8 +20,10 @@ namespace Market.WFA
 
         private void VerileriDoldur()
         {
+            lstUrunler.DataSource = null;
             lstKategori.DataSource = new KategoriRepo().GetAll();
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
+            lstUrunler.DataSource = new UrunRepo().GetAll();
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)
@@ -53,35 +54,38 @@ namespace Market.WFA
 
         private void cmbKategoriler_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (seciliKategori == null) return;
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+
+            if (seciliKategori == null) return;
 
             var urunler = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
             lstUrunler.DataSource = urunler.ToList();
         }
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
-            if (cmbKategoriler.SelectedItem == null) return;
+            if (seciliKategori == null) return;
+
             try
             {            
                 Random rnd = new Random();
-                var urunDetay = new Urun
+
+                var urun = new Urun
                 {
+                    KategoriId = seciliKategori.Id,
                     UrunAdi = txtUrunAdi.Text,
-                    Aciklama = txtUrunDetayAciklama.Text,
                     KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
+                    KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
+                    Aciklama = txtUrunAciklama.Text,
+                    Kdv = Convert.ToDouble(txtKdv.Text),
+                    KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
+                    UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
                     AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text),
                     SatisFiyat = Convert.ToDecimal(txtSatisFiyati.Text),
-                    Kdv = Convert.ToDouble(txtKdv.Text),
-                    KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
-                    UrunAdet = Convert.ToInt32(txtUrunAdet.Text),
-                    KoliBarkod = Convert.ToString(rnd.Next(1000000, 99999999)),
-                    UrunBarkod = Convert.ToString(rnd.Next(1000000, 99999999))
                 };
 
-                if (new UrunRepo().Insert(urunDetay) > 0)
+                if (new UrunRepo().Insert(urun) > 0)
                 {
-                    MessageBox.Show($@"{urunDetay.Aciklama} ürünü eklendi.");
+                    MessageBox.Show($@"{urun.Aciklama} ürünü eklendi.");
                 }
                 else
                 {

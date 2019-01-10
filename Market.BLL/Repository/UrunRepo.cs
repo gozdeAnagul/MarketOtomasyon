@@ -28,24 +28,5 @@ namespace Market.BLL.Repository
                 throw;
             }
         }
-        private int BarkodBas(Urun entity)
-        {
-            if (entity != null && entity.KoliBarkod == null)
-            {
-                try
-                {
-                    entity.KoliBarkod = entity.KategoriId + "" + entity.Id + entity.Id;
-                    return Update();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-            else
-            {
-                throw new Exception("Urun bulunamadi veya Barkodu zaten var.");
-            }
-        }
     }
 }

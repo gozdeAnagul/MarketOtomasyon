@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Market.Models.Entities
 {
-    [Table("UrunDetaylar")]
+    [Table("Urunler")]
     public class Urun : BaseEntity<int>
     {
 
@@ -14,16 +14,19 @@ namespace Market.Models.Entities
         [Index(IsUnique = true)]
         public string UrunAdi { get; set; }
 
+        [StringLength(50)]
+        public string Aciklama { get; set; }
+
         public int KoliAdet { get; set; }
 
         public int KoliIciAdet { get; set; }
 
-        public int UrunAdet { get; set; }
-
-        [StringLength(50)]
-        [Index(IsUnique = true)]
-        public string Aciklama { get; set; }
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public int Stok {
+            get => KoliAdet*KoliIciAdet;
+            private set{ }
+        }
+        
         [Required]
         public double Kdv { get; set; }
 
@@ -48,6 +51,6 @@ namespace Market.Models.Entities
         [ForeignKey("KategoriId")]
         public virtual Kategori Kategori { get; set; }
 
-        public override string ToString() => $@"{Aciklama} {SatisFiyat} {Kdv} {UrunAdet}";
+        public override string ToString() => $@"{UrunAdi} {Aciklama} {Stok}";
     }
 }
