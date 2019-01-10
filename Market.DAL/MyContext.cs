@@ -9,7 +9,12 @@ namespace Market.DAL
         {
 
         }
-       
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Urun>()
+                .Property(x => x.Kdv).
+                HasPrecision(5, 3);
+        }
         public virtual DbSet<Kategori> Kategoriler { get; set; }
         public virtual DbSet<Urun> Urunler { get; set; }      
         public virtual DbSet<Satis> Satislar { get; set; }

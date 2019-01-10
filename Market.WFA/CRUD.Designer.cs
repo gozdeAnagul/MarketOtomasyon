@@ -36,24 +36,17 @@
             this.txtKategoriAciklama = new System.Windows.Forms.RichTextBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.txtUrunAciklama = new System.Windows.Forms.RichTextBox();
-            this.nuKoliAdet = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
-            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtKoliIciAdet = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtUrunAdet = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtKdv = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nuKoliAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // lstKategori
@@ -61,7 +54,7 @@
             this.lstKategori.FormattingEnabled = true;
             this.lstKategori.Location = new System.Drawing.Point(35, 12);
             this.lstKategori.Name = "lstKategori";
-            this.lstKategori.Size = new System.Drawing.Size(198, 147);
+            this.lstKategori.Size = new System.Drawing.Size(314, 147);
             this.lstKategori.TabIndex = 0;
             // 
             // lstUrunler
@@ -74,14 +67,14 @@
             // 
             // txtKategori
             // 
-            this.txtKategori.Location = new System.Drawing.Point(80, 176);
+            this.txtKategori.Location = new System.Drawing.Point(196, 219);
             this.txtKategori.Name = "txtKategori";
             this.txtKategori.Size = new System.Drawing.Size(153, 20);
             this.txtKategori.TabIndex = 3;
             // 
             // btnKatEkle
             // 
-            this.btnKatEkle.Location = new System.Drawing.Point(35, 274);
+            this.btnKatEkle.Location = new System.Drawing.Point(151, 317);
             this.btnKatEkle.Name = "btnKatEkle";
             this.btnKatEkle.Size = new System.Drawing.Size(198, 42);
             this.btnKatEkle.TabIndex = 6;
@@ -91,7 +84,7 @@
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(518, 405);
+            this.btnUrunEkle.Location = new System.Drawing.Point(518, 326);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(309, 42);
             this.btnUrunEkle.TabIndex = 7;
@@ -101,7 +94,7 @@
             // 
             // txtKategoriAciklama
             // 
-            this.txtKategoriAciklama.Location = new System.Drawing.Point(80, 210);
+            this.txtKategoriAciklama.Location = new System.Drawing.Point(196, 253);
             this.txtKategoriAciklama.Name = "txtKategoriAciklama";
             this.txtKategoriAciklama.Size = new System.Drawing.Size(155, 48);
             this.txtKategoriAciklama.TabIndex = 9;
@@ -124,17 +117,10 @@
             this.txtUrunAciklama.TabIndex = 13;
             this.txtUrunAciklama.Text = "";
             // 
-            // nuKoliAdet
-            // 
-            this.nuKoliAdet.Location = new System.Drawing.Point(586, 306);
-            this.nuKoliAdet.Name = "nuKoliAdet";
-            this.nuKoliAdet.Size = new System.Drawing.Size(85, 20);
-            this.nuKoliAdet.TabIndex = 14;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 179);
+            this.label1.Location = new System.Drawing.Point(144, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 15;
@@ -152,7 +138,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 213);
+            this.label5.Location = new System.Drawing.Point(140, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 19;
@@ -165,34 +151,18 @@
             this.txtAlisFiyati.Size = new System.Drawing.Size(70, 20);
             this.txtAlisFiyati.TabIndex = 20;
             // 
-            // txtSatisFiyati
-            // 
-            this.txtSatisFiyati.Location = new System.Drawing.Point(757, 247);
-            this.txtSatisFiyati.Name = "txtSatisFiyati";
-            this.txtSatisFiyati.Size = new System.Drawing.Size(70, 20);
-            this.txtSatisFiyati.TabIndex = 21;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(691, 219);
+            this.label6.Location = new System.Drawing.Point(701, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Alış Fiyatı";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(691, 250);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Satış Fiyatı";
+            this.label6.Text = "Alış Fiyatı:";
             // 
             // txtKoliIciAdet
             // 
-            this.txtKoliIciAdet.Location = new System.Drawing.Point(601, 362);
+            this.txtKoliIciAdet.Location = new System.Drawing.Point(757, 273);
             this.txtKoliIciAdet.Name = "txtKoliIciAdet";
             this.txtKoliIciAdet.Size = new System.Drawing.Size(70, 20);
             this.txtKoliIciAdet.TabIndex = 24;
@@ -200,40 +170,15 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(535, 365);
+            this.label8.Location = new System.Drawing.Point(688, 276);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Koli İçiAdet";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 340);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Ürün Adeti";
-            // 
-            // txtUrunAdet
-            // 
-            this.txtUrunAdet.Location = new System.Drawing.Point(601, 336);
-            this.txtUrunAdet.Name = "txtUrunAdet";
-            this.txtUrunAdet.Size = new System.Drawing.Size(70, 20);
-            this.txtUrunAdet.TabIndex = 26;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(531, 312);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Koli Adet";
+            this.label8.Text = "Koli İçiAdet:";
             // 
             // txtKdv
             // 
-            this.txtKdv.Location = new System.Drawing.Point(757, 273);
+            this.txtKdv.Location = new System.Drawing.Point(757, 247);
             this.txtKdv.Name = "txtKdv";
             this.txtKdv.Size = new System.Drawing.Size(70, 20);
             this.txtKdv.TabIndex = 21;
@@ -241,11 +186,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(715, 276);
+            this.label3.Location = new System.Drawing.Point(725, 250);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Kdv";
+            this.label3.Text = "Kdv:";
             // 
             // txtUrunAdi
             // 
@@ -268,22 +213,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 469);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtUrunAdet);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtKoliIciAdet);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtKdv);
-            this.Controls.Add(this.txtSatisFiyati);
             this.Controls.Add(this.txtAlisFiyati);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nuKoliAdet);
             this.Controls.Add(this.txtUrunAciklama);
             this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.txtKategoriAciklama);
@@ -296,7 +235,6 @@
             this.Name = "CRUD";
             this.Text = "CRUD";
             this.Load += new System.EventHandler(this.CRUD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nuKoliAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,19 +250,13 @@
         private System.Windows.Forms.RichTextBox txtKategoriAciklama;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.RichTextBox txtUrunAciklama;
-        private System.Windows.Forms.NumericUpDown nuKoliAdet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAlisFiyati;
-        private System.Windows.Forms.TextBox txtSatisFiyati;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtKoliIciAdet;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtUrunAdet;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtKdv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUrunAdi;

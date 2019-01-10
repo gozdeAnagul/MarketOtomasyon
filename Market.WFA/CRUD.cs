@@ -74,7 +74,6 @@ namespace Market.WFA
                     KategoriId = seciliKategori.Id,
                     UrunAdi = txtUrunAdi.Text,
                     Aciklama = txtUrunAciklama.Text,
-                    KoliAdet = Convert.ToInt32(nuKoliAdet.Value),
                     KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text),
                     Kdv = Convert.ToDecimal(txtKdv.Text),
                     KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
