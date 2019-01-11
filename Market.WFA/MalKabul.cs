@@ -1,6 +1,7 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -14,7 +15,7 @@ namespace Market.WFA
         private string seciliBarkod;
         private Urun seciliUrun;
         private Kategori seciliKategori;
-
+        private SatisDialog satisDialogForm;
         private void MalKabul_Load(object sender, EventArgs e)
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
@@ -68,12 +69,29 @@ namespace Market.WFA
         {
            
             if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text)==null)
-            {
-              
+            {              
             }
-
+            var urunList = new UrunRepo().GetAll();
             Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
             pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
+
+            foreach (var item in urunList)
+            {
+                if(item.KoliBarkod==txtBarkod.Text)
+                {
+                    break;
+                }
+                else if(item.KoliBarkod != txtBarkod.Text)
+                {
+                    if (satisDialogForm == null || satisDialogForm.IsDisposed)
+                    {
+                        satisDialogForm = new SatisDialog();
+                    }
+                   
+                    satisDialogForm.Show();
+                    
+                }
+            }
         }
     }
 }

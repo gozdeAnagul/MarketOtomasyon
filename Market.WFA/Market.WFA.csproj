@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatisDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatisDialog.Designer.cs">
+      <DependentUpon>SatisDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="SatisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SatisDialog.resx">
+      <DependentUpon>SatisDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SatisForm.resx">
       <DependentUpon>SatisForm.cs</DependentUpon>
     </EmbeddedResource>
