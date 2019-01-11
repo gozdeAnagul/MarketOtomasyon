@@ -186,7 +186,15 @@ namespace Market.WFA
             fis.Satislar = satislar;
             fis.OdemeYontemi = odemeYontemi;
             fis.GenelToplam = genelTutar;
-            new FisRepo().Insert(fis);
+
+            if (new FisRepo().Insert(fis)>0)
+            {
+                MessageBox.Show("Odeme Alindi.");
+            }
+            else
+            {
+                MessageBox.Show("Odeme Basarisiz.");
+            }
         }
     }
 }
