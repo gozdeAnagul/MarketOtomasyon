@@ -33,26 +33,24 @@
             this.lstSepet = new System.Windows.Forms.ListBox();
             this.rbNakit = new System.Windows.Forms.RadioButton();
             this.rbKrediKarti = new System.Windows.Forms.RadioButton();
-            this.lblTutar = new System.Windows.Forms.Label();
+            this.lblToplamFiyat = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtParaUstu = new System.Windows.Forms.TextBox();
             this.txtTutar = new System.Windows.Forms.TextBox();
-            this.txtNakit = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAlinan = new System.Windows.Forms.TextBox();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunCikar = new System.Windows.Forms.Button();
             this.cmbUrunler = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.nuUrunAdet = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblTutar = new System.Windows.Forms.Label();
+            this.btnOdemeYap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +87,12 @@
             this.rbNakit.TabStop = true;
             this.rbNakit.Text = "Nakit Ödeme";
             this.rbNakit.UseVisualStyleBackColor = true;
+            this.rbNakit.CheckedChanged += new System.EventHandler(this.rbNakit_CheckedChanged);
             // 
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Location = new System.Drawing.Point(509, 168);
+            this.rbKrediKarti.Location = new System.Drawing.Point(604, 28);
             this.rbKrediKarti.Name = "rbKrediKarti";
             this.rbKrediKarti.Size = new System.Drawing.Size(120, 17);
             this.rbKrediKarti.TabIndex = 4;
@@ -101,15 +100,15 @@
             this.rbKrediKarti.Text = "Kredi Kartı ileÖdeme";
             this.rbKrediKarti.UseVisualStyleBackColor = true;
             // 
-            // lblTutar
+            // lblToplamFiyat
             // 
-            this.lblTutar.AutoSize = true;
-            this.lblTutar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(353, 355);
-            this.lblTutar.Name = "lblTutar";
-            this.lblTutar.Size = new System.Drawing.Size(129, 22);
-            this.lblTutar.TabIndex = 5;
-            this.lblTutar.Text = "Toplam Fiyat";
+            this.lblToplamFiyat.AutoSize = true;
+            this.lblToplamFiyat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamFiyat.Location = new System.Drawing.Point(251, 356);
+            this.lblToplamFiyat.Name = "lblToplamFiyat";
+            this.lblToplamFiyat.Size = new System.Drawing.Size(136, 22);
+            this.lblToplamFiyat.TabIndex = 5;
+            this.lblToplamFiyat.Text = "Toplam Fiyat:";
             // 
             // panel1
             // 
@@ -118,7 +117,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtParaUstu);
             this.panel1.Controls.Add(this.txtTutar);
-            this.panel1.Controls.Add(this.txtNakit);
+            this.panel1.Controls.Add(this.txtAlinan);
             this.panel1.Location = new System.Drawing.Point(509, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 111);
@@ -162,40 +161,17 @@
             // 
             this.txtTutar.Location = new System.Drawing.Point(82, 42);
             this.txtTutar.Name = "txtTutar";
+            this.txtTutar.ReadOnly = true;
             this.txtTutar.Size = new System.Drawing.Size(118, 20);
             this.txtTutar.TabIndex = 1;
             // 
-            // txtNakit
+            // txtAlinan
             // 
-            this.txtNakit.Location = new System.Drawing.Point(82, 15);
-            this.txtNakit.Name = "txtNakit";
-            this.txtNakit.Size = new System.Drawing.Size(118, 20);
-            this.txtNakit.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Location = new System.Drawing.Point(509, 191);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 73);
-            this.panel2.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Toplam Tutar";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(95, 23);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(107, 20);
-            this.textBox4.TabIndex = 0;
+            this.txtAlinan.Location = new System.Drawing.Point(82, 15);
+            this.txtAlinan.Name = "txtAlinan";
+            this.txtAlinan.Size = new System.Drawing.Size(118, 20);
+            this.txtAlinan.TabIndex = 0;
+            this.txtAlinan.TextChanged += new System.EventHandler(this.txtNakit_TextChanged);
             // 
             // btnUrunEkle
             // 
@@ -255,20 +231,39 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Ürün Adeti:";
             // 
+            // lblTutar
+            // 
+            this.lblTutar.AutoSize = true;
+            this.lblTutar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutar.Location = new System.Drawing.Point(393, 360);
+            this.lblTutar.Name = "lblTutar";
+            this.lblTutar.Size = new System.Drawing.Size(0, 17);
+            this.lblTutar.TabIndex = 14;
+            // 
+            // btnOdemeYap
+            // 
+            this.btnOdemeYap.Location = new System.Drawing.Point(509, 169);
+            this.btnOdemeYap.Name = "btnOdemeYap";
+            this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
+            this.btnOdemeYap.TabIndex = 15;
+            this.btnOdemeYap.Text = "Ödemeyi Tamamla";
+            this.btnOdemeYap.UseVisualStyleBackColor = true;
+            // 
             // SatisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.btnOdemeYap);
+            this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.nuUrunAdet);
             this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.cmbUrunler);
             this.Controls.Add(this.btnUrunCikar);
             this.Controls.Add(this.btnUrunEkle);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblTutar);
+            this.Controls.Add(this.lblToplamFiyat);
             this.Controls.Add(this.rbKrediKarti);
             this.Controls.Add(this.rbNakit);
             this.Controls.Add(this.lstSepet);
@@ -280,8 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,22 +288,21 @@
         private System.Windows.Forms.ListBox lstSepet;
         private System.Windows.Forms.RadioButton rbNakit;
         private System.Windows.Forms.RadioButton rbKrediKarti;
-        private System.Windows.Forms.Label lblTutar;
+        private System.Windows.Forms.Label lblToplamFiyat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtParaUstu;
         private System.Windows.Forms.TextBox txtTutar;
-        private System.Windows.Forms.TextBox txtNakit;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtAlinan;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunCikar;
         private System.Windows.Forms.ComboBox cmbUrunler;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.NumericUpDown nuUrunAdet;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTutar;
+        private System.Windows.Forms.Button btnOdemeYap;
     }
 }

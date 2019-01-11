@@ -2,7 +2,6 @@
 using Market.Models.Entities;
 using Market.Models.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,10 +15,11 @@ namespace Market.WFA
             InitializeComponent();
         }
         public Urun seciliUrun;
-        public Fis Fis;
         public SatisViewModel seciliSatis;
+        public decimal genelTutar = 0;
         private void Satis_Load(object sender, EventArgs e)
         {
+            panel1.Visible = false;
             KategorileriGetir();
         }
 
@@ -66,13 +66,13 @@ namespace Market.WFA
 
             var urun = new UrunRepo().GetAll().FirstOrDefault(x => x.UrunBarkod == seciliBarkod);
             var adet = (int)nuUrunAdet.Value;
-            if (urun.Stok-adet>=0 && adet!=0)
+            if (urun.Stok - adet >= 0 && adet != 0)
             {
                 bool VarMi = false;
                 foreach (SatisViewModel satis in lstSepet.Items)
                 {
                     VarMi = (satis.UrunBarkod == urun.UrunBarkod);
-                    
+
                     if (VarMi)
                     {
                         seciliSatis = satis;
@@ -82,8 +82,8 @@ namespace Market.WFA
 
                 if (VarMi)
                 {
-                    
-                    if (seciliSatis.Adet+adet>urun.Stok)
+
+                    if (seciliSatis.Adet + adet > urun.Stok)
                     {
                         MessageBox.Show($"Stokta yeterli sayıda {urun.UrunAdi} yok.");
                     }
@@ -108,10 +108,17 @@ namespace Market.WFA
                     };
                     lstSepet.Items.Add(yeniSatisViewModel);
                 }
+
+                genelTutar = 0;
+                foreach (SatisViewModel item in lstSepet.Items)
+                {
+                    genelTutar += item.Fiyat;
+                }
+                lblTutar.Text = genelTutar.ToString();
             }
             else
             {
-                if (adet==0)
+                if (adet == 0)
                 {
                     MessageBox.Show("Sepete en az 1 ürün eklemelisiniz.");
                 }
@@ -122,6 +129,34 @@ namespace Market.WFA
             }
         }
 
-        
+        private void rbNakit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNakit.Checked == true)
+            {
+                panel1.Visible = true;
+                txtTutar.Text = genelTutar.ToString();
+            }
+            else if (rbNakit.Checked==false)
+            {
+                panel1.Visible = false;
+            }
+        }
+
+        private void txtNakit_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAlinan.Text == string.Empty) return;
+
+            var alinanPara = decimal.Parse(txtAlinan.Text);
+            var tutar = decimal.Parse(txtTutar.Text);
+
+            if (alinanPara - tutar > 0)
+            {
+                txtParaUstu.Text = (alinanPara - tutar).ToString();
+            }
+            else
+            {
+                txtParaUstu.Text = "Para yetmiyor.";
+            }
+        }
     }
 }
