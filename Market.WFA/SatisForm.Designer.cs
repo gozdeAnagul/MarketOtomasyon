@@ -248,6 +248,7 @@
             this.btnOdemeYap.TabIndex = 15;
             this.btnOdemeYap.Text = "Ödemeyi Tamamla";
             this.btnOdemeYap.UseVisualStyleBackColor = true;
+            this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
             // SatisForm
             // 

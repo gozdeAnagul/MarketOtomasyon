@@ -1,7 +1,9 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
+using Market.Models.Enums;
 using Market.Models.ViewModels;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -161,6 +163,30 @@ namespace Market.WFA
             {
                 txtParaUstu.Text = "Para yetmiyor.";
             }
+        }
+
+        private void btnOdemeYap_Click(object sender, EventArgs e)
+        {
+            var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Peşin : OdemeYontemi.KrediKartı;
+            
+            Fis fis = new Fis();
+            List<Satis> satislar = new List<Satis>();
+
+            foreach (SatisViewModel item in lstSepet.Items)
+            {
+                satislar.Add(new Satis
+                {
+                    UrunId = item.UrunId,
+                    AltToplam = item.Fiyat,
+                    SatisAdeti = item.Adet,
+                    FisId = fis.Id
+                });
+            }
+
+            fis.Satislar = satislar;
+            fis.OdemeYontemi = odemeYontemi;
+            fis.GenelToplam = genelTutar;
+            new FisRepo().Insert(fis);
         }
     }
 }
