@@ -37,9 +37,7 @@ namespace Market.WFA
             MalKabulForm.WindowState = FormWindowState.Maximized;
         }
 
-        private void MarketOtomasyon_Load(object sender, EventArgs e)
-        {
-        }
+
 
         private void işlemlerToolStripMenuItem_Click(object sender, EventArgs e)
         {

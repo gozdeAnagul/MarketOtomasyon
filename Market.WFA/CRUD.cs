@@ -21,10 +21,14 @@ namespace Market.WFA
 
         private void VerileriDoldur()
         {
+
+            seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+
+
             lstUrunler.DataSource = null;
             lstKategori.DataSource = new KategoriRepo().GetAll();
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
-            lstUrunler.DataSource = new UrunRepo().GetAll();
+            lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
         }
 
         private void btnKatEkle_Click(object sender, EventArgs e)

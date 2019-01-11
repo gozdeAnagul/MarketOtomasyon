@@ -38,6 +38,7 @@ namespace Market.WFA
 
             seciliBarkod = seciliUrun.KoliBarkod;
             txtBarkod.Text = seciliBarkod;
+            lbIicAdetKoli.Text = seciliUrun.KoliIciAdet.ToString();
             
         }
         
