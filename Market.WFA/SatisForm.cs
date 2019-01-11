@@ -15,7 +15,7 @@ namespace Market.WFA
             InitializeComponent();
         }
         public Urun seciliUrun;
-
+        public Fis Fis;
         private void Satis_Load(object sender, EventArgs e)
         {
             KategorileriGetir();
@@ -54,6 +54,7 @@ namespace Market.WFA
 
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
+            Fis = new Fis();
             FiseUrunEkle();
         }
 
@@ -65,14 +66,18 @@ namespace Market.WFA
             var urun = new UrunRepo().GetAll().FirstOrDefault(x => x.UrunBarkod == seciliBarkod);
             var adet = (int)nuUrunAdet.Value;
 
-            var yeniSatis = new SatisViewModel
+            if (urun.Stok-adet>=0)
             {
-                UrunBarkod = seciliBarkod,
-                UrunAdi = urun.UrunAdi,
-                Adet = adet,
-                Fiyat = adet * urun.SatisFiyat,
-            };
-            lstSepet.Items.Add(yeniSatis);
+                var yeniSatisViewModel = new SatisViewModel
+                {
+                    UrunId = urun.Id,
+                    UrunBarkod = seciliBarkod,
+                    UrunAdi = urun.UrunAdi,
+                    Adet = adet,
+                    Fiyat = adet * urun.SatisFiyat,
+                };
+                lstSepet.Items.Add(yeniSatisViewModel);
+            }
         }
 
         

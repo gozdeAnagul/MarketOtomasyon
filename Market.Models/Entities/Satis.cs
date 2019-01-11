@@ -21,6 +21,6 @@ namespace Market.Models.Entities
 
         [ForeignKey("UrunId")]
         public Urun Urun { get; set; }
-
+        
     }
 }
