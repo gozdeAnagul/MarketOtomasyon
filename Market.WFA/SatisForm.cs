@@ -153,6 +153,10 @@ namespace Market.WFA
             {
                 txtParaUstu.Text = (alinanPara - tutar).ToString();
             }
+            else if (alinanPara==tutar)
+            {
+                txtParaUstu.Text = "Para tam.";
+            }
             else
             {
                 txtParaUstu.Text = "Para yetmiyor.";
