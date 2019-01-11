@@ -1,5 +1,4 @@
 ﻿using Market.Models.Abstracts;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,7 +12,7 @@ namespace Market.Models.Entities
         public decimal AltToplam { get; set; } = 0;
 
         public int UrunId { get; set; }
-
+        
         [Required]
         public int FisId { get; set; }
 

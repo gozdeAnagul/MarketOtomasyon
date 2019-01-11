@@ -2,13 +2,8 @@
 using Market.Models.Entities;
 using Market.Models.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -18,10 +13,9 @@ namespace Market.WFA
         public SatisForm()
         {
             InitializeComponent();
-            Models = new UrunKontrolViewModels();
         }
-        public UrunKontrolViewModels Models;
         public Urun seciliUrun;
+
         private void Satis_Load(object sender, EventArgs e)
         {
             KategorileriGetir();
@@ -67,7 +61,20 @@ namespace Market.WFA
         {
             var seciliBarkod = txtBarkod.Text;
             if (seciliBarkod == null) return;
-            
+
+            var urun = new UrunRepo().GetAll().FirstOrDefault(x => x.UrunBarkod == seciliBarkod);
+            var adet = (int)nuUrunAdet.Value;
+
+            var yeniSatis = new SatisViewModel
+            {
+                UrunBarkod = seciliBarkod,
+                UrunAdi = urun.UrunAdi,
+                Adet = adet,
+                Fiyat = adet * urun.SatisFiyat,
+            };
+            lstSepet.Items.Add(yeniSatis);
         }
+
+        
     }
 }

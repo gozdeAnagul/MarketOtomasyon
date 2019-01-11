@@ -30,7 +30,7 @@
         {
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.pbBarkod = new System.Windows.Forms.PictureBox();
-            this.lstFis = new System.Windows.Forms.ListBox();
+            this.lstSepet = new System.Windows.Forms.ListBox();
             this.rbNakit = new System.Windows.Forms.RadioButton();
             this.rbKrediKarti = new System.Windows.Forms.RadioButton();
             this.lblTutar = new System.Windows.Forms.Label();
@@ -48,9 +48,12 @@
             this.btnUrunCikar = new System.Windows.Forms.Button();
             this.cmbUrunler = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
+            this.nuUrunAdet = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBarkod
@@ -68,13 +71,13 @@
             this.pbBarkod.TabIndex = 1;
             this.pbBarkod.TabStop = false;
             // 
-            // lstFis
+            // lstSepet
             // 
-            this.lstFis.FormattingEnabled = true;
-            this.lstFis.Location = new System.Drawing.Point(255, 29);
-            this.lstFis.Name = "lstFis";
-            this.lstFis.Size = new System.Drawing.Size(227, 303);
-            this.lstFis.TabIndex = 2;
+            this.lstSepet.FormattingEnabled = true;
+            this.lstSepet.Location = new System.Drawing.Point(255, 29);
+            this.lstSepet.Name = "lstSepet";
+            this.lstSepet.Size = new System.Drawing.Size(227, 303);
+            this.lstSepet.TabIndex = 2;
             // 
             // rbNakit
             // 
@@ -102,7 +105,7 @@
             // 
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(251, 356);
+            this.lblTutar.Location = new System.Drawing.Point(353, 355);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(129, 22);
             this.lblTutar.TabIndex = 5;
@@ -196,7 +199,7 @@
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(21, 238);
+            this.btnUrunEkle.Location = new System.Drawing.Point(21, 266);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(92, 36);
             this.btnUrunEkle.TabIndex = 8;
@@ -206,7 +209,7 @@
             // 
             // btnUrunCikar
             // 
-            this.btnUrunCikar.Location = new System.Drawing.Point(144, 238);
+            this.btnUrunCikar.Location = new System.Drawing.Point(144, 266);
             this.btnUrunCikar.Name = "btnUrunCikar";
             this.btnUrunCikar.Size = new System.Drawing.Size(92, 36);
             this.btnUrunCikar.TabIndex = 9;
@@ -231,11 +234,34 @@
             this.cmbKategoriler.TabIndex = 11;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
-            // Satis
+            // nuUrunAdet
+            // 
+            this.nuUrunAdet.Location = new System.Drawing.Point(116, 237);
+            this.nuUrunAdet.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nuUrunAdet.Name = "nuUrunAdet";
+            this.nuUrunAdet.Size = new System.Drawing.Size(120, 20);
+            this.nuUrunAdet.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(53, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Ürün Adeti:";
+            // 
+            // SatisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.nuUrunAdet);
             this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.cmbUrunler);
             this.Controls.Add(this.btnUrunCikar);
@@ -245,10 +271,10 @@
             this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.rbKrediKarti);
             this.Controls.Add(this.rbNakit);
-            this.Controls.Add(this.lstFis);
+            this.Controls.Add(this.lstSepet);
             this.Controls.Add(this.pbBarkod);
             this.Controls.Add(this.txtBarkod);
-            this.Name = "Satis";
+            this.Name = "SatisForm";
             this.Text = "Satıs";
             this.Load += new System.EventHandler(this.Satis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
@@ -256,6 +282,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +292,7 @@
 
         private System.Windows.Forms.TextBox txtBarkod;
         private System.Windows.Forms.PictureBox pbBarkod;
-        private System.Windows.Forms.ListBox lstFis;
+        private System.Windows.Forms.ListBox lstSepet;
         private System.Windows.Forms.RadioButton rbNakit;
         private System.Windows.Forms.RadioButton rbKrediKarti;
         private System.Windows.Forms.Label lblTutar;
@@ -283,5 +310,7 @@
         private System.Windows.Forms.Button btnUrunCikar;
         private System.Windows.Forms.ComboBox cmbUrunler;
         private System.Windows.Forms.ComboBox cmbKategoriler;
+        private System.Windows.Forms.NumericUpDown nuUrunAdet;
+        private System.Windows.Forms.Label label5;
     }
 }
