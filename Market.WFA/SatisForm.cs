@@ -93,7 +93,6 @@ namespace Market.WFA
                         seciliSatis.Fiyat = urun.SatisFiyat * seciliSatis.Adet;
                         lstSepet.Items.Remove(seciliSatis);
                         lstSepet.Items.Add(seciliSatis);
-                        UrunleriGetir();
                     }
                 }
                 else
@@ -108,7 +107,6 @@ namespace Market.WFA
                         Stok = urun.Stok
                     };
                     lstSepet.Items.Add(yeniSatisViewModel);
-                    UrunleriGetir();
                 }
             }
             else
