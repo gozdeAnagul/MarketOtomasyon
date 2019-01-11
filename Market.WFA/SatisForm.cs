@@ -82,11 +82,19 @@ namespace Market.WFA
 
                 if (VarMi)
                 {
-                    seciliSatis.Adet = seciliSatis.Adet + 1;
-                    seciliSatis.Fiyat = urun.SatisFiyat*seciliSatis.Adet;
-                    lstSepet.Items.Remove(seciliSatis);
-                    lstSepet.Items.Add(seciliSatis);
-                    UrunleriGetir();
+                    
+                    if (seciliSatis.Adet+adet>urun.Stok)
+                    {
+                        MessageBox.Show($"Stokta yeterli sayıda {urun.UrunAdi} yok.");
+                    }
+                    else
+                    {
+                        seciliSatis.Adet = seciliSatis.Adet + adet;
+                        seciliSatis.Fiyat = urun.SatisFiyat * seciliSatis.Adet;
+                        lstSepet.Items.Remove(seciliSatis);
+                        lstSepet.Items.Add(seciliSatis);
+                        UrunleriGetir();
+                    }
                 }
                 else
                 {
