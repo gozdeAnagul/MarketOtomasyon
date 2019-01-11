@@ -8,6 +8,7 @@
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
 
+        public int Stok { get; set; }
         public override string ToString() => $"{UrunAdi} X {Adet} = {Fiyat}";
     }
 }
