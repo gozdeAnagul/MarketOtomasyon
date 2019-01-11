@@ -187,9 +187,15 @@ namespace Market.WFA
             fis.OdemeYontemi = odemeYontemi;
             fis.GenelToplam = genelTutar;
 
-            if (new FisRepo().Insert(fis)>0)
+            if (new FisRepo().Insert(fis) > 0)
             {
                 MessageBox.Show("Odeme Alindi.");
+                foreach (Satis item in satislar)
+                {
+                    var urun = new UrunRepo().GetById(item.UrunId);
+                  //  urun.Stok -= item.SatisAdeti;
+                    new UrunRepo().Update();
+                }
             }
             else
             {
