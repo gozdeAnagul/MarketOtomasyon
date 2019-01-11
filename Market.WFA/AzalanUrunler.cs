@@ -19,7 +19,7 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
-       
+        
 
         private void AzalanUrunler_Load(object sender, EventArgs e)
         {
@@ -52,6 +52,7 @@ namespace Market.WFA
             {
                 MessageBox.Show(ex.Message);
             }
+            
 
         }
         private void ListeyiYenile()
@@ -62,13 +63,22 @@ namespace Market.WFA
 
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MyContext db = new MyContext();
             var seciliKategori = cmbKategoriler.SelectedItem as Kategori;
             Urun urun = new Urun();
+            
             lstKategoriUrunleri.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
-           // lblKatUrunAdeti.Text = new UrunRepo().GetAll(x=>x.KategoriId==seciliKategori.Id).Count.ToString();
-            lblKatUrunAdeti.Text = $"{seciliKategori.ToString()} içerisinde toplam {new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id).Count.ToString()} adet ürün vardır";
-         //RaporViewModel
+           
+
+            var KategoriFarkliUrun = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id).Count.ToString();
+            lblKatUrunAdeti.Text = $"{seciliKategori.ToString()} içerisinde toplam {KategoriFarkliUrun} adet farklı ürün vardır";
+
+            var ToplamStok = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id).Sum(x => x.Stok);
+            lblKatToplamUrun.Text = $"{seciliKategori.ToString()} içerisinde toplam {ToplamStok} adet ürün vardır.";
+
+
+       
+
+        
         }
     }
 }
