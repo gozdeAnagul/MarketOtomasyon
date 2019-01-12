@@ -76,6 +76,7 @@
             this.lstSepet.Name = "lstSepet";
             this.lstSepet.Size = new System.Drawing.Size(227, 303);
             this.lstSepet.TabIndex = 2;
+            this.lstSepet.SelectedIndexChanged += new System.EventHandler(this.lstSepet_SelectedIndexChanged);
             // 
             // rbNakit
             // 
@@ -99,6 +100,7 @@
             this.rbKrediKarti.TabStop = true;
             this.rbKrediKarti.Text = "Kredi Kartı ileÖdeme";
             this.rbKrediKarti.UseVisualStyleBackColor = true;
+            this.rbKrediKarti.CheckedChanged += new System.EventHandler(this.rbKrediKarti_CheckedChanged);
             // 
             // lblToplamFiyat
             // 
