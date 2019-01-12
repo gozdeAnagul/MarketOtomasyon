@@ -102,7 +102,7 @@ namespace Market.WFA
                 MessageBox.Show(ex.Message);
             }
         }
- 
+
         private void kategoriSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lstSeciliKat = lstKategori.SelectedItem as Kategori;
@@ -116,7 +116,7 @@ namespace Market.WFA
             {
                 var silinecekKat = new KategoriRepo();
                 silinecekKat.Delete(lstSeciliKat);
-               
+
                 VerileriDoldur();
             }
             catch (DbUpdateException ex)
@@ -143,12 +143,39 @@ namespace Market.WFA
                 var silinecekUrun = new UrunRepo();
                 silinecekUrun.Delete(lstSeciliUrun);
                 VerileriDoldur();
-                
+
 
             }
             catch (DbUpdateException ex)
             {
                 MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            lstSeciliUrun = lstUrunler.SelectedItem as Urun;
+            var guncellenecekUrun = new UrunRepo().GetById(lstSeciliUrun.Id);           
+            if (lstSeciliUrun == null) return;          
+            try
+            {                 
+                lstSeciliUrun.KategoriId = seciliKategori.Id;
+                lstSeciliUrun.UrunAdi = txtUrunAdi.Text;
+                lstSeciliUrun.Aciklama = txtUrunAciklama.Text;
+                lstSeciliUrun.KoliIciAdet = Convert.ToInt32(txtKoliIciAdet.Text);
+                lstSeciliUrun.Kdv = Convert.ToDecimal(txtKdv.Text);
+                lstSeciliUrun.KoliBarkod = lstSeciliUrun.KoliBarkod;
+                lstSeciliUrun.UrunBarkod = lstSeciliUrun.UrunBarkod;
+                lstSeciliUrun.AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text);
+                if (new UrunRepo().Update()> 0)
+                {
+                    MessageBox.Show("Güncelleme Başarılı.");
+                    VerileriDoldur();
+                }
             }
             catch (Exception ex)
             {

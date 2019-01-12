@@ -30,7 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lstKategori = new System.Windows.Forms.ListBox();
+            this.cmsKatSil = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kategoriSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstUrunler = new System.Windows.Forms.ListBox();
+            this.cmsUrunSil = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.urunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtKategori = new System.Windows.Forms.TextBox();
             this.btnKatEkle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
@@ -49,10 +53,6 @@
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.cmsKatSil = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.kategoriSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsUrunSil = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.urunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsKatSil.SuspendLayout();
             this.cmsUrunSil.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,20 @@
             this.lstKategori.Size = new System.Drawing.Size(314, 147);
             this.lstKategori.TabIndex = 0;
             // 
+            // cmsKatSil
+            // 
+            this.cmsKatSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kategoriSilToolStripMenuItem});
+            this.cmsKatSil.Name = "cmsKatSil";
+            this.cmsKatSil.Size = new System.Drawing.Size(136, 26);
+            // 
+            // kategoriSilToolStripMenuItem
+            // 
+            this.kategoriSilToolStripMenuItem.Name = "kategoriSilToolStripMenuItem";
+            this.kategoriSilToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.kategoriSilToolStripMenuItem.Text = "Kategori_Sil";
+            this.kategoriSilToolStripMenuItem.Click += new System.EventHandler(this.kategoriSilToolStripMenuItem_Click);
+            // 
             // lstUrunler
             // 
             this.lstUrunler.ContextMenuStrip = this.cmsUrunSil;
@@ -74,6 +88,20 @@
             this.lstUrunler.Name = "lstUrunler";
             this.lstUrunler.Size = new System.Drawing.Size(381, 147);
             this.lstUrunler.TabIndex = 2;
+            // 
+            // cmsUrunSil
+            // 
+            this.cmsUrunSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.urunToolStripMenuItem});
+            this.cmsUrunSil.Name = "cmsUrunSil";
+            this.cmsUrunSil.Size = new System.Drawing.Size(118, 26);
+            // 
+            // urunToolStripMenuItem
+            // 
+            this.urunToolStripMenuItem.Name = "urunToolStripMenuItem";
+            this.urunToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.urunToolStripMenuItem.Text = "Urun_Sil";
+            this.urunToolStripMenuItem.Click += new System.EventHandler(this.urunToolStripMenuItem_Click);
             // 
             // txtKategori
             // 
@@ -227,34 +255,7 @@
             this.btnGuncelle.TabIndex = 27;
             this.btnGuncelle.Text = "Ürün Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // cmsKatSil
-            // 
-            this.cmsKatSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kategoriSilToolStripMenuItem});
-            this.cmsKatSil.Name = "cmsKatSil";
-            this.cmsKatSil.Size = new System.Drawing.Size(136, 26);
-            // 
-            // kategoriSilToolStripMenuItem
-            // 
-            this.kategoriSilToolStripMenuItem.Name = "kategoriSilToolStripMenuItem";
-            this.kategoriSilToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.kategoriSilToolStripMenuItem.Text = "Kategori_Sil";
-            this.kategoriSilToolStripMenuItem.Click += new System.EventHandler(this.kategoriSilToolStripMenuItem_Click);
-            // 
-            // cmsUrunSil
-            // 
-            this.cmsUrunSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.urunToolStripMenuItem});
-            this.cmsUrunSil.Name = "cmsUrunSil";
-            this.cmsUrunSil.Size = new System.Drawing.Size(118, 26);
-            // 
-            // urunToolStripMenuItem
-            // 
-            this.urunToolStripMenuItem.Name = "urunToolStripMenuItem";
-            this.urunToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.urunToolStripMenuItem.Text = "Urun_Sil";
-            this.urunToolStripMenuItem.Click += new System.EventHandler(this.urunToolStripMenuItem_Click);
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // CRUD
             // 
