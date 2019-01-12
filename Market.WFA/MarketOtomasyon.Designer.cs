@@ -33,6 +33,7 @@
             this.satışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.işlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.azalanUrunlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.malGirişToolStripMenuItem,
             this.satışToolStripMenuItem,
             this.işlemlerToolStripMenuItem,
-            this.azalanUrunlerToolStripMenuItem});
+            this.azalanUrunlerToolStripMenuItem,
+            this.raporlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(902, 24);
@@ -77,6 +79,13 @@
             this.azalanUrunlerToolStripMenuItem.Text = "Azalan Urunler";
             this.azalanUrunlerToolStripMenuItem.Click += new System.EventHandler(this.azalanUrunlerToolStripMenuItem_Click);
             // 
+            // raporlarToolStripMenuItem
+            // 
+            this.raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
+            this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.raporlarToolStripMenuItem.Text = "Raporlar";
+            this.raporlarToolStripMenuItem.Click += new System.EventHandler(this.raporlarToolStripMenuItem_Click);
+            // 
             // MarketOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,7 +100,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MarketOtomasyon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,6 +114,7 @@
         private System.Windows.Forms.ToolStripMenuItem satışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem işlemlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem azalanUrunlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem raporlarToolStripMenuItem;
     }
 }
 

@@ -137,6 +137,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lstAzalanUrunler);
             this.Name = "AzalanUrunler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AzalanUrunler";
             this.Load += new System.EventHandler(this.AzalanUrunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuKutu)).EndInit();

@@ -14,7 +14,7 @@ namespace Market.WFA
         private SatisForm satisForm;
         private MalKabul MalKabulForm;
         private CRUD CrudIslemleriForm;
-
+        private Raporlar raporlarForm;
         private void satışToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (satisForm == null || satisForm.IsDisposed)
@@ -59,6 +59,17 @@ namespace Market.WFA
             azalanUrunlerForm.MdiParent = this;
             azalanUrunlerForm.Show();
             azalanUrunlerForm.WindowState = FormWindowState.Maximized;
+        }
+
+        private void raporlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (raporlarForm == null || raporlarForm.IsDisposed)
+            {
+                raporlarForm = new Raporlar();
+            }
+            raporlarForm.MdiParent = this;
+            raporlarForm.Show();
+            raporlarForm.WindowState = FormWindowState.Maximized;
         }
     }
 }
