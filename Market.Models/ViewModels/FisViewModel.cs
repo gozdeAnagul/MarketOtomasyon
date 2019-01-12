@@ -1,5 +1,4 @@
 ﻿using Market.Models.Entities;
-using System;
 using System.Collections.Generic;
 
 namespace Market.Models.ViewModels
