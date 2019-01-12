@@ -1,19 +1,13 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Market.WFA
 {
     public partial class SatisDialog : Form
     {
+        public MalKabul malkabulForm;
         public SatisDialog()
         {
             InitializeComponent();
@@ -32,8 +26,8 @@ namespace Market.WFA
             if (txtYeniBarkod.Text == null) return;
             try
             {
+                
                 Random rnd = new Random();
-
                 var urun = new Urun
                 {
                     KategoriId = seciliKategori.Id,
@@ -60,6 +54,11 @@ namespace Market.WFA
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void SatisDialog_Load(object sender, EventArgs e)
+        {
+            txtYeniBarkod.Text = malkabulForm.txtBarkod.Text;
         }
     }
 }

@@ -170,12 +170,12 @@
         private System.Windows.Forms.NumericUpDown nuKoli;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblBarkod;
-        private System.Windows.Forms.TextBox txtBarkod;
         private System.Windows.Forms.PictureBox pbBarkod;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.ListBox lstUrunler;
         private System.Windows.Forms.Button btnBarkodGetir;
         private System.Windows.Forms.Label lblKoliUrunu;
         private System.Windows.Forms.Label lbIicAdetKoli;
+        public System.Windows.Forms.TextBox txtBarkod;
     }
 }
