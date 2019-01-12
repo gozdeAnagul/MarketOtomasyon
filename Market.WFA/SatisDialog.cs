@@ -32,7 +32,7 @@ namespace Market.WFA
         {
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
             if (seciliKategori == null) return;
-            if (txtYeniBarkod == null) return;
+            if (txtYeniBarkod.Text == null) return;
             try
             {
                 Random rnd = new Random();

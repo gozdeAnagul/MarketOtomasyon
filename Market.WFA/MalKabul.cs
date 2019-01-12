@@ -1,6 +1,7 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace Market.WFA
     {
         public MalKabul()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
         private string seciliBarkod;
         private Urun seciliUrun;
@@ -20,7 +21,7 @@ namespace Market.WFA
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
         }
-       
+
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
@@ -40,9 +41,9 @@ namespace Market.WFA
             seciliBarkod = seciliUrun.KoliBarkod;
             txtBarkod.Text = seciliBarkod;
             lbIicAdetKoli.Text = seciliUrun.KoliIciAdet.ToString();
-            
+
         }
-        
+
         private void btnStogaEkle_Click(object sender, EventArgs e)
         {
             if (seciliBarkod == null) return;
@@ -63,35 +64,37 @@ namespace Market.WFA
 
         private void ListeyiYenile()
         {
+
             lstUrunler.DataSource = null;
             lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
         }
         private void btnBarkodGetir_Click(object sender, EventArgs e)
         {
-           
-            if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text)==null)
-            {              
+
+            if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text) == null)
+            {
             }
-            var urunList = new UrunRepo().GetAll();
+
             Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
             pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
 
-            foreach (var item in urunList)
+            YeniBarkodMu();
+        }
+        
+        
+        private void YeniBarkodMu()
+        {          
+            if (txtBarkod == null) return;
+
+            var urun = new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text);
+            if(urun.Count<1)
             {
-                if(item.KoliBarkod==txtBarkod.Text)
+                if (satisDialogForm == null || satisDialogForm.IsDisposed)
                 {
-                    break;
+                    satisDialogForm = new SatisDialog();
                 }
-                else if(item.KoliBarkod != txtBarkod.Text)
-                {
-                    if (satisDialogForm == null || satisDialogForm.IsDisposed)
-                    {
-                        satisDialogForm = new SatisDialog();
-                    }
-                   
-                    satisDialogForm.Show();
-                    
-                }
+                satisDialogForm.Show();
+                
             }
         }
     }
