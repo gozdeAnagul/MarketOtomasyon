@@ -23,6 +23,7 @@ namespace Market.WFA
         {
             panel1.Visible = false;
             KategorileriGetir();
+            btnOdemeYap.Enabled = false;
         }
 
         private void KategorileriGetir()
@@ -154,14 +155,17 @@ namespace Market.WFA
             if (alinanPara - tutar > 0)
             {
                 txtParaUstu.Text = (alinanPara - tutar).ToString();
+                btnOdemeYap.Enabled = true;
             }
             else if (alinanPara==tutar)
             {
                 txtParaUstu.Text = "Para tam.";
+                btnOdemeYap.Enabled = true;
             }
             else
             {
                 txtParaUstu.Text = "Para yetmiyor.";
+                btnOdemeYap.Enabled = false;
             }
         }
 
@@ -189,17 +193,48 @@ namespace Market.WFA
 
             if (new FisRepo().Insert(fis) > 0)
             {
-                MessageBox.Show("Odeme Alindi.");
+                MessageBox.Show("Odeme Alindi.","Uyarı!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 foreach (Satis item in satislar)
                 {
                     var urun = new UrunRepo().GetById(item.UrunId);
-                  //  urun.Stok -= item.SatisAdeti;
+                   // urun.Stok = urun.Stok - item.SatisAdeti;
                     new UrunRepo().Update();
                 }
+                SepetiTemizle();
             }
             else
             {
-                MessageBox.Show("Odeme Basarisiz.");
+                MessageBox.Show("Odeme Basarisiz.", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void SepetiTemizle()
+        {
+            lstSepet.Items.Clear();
+            rbKrediKarti.Checked = false;
+            rbNakit.Checked = false;
+            lblTutar.Text = string.Empty;
+            genelTutar = 0;
+            nuUrunAdet.Value = 0;
+            btnOdemeYap.Enabled = false;
+        }
+
+        private void lstSepet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void rbKrediKarti_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbKrediKarti.Checked==true)
+            {
+                btnOdemeYap.Enabled = true;
+                txtAlinan.Text = string.Empty;
+                txtParaUstu.Text = string.Empty;
+            }
+            else
+            {
+                btnOdemeYap.Enabled = false;
             }
         }
     }
