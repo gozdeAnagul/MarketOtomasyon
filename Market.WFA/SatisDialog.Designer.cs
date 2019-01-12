@@ -42,29 +42,30 @@
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.lstUrunler = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.SuspendLayout();
             // 
             // txtYeniBarkod
             // 
-            this.txtYeniBarkod.Location = new System.Drawing.Point(224, 12);
+            this.txtYeniBarkod.Location = new System.Drawing.Point(72, 49);
             this.txtYeniBarkod.Name = "txtYeniBarkod";
-            this.txtYeniBarkod.Size = new System.Drawing.Size(147, 20);
+            this.txtYeniBarkod.Size = new System.Drawing.Size(161, 20);
             this.txtYeniBarkod.TabIndex = 0;
             // 
             // pbBarkod
             // 
-            this.pbBarkod.Location = new System.Drawing.Point(224, 38);
+            this.pbBarkod.Location = new System.Drawing.Point(72, 81);
             this.pbBarkod.Name = "pbBarkod";
-            this.pbBarkod.Size = new System.Drawing.Size(147, 84);
+            this.pbBarkod.Size = new System.Drawing.Size(161, 84);
             this.pbBarkod.TabIndex = 1;
             this.pbBarkod.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(232, 388);
+            this.label8.Location = new System.Drawing.Point(94, 325);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 38;
@@ -72,7 +73,7 @@
             // 
             // txtKoliIciAdet
             // 
-            this.txtKoliIciAdet.Location = new System.Drawing.Point(301, 385);
+            this.txtKoliIciAdet.Location = new System.Drawing.Point(163, 322);
             this.txtKoliIciAdet.Name = "txtKoliIciAdet";
             this.txtKoliIciAdet.Size = new System.Drawing.Size(70, 20);
             this.txtKoliIciAdet.TabIndex = 37;
@@ -80,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 362);
+            this.label3.Location = new System.Drawing.Point(131, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 36;
@@ -89,7 +90,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(245, 331);
+            this.label6.Location = new System.Drawing.Point(107, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 35;
@@ -97,14 +98,14 @@
             // 
             // txtKdv
             // 
-            this.txtKdv.Location = new System.Drawing.Point(301, 359);
+            this.txtKdv.Location = new System.Drawing.Point(163, 296);
             this.txtKdv.Name = "txtKdv";
             this.txtKdv.Size = new System.Drawing.Size(70, 20);
             this.txtKdv.TabIndex = 34;
             // 
             // txtAlisFiyati
             // 
-            this.txtAlisFiyati.Location = new System.Drawing.Point(301, 328);
+            this.txtAlisFiyati.Location = new System.Drawing.Point(163, 265);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
             this.txtAlisFiyati.Size = new System.Drawing.Size(70, 20);
             this.txtAlisFiyati.TabIndex = 33;
@@ -112,7 +113,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 359);
+            this.label4.Location = new System.Drawing.Point(12, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 32;
@@ -121,7 +122,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 328);
+            this.label11.Location = new System.Drawing.Point(14, 175);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 31;
@@ -129,26 +130,26 @@
             // 
             // txtUrunAciklama
             // 
-            this.txtUrunAciklama.Location = new System.Drawing.Point(62, 356);
+            this.txtUrunAciklama.Location = new System.Drawing.Point(72, 203);
             this.txtUrunAciklama.Name = "txtUrunAciklama";
-            this.txtUrunAciklama.Size = new System.Drawing.Size(153, 56);
+            this.txtUrunAciklama.Size = new System.Drawing.Size(161, 56);
             this.txtUrunAciklama.TabIndex = 30;
             this.txtUrunAciklama.Text = "";
             // 
             // cmbKategoriler
             // 
             this.cmbKategoriler.FormattingEnabled = true;
-            this.cmbKategoriler.Location = new System.Drawing.Point(12, 131);
+            this.cmbKategoriler.Location = new System.Drawing.Point(12, 22);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(359, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(221, 21);
             this.cmbKategoriler.TabIndex = 29;
             this.cmbKategoriler.Text = "Kategori Seciniz";
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(62, 428);
+            this.btnUrunEkle.Location = new System.Drawing.Point(54, 348);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(309, 42);
+            this.btnUrunEkle.Size = new System.Drawing.Size(179, 42);
             this.btnUrunEkle.TabIndex = 28;
             this.btnUrunEkle.Text = "Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
@@ -156,24 +157,36 @@
             // 
             // txtUrunAdi
             // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(62, 325);
+            this.txtUrunAdi.Location = new System.Drawing.Point(72, 172);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(153, 20);
+            this.txtUrunAdi.Size = new System.Drawing.Size(161, 20);
             this.txtUrunAdi.TabIndex = 27;
             // 
-            // lstUrunler
+            // label1
             // 
-            this.lstUrunler.FormattingEnabled = true;
-            this.lstUrunler.Location = new System.Drawing.Point(12, 158);
-            this.lstUrunler.Name = "lstUrunler";
-            this.lstUrunler.Size = new System.Drawing.Size(359, 147);
-            this.lstUrunler.TabIndex = 26;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Yeni Barkod:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Barkod:";
             // 
             // SatisDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 498);
+            this.ClientSize = new System.Drawing.Size(257, 393);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtKoliIciAdet);
             this.Controls.Add(this.label3);
@@ -186,10 +199,10 @@
             this.Controls.Add(this.cmbKategoriler);
             this.Controls.Add(this.btnUrunEkle);
             this.Controls.Add(this.txtUrunAdi);
-            this.Controls.Add(this.lstUrunler);
             this.Controls.Add(this.pbBarkod);
             this.Controls.Add(this.txtYeniBarkod);
             this.Name = "SatisDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SatisDialog";
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.ResumeLayout(false);
@@ -213,6 +226,7 @@
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.TextBox txtUrunAdi;
-        private System.Windows.Forms.ListBox lstUrunler;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
