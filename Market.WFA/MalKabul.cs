@@ -70,11 +70,6 @@ namespace Market.WFA
         }
         private void btnBarkodGetir_Click(object sender, EventArgs e)
         {
-
-            if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text) == null)
-            {
-            }
-
             Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
             pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
 
@@ -89,12 +84,16 @@ namespace Market.WFA
             var urun = new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text);
             if(urun.Count<1)
             {
-                if (satisDialogForm == null || satisDialogForm.IsDisposed)
+                DialogResult dialogResult = MessageBox.Show($"{txtBarkod.Text} barkodlu ürün yok. Eklemek ister misiniz?","Uyarı!",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    satisDialogForm = new SatisDialog();
+                    if (satisDialogForm == null || satisDialogForm.IsDisposed)
+                    {
+                        satisDialogForm = new SatisDialog();
+
+                        satisDialogForm.Show();
+                    }
                 }
-                satisDialogForm.Show();
-                
             }
         }
     }
