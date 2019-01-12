@@ -12,7 +12,7 @@ namespace Market.Models.Entities
         public decimal AltToplam { get; set; } = 0;
 
         public int UrunId { get; set; }
-        
+
         [Required]
         public int FisId { get; set; }
 
@@ -21,6 +21,7 @@ namespace Market.Models.Entities
 
         [ForeignKey("UrunId")]
         public Urun Urun { get; set; }
-        
+
+        public override string ToString() => $"{Urun.UrunAdi} {SatisAdeti} {Urun.Kdv} {AltToplam}";
     }
 }

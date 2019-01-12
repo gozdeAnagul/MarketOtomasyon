@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Market.BLL.Repository;
+using System;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -16,5 +10,15 @@ namespace Market.WFA
         {
             InitializeComponent();
         }
+
+        private void Raporlar_Load(object sender, System.EventArgs e)
+        {
+           // var suan = DateTime.Now;
+           // //new KategoriRepo().GetAll(x=>x.);
+           // //new UrunRepo().GetAll(x => x.);
+           // //new SatisRepo().GetAll(x => x.);
+           //label1.Text = new FisRepo().GetAll(x => x.EklenmeZamani>suan.AddMonths(-1)).ToString();
+        }
+
     }
 }
