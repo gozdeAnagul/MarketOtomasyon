@@ -127,6 +127,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SatisDialog.resx">
       <DependentUpon>SatisDialog.cs</DependentUpon>
     </EmbeddedResource>

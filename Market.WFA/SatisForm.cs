@@ -201,6 +201,13 @@ namespace Market.WFA
                     new UrunRepo().Update();
                 }
                 SepetiTemizle();
+
+                FisViewModel fisViewModel = new FisViewModel
+                {
+                    FisId = fis.Id,
+                    SatisListesi=fis.Satislar.ToList()
+                };
+                MessageBox.Show($"{fisViewModel}");
             }
             else
             {

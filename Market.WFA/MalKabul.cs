@@ -1,8 +1,6 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -16,7 +14,7 @@ namespace Market.WFA
         private string seciliBarkod;
         private Urun seciliUrun;
         private Kategori seciliKategori;
-        private SatisDialog satisDialogForm;
+        public SatisDialog satisDialogForm;
         private void MalKabul_Load(object sender, EventArgs e)
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
@@ -73,30 +71,39 @@ namespace Market.WFA
                 MessageBox.Show("Önce Kategori Ekleyiniz!!", "Uyarı!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (txtBarkod.Text == null) return;
-
-            if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text) == null)
-            {
-            }
+            
             if (seciliBarkod == null) return;
-            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
 
+           
             YeniBarkodMu();
+            
         }
            
         private void YeniBarkodMu()
         {          
-            if (txtBarkod == null) return;
-
-            var urun = new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text);
-            if(urun.Count<1)
+            if (txtBarkod != null)
             {
-                if (satisDialogForm == null || satisDialogForm.IsDisposed)
+                var urun = new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text);
+                if (urun.Count < 1)
                 {
-                    satisDialogForm = new SatisDialog();
+                    DialogResult dialogResult = MessageBox.Show($"{txtBarkod.Text} barkodlu ürün kayıtlı değil. Eklemek ister misiniz ?",
+                        "Uyarı!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        if (satisDialogForm == null || satisDialogForm.IsDisposed)
+                        {
+                            satisDialogForm = new SatisDialog
+                            {
+                                malkabulForm = this
+                            };
+                        }
+                        satisDialogForm.Show();
+                    }
                 }
-                satisDialogForm.Show();              
+                Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
             }
+            
         }
     }
 }

@@ -204,6 +204,7 @@
             this.Name = "SatisDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SatisDialog";
+            this.Load += new System.EventHandler(this.SatisDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
