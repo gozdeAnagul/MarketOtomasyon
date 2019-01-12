@@ -21,11 +21,8 @@ namespace Market.WFA
         }
         Kategori seciliKategori;
         private void VerileriDoldur()
-        {
-            lstUrunler.DataSource = null;
-            cmbKategoriler.DataSource = new KategoriRepo().GetAll();
-            lstUrunler.DataSource = new UrunRepo().GetAll();
-
+        {          
+            cmbKategoriler.DataSource = new KategoriRepo().GetAll();           
         }
 
         private void btnUrunEkle_Click(object sender, EventArgs e)

@@ -20,8 +20,8 @@ namespace Market.WFA
         private void MalKabul_Load(object sender, EventArgs e)
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
+          
         }
-
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
@@ -29,7 +29,6 @@ namespace Market.WFA
             if (seciliKategori == null) return;
 
             lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
-
         }
 
         private void lstUrunler_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +40,6 @@ namespace Market.WFA
             seciliBarkod = seciliUrun.KoliBarkod;
             txtBarkod.Text = seciliBarkod;
             lbIicAdetKoli.Text = seciliUrun.KoliIciAdet.ToString();
-
         }
 
         private void btnStogaEkle_Click(object sender, EventArgs e)
@@ -64,24 +62,28 @@ namespace Market.WFA
 
         private void ListeyiYenile()
         {
-
+           
             lstUrunler.DataSource = null;
             lstUrunler.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
         }
         private void btnBarkodGetir_Click(object sender, EventArgs e)
         {
+            if (cmbKategoriler.Items.Count < 1)
+            {
+                MessageBox.Show("Önce Kategori Ekleyiniz!!", "Uyarı!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtBarkod.Text == null) return;
 
             if (new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text) == null)
             {
             }
-
+            if (seciliBarkod == null) return;
             Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
             pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
 
             YeniBarkodMu();
         }
-        
-        
+           
         private void YeniBarkodMu()
         {          
             if (txtBarkod == null) return;
@@ -93,8 +95,7 @@ namespace Market.WFA
                 {
                     satisDialogForm = new SatisDialog();
                 }
-                satisDialogForm.Show();
-                
+                satisDialogForm.Show();              
             }
         }
     }
