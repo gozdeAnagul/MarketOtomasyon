@@ -95,7 +95,8 @@ namespace Market.WFA
                 {
                     satisDialogForm = new SatisDialog();
                 }
-                satisDialogForm.Show();              
+                satisDialogForm.Show();
+                
             }
         }
     }
