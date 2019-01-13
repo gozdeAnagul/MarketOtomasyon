@@ -32,21 +32,23 @@
             this.btnGunlukRapor = new System.Windows.Forms.Button();
             this.btnAylıkRapor = new System.Windows.Forms.Button();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
+            this.btnYazdır = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmRapor)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvmRapor
             // 
             this.dgvmRapor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvmRapor.Location = new System.Drawing.Point(245, 59);
+            this.dgvmRapor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvmRapor.Location = new System.Drawing.Point(0, 0);
             this.dgvmRapor.Name = "dgvmRapor";
             this.dgvmRapor.RowTemplate.Height = 24;
-            this.dgvmRapor.Size = new System.Drawing.Size(810, 369);
+            this.dgvmRapor.Size = new System.Drawing.Size(1392, 554);
             this.dgvmRapor.TabIndex = 0;
             // 
             // btnGunlukRapor
             // 
-            this.btnGunlukRapor.Location = new System.Drawing.Point(18, 110);
+            this.btnGunlukRapor.Location = new System.Drawing.Point(1101, 91);
             this.btnGunlukRapor.Name = "btnGunlukRapor";
             this.btnGunlukRapor.Size = new System.Drawing.Size(188, 39);
             this.btnGunlukRapor.TabIndex = 1;
@@ -56,7 +58,7 @@
             // 
             // btnAylıkRapor
             // 
-            this.btnAylıkRapor.Location = new System.Drawing.Point(18, 171);
+            this.btnAylıkRapor.Location = new System.Drawing.Point(1101, 155);
             this.btnAylıkRapor.Name = "btnAylıkRapor";
             this.btnAylıkRapor.Size = new System.Drawing.Size(188, 43);
             this.btnAylıkRapor.TabIndex = 2;
@@ -65,17 +67,27 @@
             // 
             // dtpTarih
             // 
-            this.dtpTarih.Location = new System.Drawing.Point(18, 59);
+            this.dtpTarih.Location = new System.Drawing.Point(1101, 36);
             this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(188, 22);
+            this.dtpTarih.Size = new System.Drawing.Size(209, 22);
             this.dtpTarih.TabIndex = 3;
             this.dtpTarih.Value = new System.DateTime(2019, 1, 13, 0, 0, 0, 0);
+            // 
+            // btnYazdır
+            // 
+            this.btnYazdır.Location = new System.Drawing.Point(1101, 222);
+            this.btnYazdır.Name = "btnYazdır";
+            this.btnYazdır.Size = new System.Drawing.Size(188, 40);
+            this.btnYazdır.TabIndex = 4;
+            this.btnYazdır.Text = "Yazdır";
+            this.btnYazdır.UseVisualStyleBackColor = true;
             // 
             // Raporlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 554);
+            this.ClientSize = new System.Drawing.Size(1392, 554);
+            this.Controls.Add(this.btnYazdır);
             this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.btnAylıkRapor);
             this.Controls.Add(this.btnGunlukRapor);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button btnGunlukRapor;
         private System.Windows.Forms.Button btnAylıkRapor;
         private System.Windows.Forms.DateTimePicker dtpTarih;
+        private System.Windows.Forms.Button btnYazdır;
     }
 }
