@@ -75,7 +75,7 @@
             // lstSepet
             // 
             this.lstSepet.FormattingEnabled = true;
-            this.lstSepet.Location = new System.Drawing.Point(255, 29);
+            this.lstSepet.Location = new System.Drawing.Point(264, 28);
             this.lstSepet.Name = "lstSepet";
             this.lstSepet.Size = new System.Drawing.Size(227, 303);
             this.lstSepet.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             this.lblToplamFiyat.AutoSize = true;
             this.lblToplamFiyat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamFiyat.Location = new System.Drawing.Point(251, 356);
+            this.lblToplamFiyat.Location = new System.Drawing.Point(260, 355);
             this.lblToplamFiyat.Name = "lblToplamFiyat";
             this.lblToplamFiyat.Size = new System.Drawing.Size(136, 22);
             this.lblToplamFiyat.TabIndex = 5;
@@ -239,7 +239,7 @@
             // 
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(295, 292);
+            this.lblTutar.Location = new System.Drawing.Point(396, 358);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(0, 18);
             this.lblTutar.TabIndex = 14;
