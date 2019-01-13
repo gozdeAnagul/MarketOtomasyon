@@ -56,34 +56,39 @@
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Location = new System.Drawing.Point(21, 94);
+            this.txtBarkod.Location = new System.Drawing.Point(28, 116);
+            this.txtBarkod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(215, 20);
+            this.txtBarkod.Size = new System.Drawing.Size(285, 22);
             this.txtBarkod.TabIndex = 0;
             // 
             // pbBarkod
             // 
-            this.pbBarkod.Location = new System.Drawing.Point(21, 120);
+            this.pbBarkod.Location = new System.Drawing.Point(28, 148);
+            this.pbBarkod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbBarkod.Name = "pbBarkod";
-            this.pbBarkod.Size = new System.Drawing.Size(215, 111);
+            this.pbBarkod.Size = new System.Drawing.Size(287, 137);
             this.pbBarkod.TabIndex = 1;
             this.pbBarkod.TabStop = false;
             // 
             // lstSepet
             // 
             this.lstSepet.FormattingEnabled = true;
-            this.lstSepet.Location = new System.Drawing.Point(255, 29);
+            this.lstSepet.ItemHeight = 16;
+            this.lstSepet.Location = new System.Drawing.Point(340, 36);
+            this.lstSepet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstSepet.Name = "lstSepet";
-            this.lstSepet.Size = new System.Drawing.Size(227, 303);
+            this.lstSepet.Size = new System.Drawing.Size(301, 372);
             this.lstSepet.TabIndex = 2;
-            this.lstSepet.SelectedIndexChanged += new System.EventHandler(this.lstSepet_SelectedIndexChanged);
+           
             // 
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
-            this.rbNakit.Location = new System.Drawing.Point(511, 29);
+            this.rbNakit.Location = new System.Drawing.Point(681, 36);
+            this.rbNakit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNakit.Name = "rbNakit";
-            this.rbNakit.Size = new System.Drawing.Size(87, 17);
+            this.rbNakit.Size = new System.Drawing.Size(111, 21);
             this.rbNakit.TabIndex = 3;
             this.rbNakit.TabStop = true;
             this.rbNakit.Text = "Nakit Ödeme";
@@ -93,9 +98,10 @@
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Location = new System.Drawing.Point(604, 28);
+            this.rbKrediKarti.Location = new System.Drawing.Point(805, 34);
+            this.rbKrediKarti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbKrediKarti.Name = "rbKrediKarti";
-            this.rbKrediKarti.Size = new System.Drawing.Size(120, 17);
+            this.rbKrediKarti.Size = new System.Drawing.Size(159, 21);
             this.rbKrediKarti.TabIndex = 4;
             this.rbKrediKarti.TabStop = true;
             this.rbKrediKarti.Text = "Kredi Kartı ileÖdeme";
@@ -106,9 +112,10 @@
             // 
             this.lblToplamFiyat.AutoSize = true;
             this.lblToplamFiyat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamFiyat.Location = new System.Drawing.Point(251, 356);
+            this.lblToplamFiyat.Location = new System.Drawing.Point(335, 438);
+            this.lblToplamFiyat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblToplamFiyat.Name = "lblToplamFiyat";
-            this.lblToplamFiyat.Size = new System.Drawing.Size(136, 22);
+            this.lblToplamFiyat.Size = new System.Drawing.Size(167, 29);
             this.lblToplamFiyat.TabIndex = 5;
             this.lblToplamFiyat.Text = "Toplam Fiyat:";
             // 
@@ -120,66 +127,74 @@
             this.panel1.Controls.Add(this.txtParaUstu);
             this.panel1.Controls.Add(this.txtTutar);
             this.panel1.Controls.Add(this.txtAlinan);
-            this.panel1.Location = new System.Drawing.Point(509, 52);
+            this.panel1.Location = new System.Drawing.Point(679, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 111);
+            this.panel1.Size = new System.Drawing.Size(284, 137);
             this.panel1.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 76);
+            this.label3.Location = new System.Drawing.Point(25, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Para Üstü";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 50);
+            this.label2.Location = new System.Drawing.Point(4, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Toplam Tutar";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Location = new System.Drawing.Point(16, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Alınan Para";
             // 
             // txtParaUstu
             // 
-            this.txtParaUstu.Location = new System.Drawing.Point(82, 69);
+            this.txtParaUstu.Location = new System.Drawing.Point(109, 85);
+            this.txtParaUstu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtParaUstu.Name = "txtParaUstu";
-            this.txtParaUstu.Size = new System.Drawing.Size(118, 20);
+            this.txtParaUstu.Size = new System.Drawing.Size(156, 22);
             this.txtParaUstu.TabIndex = 2;
             // 
             // txtTutar
             // 
-            this.txtTutar.Location = new System.Drawing.Point(82, 42);
+            this.txtTutar.Location = new System.Drawing.Point(109, 52);
+            this.txtTutar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTutar.Name = "txtTutar";
             this.txtTutar.ReadOnly = true;
-            this.txtTutar.Size = new System.Drawing.Size(118, 20);
+            this.txtTutar.Size = new System.Drawing.Size(156, 22);
             this.txtTutar.TabIndex = 1;
             // 
             // txtAlinan
             // 
-            this.txtAlinan.Location = new System.Drawing.Point(82, 15);
+            this.txtAlinan.Location = new System.Drawing.Point(109, 18);
+            this.txtAlinan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAlinan.Name = "txtAlinan";
-            this.txtAlinan.Size = new System.Drawing.Size(118, 20);
+            this.txtAlinan.Size = new System.Drawing.Size(156, 22);
             this.txtAlinan.TabIndex = 0;
             this.txtAlinan.TextChanged += new System.EventHandler(this.txtNakit_TextChanged);
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Location = new System.Drawing.Point(21, 266);
+            this.btnUrunEkle.Location = new System.Drawing.Point(28, 327);
+            this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(92, 36);
+            this.btnUrunEkle.Size = new System.Drawing.Size(123, 44);
             this.btnUrunEkle.TabIndex = 8;
             this.btnUrunEkle.Text = "Ürün Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
@@ -187,49 +202,55 @@
             // 
             // btnUrunCikar
             // 
-            this.btnUrunCikar.Location = new System.Drawing.Point(144, 266);
+            this.btnUrunCikar.Location = new System.Drawing.Point(192, 327);
+            this.btnUrunCikar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUrunCikar.Name = "btnUrunCikar";
-            this.btnUrunCikar.Size = new System.Drawing.Size(92, 36);
+            this.btnUrunCikar.Size = new System.Drawing.Size(123, 44);
             this.btnUrunCikar.TabIndex = 9;
             this.btnUrunCikar.Text = "Ürün Çıkar";
             this.btnUrunCikar.UseVisualStyleBackColor = true;
+          
             // 
             // cmbUrunler
             // 
             this.cmbUrunler.FormattingEnabled = true;
-            this.cmbUrunler.Location = new System.Drawing.Point(21, 55);
+            this.cmbUrunler.Location = new System.Drawing.Point(28, 68);
+            this.cmbUrunler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUrunler.Name = "cmbUrunler";
-            this.cmbUrunler.Size = new System.Drawing.Size(215, 21);
+            this.cmbUrunler.Size = new System.Drawing.Size(285, 24);
             this.cmbUrunler.TabIndex = 10;
             this.cmbUrunler.SelectedIndexChanged += new System.EventHandler(this.cmbUrunler_SelectedIndexChanged);
             // 
             // cmbKategoriler
             // 
             this.cmbKategoriler.FormattingEnabled = true;
-            this.cmbKategoriler.Location = new System.Drawing.Point(21, 28);
+            this.cmbKategoriler.Location = new System.Drawing.Point(28, 34);
+            this.cmbKategoriler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(215, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(285, 24);
             this.cmbKategoriler.TabIndex = 11;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
             // nuUrunAdet
             // 
-            this.nuUrunAdet.Location = new System.Drawing.Point(116, 237);
+            this.nuUrunAdet.Location = new System.Drawing.Point(155, 292);
+            this.nuUrunAdet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nuUrunAdet.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.nuUrunAdet.Name = "nuUrunAdet";
-            this.nuUrunAdet.Size = new System.Drawing.Size(120, 20);
+            this.nuUrunAdet.Size = new System.Drawing.Size(160, 22);
             this.nuUrunAdet.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 239);
+            this.label5.Location = new System.Drawing.Point(71, 294);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Ürün Adeti:";
             // 
@@ -237,16 +258,18 @@
             // 
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(393, 360);
+            this.lblTutar.Location = new System.Drawing.Point(524, 443);
+            this.lblTutar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTutar.Name = "lblTutar";
-            this.lblTutar.Size = new System.Drawing.Size(0, 17);
+            this.lblTutar.Size = new System.Drawing.Size(0, 22);
             this.lblTutar.TabIndex = 14;
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Location = new System.Drawing.Point(509, 169);
+            this.btnOdemeYap.Location = new System.Drawing.Point(679, 208);
+            this.btnOdemeYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOdemeYap.Name = "btnOdemeYap";
-            this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
+            this.btnOdemeYap.Size = new System.Drawing.Size(284, 41);
             this.btnOdemeYap.TabIndex = 15;
             this.btnOdemeYap.Text = "Ödemeyi Tamamla";
             this.btnOdemeYap.UseVisualStyleBackColor = true;
@@ -254,9 +277,9 @@
             // 
             // SatisForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 506);
+            this.ClientSize = new System.Drawing.Size(981, 623);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.label5);
@@ -272,6 +295,7 @@
             this.Controls.Add(this.lstSepet);
             this.Controls.Add(this.pbBarkod);
             this.Controls.Add(this.txtBarkod);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SatisForm";
             this.Text = "Satıs";
             this.Load += new System.EventHandler(this.Satis_Load);

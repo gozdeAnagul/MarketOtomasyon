@@ -30,8 +30,10 @@ namespace Market.WFA
 
         private void lstAzalanUrunler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var SeciliUrun = lstAzalanUrunler.SelectedItem as Urun;
+            var  SeciliUrun = lstAzalanUrunler.SelectedItem as Urun;
 
+            lblAdetIc.Text = SeciliUrun.KoliIciAdet.ToString();
+           
 
         }
 
@@ -57,13 +59,14 @@ namespace Market.WFA
         }
         private void ListeyiYenile()
         {
-            lstAzalanUrunler.DataSource = null;
+          //  lstAzalanUrunler.DataSource = null;
             lstAzalanUrunler.DataSource = new UrunRepo().GetAll(x => x.Stok<=20);
         }
 
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
             var seciliKategori = cmbKategoriler.SelectedItem as Kategori;
+            
             Urun urun = new Urun();
             
             lstKategoriUrunleri.DataSource = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id);
@@ -75,8 +78,8 @@ namespace Market.WFA
             var ToplamStok = new UrunRepo().GetAll(x => x.KategoriId == seciliKategori.Id).Sum(x => x.Stok);
             lblKatToplamUrun.Text = $"{seciliKategori.ToString()} içerisinde toplam {ToplamStok} adet ürün vardır.";
 
-
-       
+          var SeciliUrun = lstAzalanUrunler.SelectedItem as Urun;
+           // lblAdetIc.Text = SeciliUrun.KoliIciAdet.ToString();
 
         
         }
