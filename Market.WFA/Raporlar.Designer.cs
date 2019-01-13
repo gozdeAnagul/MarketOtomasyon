@@ -64,6 +64,7 @@
             this.btnAylıkRapor.TabIndex = 2;
             this.btnAylıkRapor.Text = "Aylık Satış Raporları";
             this.btnAylıkRapor.UseVisualStyleBackColor = true;
+            this.btnAylıkRapor.Click += new System.EventHandler(this.btnAylıkRapor_Click);
             // 
             // dtpTarih
             // 
