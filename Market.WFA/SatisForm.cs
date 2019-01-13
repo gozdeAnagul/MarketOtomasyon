@@ -66,6 +66,8 @@ namespace Market.WFA
         {
             var seciliBarkod = txtBarkod.Text;
             if (seciliBarkod == null) return;
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
 
             var urun = new UrunRepo().GetAll().FirstOrDefault(x => x.UrunBarkod == seciliBarkod);
             var adet = (int)nuUrunAdet.Value;
@@ -112,11 +114,11 @@ namespace Market.WFA
                     lstSepet.Items.Add(yeniSatisViewModel);
                 }
 
-                genelTutar = 0;
                 foreach (SatisViewModel item in lstSepet.Items)
                 {
                     genelTutar += item.Fiyat;
                 }
+                genelTutar += nuPosetSayisi.Value * Convert.ToDecimal(0.25);
                 lblTutar.Text = genelTutar.ToString();
             }
             else
@@ -137,9 +139,10 @@ namespace Market.WFA
             if (rbNakit.Checked == true)
             {
                 panel1.Visible = true;
+
                 txtTutar.Text = genelTutar.ToString();
             }
-            else if (rbNakit.Checked==false)
+            else if (rbNakit.Checked == false)
             {
                 panel1.Visible = false;
             }
@@ -157,7 +160,7 @@ namespace Market.WFA
                 txtParaUstu.Text = (alinanPara - tutar).ToString();
                 btnOdemeYap.Enabled = true;
             }
-            else if (alinanPara==tutar)
+            else if (alinanPara == tutar)
             {
                 txtParaUstu.Text = "Para tam.";
                 btnOdemeYap.Enabled = true;
@@ -172,7 +175,7 @@ namespace Market.WFA
         private void btnOdemeYap_Click(object sender, EventArgs e)
         {
             var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Peşin : OdemeYontemi.KrediKartı;
-            
+
             Fis fis = new Fis();
             List<Satis> satislar = new List<Satis>();
 
@@ -193,11 +196,11 @@ namespace Market.WFA
 
             if (new FisRepo().Insert(fis) > 0)
             {
-                MessageBox.Show("Odeme Alindi.","Uyarı!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Odeme Alindi.", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 foreach (Satis item in satislar)
                 {
                     var urun = new UrunRepo().GetById(item.UrunId);
-                   // urun.Stok = urun.Stok - item.SatisAdeti;
+                    // urun.Stok = urun.Stok - item.SatisAdeti;
                     new UrunRepo().Update();
                 }
                 SepetiTemizle();
@@ -205,7 +208,7 @@ namespace Market.WFA
                 FisViewModel fisViewModel = new FisViewModel
                 {
                     FisId = fis.Id,
-                    SatisListesi=fis.Satislar.ToList()
+                    SatisListesi = fis.Satislar.ToList()
                 };
                 MessageBox.Show($"{fisViewModel}");
             }
@@ -228,12 +231,12 @@ namespace Market.WFA
 
         private void lstSepet_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void rbKrediKarti_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbKrediKarti.Checked==true)
+            if (rbKrediKarti.Checked == true)
             {
                 btnOdemeYap.Enabled = true;
                 txtAlinan.Text = string.Empty;
@@ -243,6 +246,10 @@ namespace Market.WFA
             {
                 btnOdemeYap.Enabled = false;
             }
+        }
+        private void PosetVarMi()
+        {
+
         }
     }
 }

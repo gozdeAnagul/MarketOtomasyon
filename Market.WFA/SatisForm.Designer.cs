@@ -49,9 +49,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblTutar = new System.Windows.Forms.Label();
             this.btnOdemeYap = new System.Windows.Forms.Button();
+            this.nuPosetSayisi = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPosetSayisi)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBarkod
@@ -81,7 +84,7 @@
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
-            this.rbNakit.Location = new System.Drawing.Point(511, 29);
+            this.rbNakit.Location = new System.Drawing.Point(500, 97);
             this.rbNakit.Name = "rbNakit";
             this.rbNakit.Size = new System.Drawing.Size(87, 17);
             this.rbNakit.TabIndex = 3;
@@ -93,7 +96,7 @@
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Location = new System.Drawing.Point(604, 28);
+            this.rbKrediKarti.Location = new System.Drawing.Point(593, 96);
             this.rbKrediKarti.Name = "rbKrediKarti";
             this.rbKrediKarti.Size = new System.Drawing.Size(120, 17);
             this.rbKrediKarti.TabIndex = 4;
@@ -120,7 +123,7 @@
             this.panel1.Controls.Add(this.txtParaUstu);
             this.panel1.Controls.Add(this.txtTutar);
             this.panel1.Controls.Add(this.txtAlinan);
-            this.panel1.Location = new System.Drawing.Point(509, 52);
+            this.panel1.Location = new System.Drawing.Point(498, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 111);
             this.panel1.TabIndex = 6;
@@ -236,15 +239,15 @@
             // lblTutar
             // 
             this.lblTutar.AutoSize = true;
-            this.lblTutar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTutar.Location = new System.Drawing.Point(393, 360);
             this.lblTutar.Name = "lblTutar";
-            this.lblTutar.Size = new System.Drawing.Size(0, 17);
+            this.lblTutar.Size = new System.Drawing.Size(0, 18);
             this.lblTutar.TabIndex = 14;
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Location = new System.Drawing.Point(509, 169);
+            this.btnOdemeYap.Location = new System.Drawing.Point(498, 237);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
             this.btnOdemeYap.TabIndex = 15;
@@ -252,11 +255,29 @@
             this.btnOdemeYap.UseVisualStyleBackColor = true;
             this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
+            // nuPosetSayisi
+            // 
+            this.nuPosetSayisi.Location = new System.Drawing.Point(638, 36);
+            this.nuPosetSayisi.Name = "nuPosetSayisi";
+            this.nuPosetSayisi.Size = new System.Drawing.Size(73, 20);
+            this.nuPosetSayisi.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(555, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Poşet Sayısı:";
+            // 
             // SatisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.nuPosetSayisi);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.label5);
@@ -279,6 +300,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPosetSayisi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +329,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTutar;
         private System.Windows.Forms.Button btnOdemeYap;
+        private System.Windows.Forms.NumericUpDown nuPosetSayisi;
+        private System.Windows.Forms.Label label4;
     }
 }
