@@ -20,5 +20,11 @@ namespace Market.WFA
            //label1.Text = new FisRepo().GetAll(x => x.EklenmeZamani>suan.AddMonths(-1)).ToString();
         }
 
+       
+
+        private void btnGunlukRapor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -229,6 +229,7 @@ namespace Market.WFA
             btnOdemeYap.Enabled = false;
         }
 
+      
         private void lstSepet_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -247,9 +248,7 @@ namespace Market.WFA
                 btnOdemeYap.Enabled = false;
             }
         }
-        private void PosetVarMi()
-        {
 
-        }
+       
     }
 }
