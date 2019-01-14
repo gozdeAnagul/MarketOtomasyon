@@ -282,5 +282,10 @@ namespace Market.WFA
                 }
             }
         }
+
+        private void nuPosetSayisi_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

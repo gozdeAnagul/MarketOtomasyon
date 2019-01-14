@@ -268,6 +268,7 @@
             this.nuPosetSayisi.Name = "nuPosetSayisi";
             this.nuPosetSayisi.Size = new System.Drawing.Size(55, 20);
             this.nuPosetSayisi.TabIndex = 16;
+            this.nuPosetSayisi.ValueChanged += new System.EventHandler(this.nuPosetSayisi_ValueChanged);
             // 
             // label4
             // 
