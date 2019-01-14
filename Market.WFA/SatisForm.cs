@@ -19,14 +19,15 @@ namespace Market.WFA
         public Urun seciliUrun;
         public SatisViewModel seciliSatis;
         public decimal genelTutar = 0;
+        public List<Urun> urunlist;
         private void Satis_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            KategorileriGetir();
+            VerileriGetir();
             btnOdemeYap.Enabled = false;
         }
 
-        private void KategorileriGetir()
+        private void VerileriGetir()
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll().OrderBy(x => x.KategoriAdi).ToList();
         }
@@ -264,6 +265,26 @@ namespace Market.WFA
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtBarkod_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtBarkod_TextChanged(object sender, EventArgs e)
+        {
+            urunlist = new UrunRepo().GetAll();
+            if (urunlist == null) return;
+            
+            foreach (var urun in urunlist)
+            {
+                if (txtBarkod.Text==urun.UrunBarkod)
+                {
+                    BarkoduGetir();
+                    btnUrunEkle.PerformClick();
+                }
             }
         }
     }
