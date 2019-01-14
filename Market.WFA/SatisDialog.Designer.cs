@@ -50,6 +50,7 @@
             // txtYeniBarkod
             // 
             this.txtYeniBarkod.Location = new System.Drawing.Point(72, 49);
+            this.txtYeniBarkod.MaxLength = 7;
             this.txtYeniBarkod.Name = "txtYeniBarkod";
             this.txtYeniBarkod.Size = new System.Drawing.Size(161, 20);
             this.txtYeniBarkod.TabIndex = 0;

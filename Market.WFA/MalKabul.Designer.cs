@@ -86,6 +86,7 @@
             // txtBarkod
             // 
             this.txtBarkod.Location = new System.Drawing.Point(346, 100);
+            this.txtBarkod.MaxLength = 7;
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(158, 20);
             this.txtBarkod.TabIndex = 37;

@@ -59,6 +59,10 @@ namespace Market.WFA
         private void SatisDialog_Load(object sender, EventArgs e)
         {
             txtYeniBarkod.Text = malkabulForm.txtBarkod.Text;
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pbBarkod.Image = barcode.Draw(txtYeniBarkod.Text, 100, 2);
         }
+
+     
     }
 }
