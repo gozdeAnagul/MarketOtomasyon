@@ -214,17 +214,20 @@ namespace Market.WFA
                 FisViewModel fisViewModel = new FisViewModel()
                 {
                     FisId = fis.Id,
-                    SatisListesi = satisViewModels
+                    SatisListesi = satisViewModels,
+                    GenelTutar = fis.GenelToplam
                 };
 
                 string fisS = "";
 
                 foreach (var item in fisViewModel.SatisListesi)
                 {
+                    fisS += fisViewModel.FisId+"\n";
                     fisS += item.UrunAdi + "X" + item.Adet +"=" + item.Fiyat +"\n";
+                    fisS += fisViewModel.GenelTutar.ToString();
                 }
                 MessageBox.Show($"{fisS}");
-
+                
 
                 SepetiTemizle();
             }
