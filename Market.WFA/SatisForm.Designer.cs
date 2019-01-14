@@ -59,9 +59,10 @@
             // 
             // txtBarkod
             // 
+            this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkod.Location = new System.Drawing.Point(21, 94);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(215, 20);
+            this.txtBarkod.Size = new System.Drawing.Size(215, 21);
             this.txtBarkod.TabIndex = 0;
             this.txtBarkod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyUp);
             // 
@@ -75,18 +76,21 @@
             // 
             // lstSepet
             // 
+            this.lstSepet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstSepet.FormattingEnabled = true;
+            this.lstSepet.ItemHeight = 16;
             this.lstSepet.Location = new System.Drawing.Point(264, 28);
             this.lstSepet.Name = "lstSepet";
-            this.lstSepet.Size = new System.Drawing.Size(227, 303);
+            this.lstSepet.Size = new System.Drawing.Size(227, 292);
             this.lstSepet.TabIndex = 2;
             // 
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
+            this.rbNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbNakit.Location = new System.Drawing.Point(509, 59);
             this.rbNakit.Name = "rbNakit";
-            this.rbNakit.Size = new System.Drawing.Size(87, 17);
+            this.rbNakit.Size = new System.Drawing.Size(108, 19);
             this.rbNakit.TabIndex = 3;
             this.rbNakit.TabStop = true;
             this.rbNakit.Text = "Nakit Ödeme";
@@ -96,9 +100,10 @@
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
+            this.rbKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbKrediKarti.Location = new System.Drawing.Point(602, 59);
             this.rbKrediKarti.Name = "rbKrediKarti";
-            this.rbKrediKarti.Size = new System.Drawing.Size(120, 17);
+            this.rbKrediKarti.Size = new System.Drawing.Size(159, 19);
             this.rbKrediKarti.TabIndex = 4;
             this.rbKrediKarti.TabStop = true;
             this.rbKrediKarti.Text = "Kredi Kartı ileÖdeme";
@@ -123,9 +128,10 @@
             this.panel1.Controls.Add(this.txtParaUstu);
             this.panel1.Controls.Add(this.txtTutar);
             this.panel1.Controls.Add(this.txtAlinan);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(509, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 111);
+            this.panel1.Size = new System.Drawing.Size(247, 111);
             this.panel1.TabIndex = 6;
             // 
             // label3
@@ -133,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Para Üstü";
             // 
@@ -142,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(92, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Toplam Tutar";
             // 
@@ -151,35 +157,36 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Alınan Para";
             // 
             // txtParaUstu
             // 
-            this.txtParaUstu.Location = new System.Drawing.Point(82, 69);
+            this.txtParaUstu.Location = new System.Drawing.Point(99, 70);
             this.txtParaUstu.Name = "txtParaUstu";
-            this.txtParaUstu.Size = new System.Drawing.Size(118, 20);
+            this.txtParaUstu.Size = new System.Drawing.Size(129, 21);
             this.txtParaUstu.TabIndex = 2;
             // 
             // txtTutar
             // 
-            this.txtTutar.Location = new System.Drawing.Point(82, 42);
+            this.txtTutar.Location = new System.Drawing.Point(99, 43);
             this.txtTutar.Name = "txtTutar";
             this.txtTutar.ReadOnly = true;
-            this.txtTutar.Size = new System.Drawing.Size(118, 20);
+            this.txtTutar.Size = new System.Drawing.Size(129, 21);
             this.txtTutar.TabIndex = 1;
             // 
             // txtAlinan
             // 
-            this.txtAlinan.Location = new System.Drawing.Point(82, 15);
+            this.txtAlinan.Location = new System.Drawing.Point(99, 16);
             this.txtAlinan.Name = "txtAlinan";
-            this.txtAlinan.Size = new System.Drawing.Size(118, 20);
+            this.txtAlinan.Size = new System.Drawing.Size(129, 21);
             this.txtAlinan.TabIndex = 0;
             this.txtAlinan.TextChanged += new System.EventHandler(this.txtNakit_TextChanged);
             // 
             // btnUrunEkle
             // 
+            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunEkle.Location = new System.Drawing.Point(21, 266);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(92, 36);
@@ -190,6 +197,7 @@
             // 
             // btnUrunCikar
             // 
+            this.btnUrunCikar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunCikar.Location = new System.Drawing.Point(144, 266);
             this.btnUrunCikar.Name = "btnUrunCikar";
             this.btnUrunCikar.Size = new System.Drawing.Size(92, 36);
@@ -200,24 +208,27 @@
             // 
             // cmbUrunler
             // 
+            this.cmbUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbUrunler.FormattingEnabled = true;
             this.cmbUrunler.Location = new System.Drawing.Point(21, 55);
             this.cmbUrunler.Name = "cmbUrunler";
-            this.cmbUrunler.Size = new System.Drawing.Size(215, 21);
+            this.cmbUrunler.Size = new System.Drawing.Size(215, 23);
             this.cmbUrunler.TabIndex = 10;
             this.cmbUrunler.SelectedIndexChanged += new System.EventHandler(this.cmbUrunler_SelectedIndexChanged);
             // 
             // cmbKategoriler
             // 
+            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(21, 28);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(215, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(215, 23);
             this.cmbKategoriler.TabIndex = 11;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
             // nuUrunAdet
             // 
+            this.nuUrunAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nuUrunAdet.Location = new System.Drawing.Point(116, 237);
             this.nuUrunAdet.Maximum = new decimal(new int[] {
             10,
@@ -225,7 +236,7 @@
             0,
             0});
             this.nuUrunAdet.Name = "nuUrunAdet";
-            this.nuUrunAdet.Size = new System.Drawing.Size(120, 20);
+            this.nuUrunAdet.Size = new System.Drawing.Size(120, 21);
             this.nuUrunAdet.TabIndex = 12;
             this.nuUrunAdet.Value = new decimal(new int[] {
             1,
@@ -236,9 +247,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 239);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(35, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "Ürün Adeti:";
             // 
@@ -253,6 +265,7 @@
             // 
             // btnOdemeYap
             // 
+            this.btnOdemeYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeYap.Location = new System.Drawing.Point(510, 214);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
@@ -263,18 +276,20 @@
             // 
             // nuPoset
             // 
-            this.nuPoset.Location = new System.Drawing.Point(602, 28);
+            this.nuPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nuPoset.Location = new System.Drawing.Point(613, 28);
             this.nuPoset.Name = "nuPoset";
-            this.nuPoset.Size = new System.Drawing.Size(120, 20);
+            this.nuPoset.Size = new System.Drawing.Size(120, 21);
             this.nuPoset.TabIndex = 16;
             this.nuPoset.ValueChanged += new System.EventHandler(this.nuPoset_ValueChanged);
             // 
             // cbPoset
             // 
             this.cbPoset.AutoSize = true;
+            this.cbPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbPoset.Location = new System.Drawing.Point(537, 30);
             this.cbPoset.Name = "cbPoset";
-            this.cbPoset.Size = new System.Drawing.Size(59, 17);
+            this.cbPoset.Size = new System.Drawing.Size(70, 19);
             this.cbPoset.TabIndex = 17;
             this.cbPoset.Text = "Poşet?";
             this.cbPoset.UseVisualStyleBackColor = true;
@@ -284,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 506);
+            this.ClientSize = new System.Drawing.Size(768, 506);
             this.Controls.Add(this.cbPoset);
             this.Controls.Add(this.nuPoset);
             this.Controls.Add(this.btnOdemeYap);
