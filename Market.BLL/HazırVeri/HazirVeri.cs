@@ -26,7 +26,7 @@ namespace Market.BLL.HazırVeri
             Urun urun = null;
             try
             {
-                for (int i=0;i<11;i++)
+                for (int i=0;i<9;i++)
                 {
                     switch (i)
                     {
@@ -147,32 +147,32 @@ namespace Market.BLL.HazırVeri
                                 AlisFiyat = 1m,
                             };
                             break;
-                        case 9:
-                            urun = new Urun()
-                            {
-                                KategoriId = 5,
-                                UrunAdi = "Büyük",
-                                Aciklama = " ",
-                                KoliIciAdet = 20,
-                                Kdv = 0,
-                                KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
-                                UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
-                                AlisFiyat = (decimal)(0.37),
-                            };
-                            break;
-                        case 10:
-                            urun = new Urun()
-                            {
-                                KategoriId = 5,
-                                UrunAdi = "Küçük",
-                                Aciklama = " ",
-                                KoliIciAdet = 20,
-                                Kdv = 0,
-                                KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
-                                UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
-                                AlisFiyat = (decimal)(0.23),
-                            };
-                            break;
+                        //case 9:
+                        //    urun = new Urun()
+                        //    {
+                        //        KategoriId = 5,
+                        //        UrunAdi = "Büyük",
+                        //        Aciklama = " ",
+                        //        KoliIciAdet = 20,
+                        //        Kdv = 0,
+                        //        KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
+                        //        UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
+                        //        AlisFiyat = (decimal)(0.29),
+                        //    };
+                        //    break;
+                        //case 10:
+                        //    urun = new Urun()
+                        //    {
+                        //        KategoriId = 5,
+                        //        UrunAdi = "Küçük",
+                        //        Aciklama = " ",
+                        //        KoliIciAdet = 20,
+                        //        Kdv = 0,
+                        //        KoliBarkod = Convert.ToString(rnd.Next(1000000, 9999999)),
+                        //        UrunBarkod = Convert.ToString(rnd.Next(10000000, 99999999)),
+                        //        AlisFiyat = (decimal)(0.19),
+                        //    };
+                        //    break;
                         default:
                             break;
                     }
@@ -191,7 +191,7 @@ namespace Market.BLL.HazırVeri
             Kategori kategori = null;
             try
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     switch (i)
                     {
@@ -223,13 +223,13 @@ namespace Market.BLL.HazırVeri
                                 Aciklama = "Gazlı Gazsız İçecekler"
                             };
                             break;
-                        case 4:
-                            kategori = new Kategori()
-                            {
-                                KategoriAdi = "Poşet",
-                                Aciklama = "Büyük - Küçük Boy"
-                            };
-                            break;
+                        //case 4:
+                        //    kategori = new Kategori()
+                        //    {
+                        //        KategoriAdi = "Poşet",
+                        //        Aciklama = "Büyük - Küçük Boy"
+                        //    };
+                        //    break;
                         default:
                             break;
                     }

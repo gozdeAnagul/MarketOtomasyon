@@ -23,11 +23,23 @@ namespace Market.WFA
         public SatisViewModel seciliSatis;
         public decimal genelTutar = 0;
         public List<Urun> urunlist;
+        public SatisViewModel poset;
         private void Satis_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
             VerileriGetir();
             btnOdemeYap.Enabled = false;
+
+            poset = new SatisViewModel()
+            {
+                Adet = Convert.ToInt32(nuPoset.Value),
+                Fiyat = (decimal)0.25,
+                Stok = 1000,
+                UrunAdi = "Poset",
+                UrunId = 1,
+                UrunBarkod = "1"
+            };
+
         }
 
         private void VerileriGetir()
@@ -221,7 +233,7 @@ namespace Market.WFA
                     SatisListesi = satisViewModels,
                     GenelTutar = fis.GenelToplam
                 };
-
+                
                 string fisS = "";
 
                 fisS += "Fiş No: " + fisViewModel.FisId + "\n--------------------------------\n";
@@ -243,10 +255,8 @@ namespace Market.WFA
                             PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
                             doc.Open();
                             var urunsatis = satisViewModels;
-
-
                             doc.Add(new Paragraph("Wissen Market A.S \nBesiktas/ISTANBUL \nKuloglu Mh., Barbaros Blv. Yildiz IS Hani No:9"));
-                            doc.Add(new Paragraph($"\nFis No:{fis.Id}\nTarih:{fis.FisTarihi}\n"));
+                            doc.Add(new Paragraph($"\nFis No : {fis.Id}\nTarih : {fis.FisTarihi}\n"));
                             doc.Add(new Paragraph("\nÜrün Listesi\n------------------------------------------------------\n"));
                             foreach (var item in urunsatis)
                             {
@@ -275,7 +285,6 @@ namespace Market.WFA
                         {
                             MessageBox.Show(ex.Message);
                         }
-
                         finally
                         {
                             doc.Close();
@@ -346,6 +355,25 @@ namespace Market.WFA
                     btnUrunEkle.PerformClick();
                 }
             }
+        }
+
+        private void nuPoset_ValueChanged(object sender, EventArgs e)
+        {
+            //if (nuPoset.Value == 0)
+            //{
+            //    for (int i = 1; i < lstSepet.Items.Count; i++)
+            //    {
+            //        if (lstSepet[i] == "Poset")
+            //        {
+            //            lstSepet.Items.Remove(poset);
+            //        }
+            //    }
+            //}
+
+           
+            //var adet = Convert.ToInt32(nuPoset.Value);
+            //poset.Adet = adet;
+            //lstSepet.Items.Add(poset);
         }
     }
 }

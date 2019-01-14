@@ -49,9 +49,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblTutar = new System.Windows.Forms.Label();
             this.btnOdemeYap = new System.Windows.Forms.Button();
+            this.nuPoset = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBarkod
@@ -258,11 +260,20 @@
             this.btnOdemeYap.UseVisualStyleBackColor = true;
             this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
+            // nuPoset
+            // 
+            this.nuPoset.Location = new System.Drawing.Point(116, 311);
+            this.nuPoset.Name = "nuPoset";
+            this.nuPoset.Size = new System.Drawing.Size(120, 20);
+            this.nuPoset.TabIndex = 16;
+            this.nuPoset.ValueChanged += new System.EventHandler(this.nuPoset_ValueChanged);
+            // 
             // SatisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.nuPoset);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.label5);
@@ -285,6 +296,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuPoset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +325,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTutar;
         private System.Windows.Forms.Button btnOdemeYap;
+        private System.Windows.Forms.NumericUpDown nuPoset;
     }
 }
