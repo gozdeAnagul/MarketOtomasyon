@@ -112,7 +112,7 @@ namespace Market.WFA
 
             var NakitAdeti = new FisRepo().GetAll(x => x.OdemeYontemi == Models.Enums.OdemeYontemi.Nakit && x.FisTarihi.Day <= GirilenTarih.Day && x.FisTarihi >= GirilenTarih.AddMonths(-1) && x.FisTarihi.Year == GirilenTarih.Year).Count.ToString();
 
-            var ToplamCiro = new FisRepo().GetAll(x => x.FisTarihi.Day < GirilenTarih.Day && x.FisTarihi > GirilenTarih.AddMonths(-1) && x.FisTarihi.Year == GirilenTarih.Year).Sum(x => x.GenelToplam);
+            var ToplamCiro = new FisRepo().GetAll(x => x.FisTarihi.Day <= GirilenTarih.Day && x.FisTarihi >= GirilenTarih.AddMonths(-1) && x.FisTarihi.Year == GirilenTarih.Year).Sum(x => x.GenelToplam);
 
             lblNakitGun.Visible = false;
             lblKartGun.Visible = false;
@@ -211,12 +211,6 @@ namespace Market.WFA
         private void btnUrunler_Click(object sender, EventArgs e)
         {
             KategorilereGoreUrunStoklariGetir();
-            lblToplamCiroAy.Visible = false;
-            lblOdemeKartAy.Visible = false;
-            lblOdemeNakitAy.Visible = false;
-            lblNakitGun.Visible = false;
-            lblKartGun.Visible = false;
-            lblToplamCiroGun.Visible = false;
 
         }
     }
