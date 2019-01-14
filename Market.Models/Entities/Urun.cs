@@ -21,11 +21,8 @@ namespace Market.Models.Entities
         public int KoliAdet { get; set; } = 0;
 
         public int KoliIciAdet { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int Stok {
-            get => KoliAdet*KoliIciAdet;
-        }
+        
+        public int Stok { get; set; }
         
         [Required]
         public decimal Kdv { get; set; }

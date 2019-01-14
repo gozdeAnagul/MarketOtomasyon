@@ -211,7 +211,7 @@ namespace Market.WFA
                 foreach (Satis item in satislar)
                 {
                     var urun = new UrunRepo().GetById(item.UrunId);
-                    // urun.Stok = urun.Stok - item.SatisAdeti;
+                    urun.Stok -= item.SatisAdeti;
                     new UrunRepo().Update();
                 }
 
