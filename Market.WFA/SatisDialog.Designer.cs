@@ -49,11 +49,11 @@
             // 
             // txtYeniBarkod
             // 
-            this.txtYeniBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtYeniBarkod.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtYeniBarkod.Location = new System.Drawing.Point(97, 49);
             this.txtYeniBarkod.MaxLength = 7;
             this.txtYeniBarkod.Name = "txtYeniBarkod";
-            this.txtYeniBarkod.Size = new System.Drawing.Size(161, 21);
+            this.txtYeniBarkod.Size = new System.Drawing.Size(161, 24);
             this.txtYeniBarkod.TabIndex = 0;
             // 
             // pbBarkod
@@ -67,74 +67,74 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(94, 325);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.Location = new System.Drawing.Point(4, 322);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 15);
+            this.label8.Size = new System.Drawing.Size(70, 15);
             this.label8.TabIndex = 38;
             this.label8.Text = "Koli İçiAdet:";
             // 
             // txtKoliIciAdet
             // 
-            this.txtKoliIciAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKoliIciAdet.Location = new System.Drawing.Point(188, 322);
+            this.txtKoliIciAdet.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtKoliIciAdet.Location = new System.Drawing.Point(97, 322);
             this.txtKoliIciAdet.Name = "txtKoliIciAdet";
-            this.txtKoliIciAdet.Size = new System.Drawing.Size(70, 21);
+            this.txtKoliIciAdet.Size = new System.Drawing.Size(161, 24);
             this.txtKoliIciAdet.TabIndex = 37;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(131, 299);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.Location = new System.Drawing.Point(43, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 36;
             this.label3.Text = "Kdv:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(107, 268);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.Location = new System.Drawing.Point(13, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
+            this.label6.Size = new System.Drawing.Size(61, 15);
             this.label6.TabIndex = 35;
             this.label6.Text = "Alış Fiyatı:";
             // 
             // txtKdv
             // 
-            this.txtKdv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKdv.Location = new System.Drawing.Point(188, 296);
+            this.txtKdv.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtKdv.Location = new System.Drawing.Point(97, 296);
             this.txtKdv.Name = "txtKdv";
-            this.txtKdv.Size = new System.Drawing.Size(70, 21);
+            this.txtKdv.Size = new System.Drawing.Size(161, 24);
             this.txtKdv.TabIndex = 34;
             // 
             // txtAlisFiyati
             // 
-            this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAlisFiyati.Location = new System.Drawing.Point(188, 265);
+            this.txtAlisFiyati.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtAlisFiyati.Location = new System.Drawing.Point(97, 265);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
-            this.txtAlisFiyati.Size = new System.Drawing.Size(70, 21);
+            this.txtAlisFiyati.Size = new System.Drawing.Size(161, 24);
             this.txtAlisFiyati.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(12, 206);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Location = new System.Drawing.Point(14, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 15);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 32;
             this.label4.Text = "Açıklama:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(14, 175);
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label11.Location = new System.Drawing.Point(16, 175);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 15);
+            this.label11.Size = new System.Drawing.Size(58, 15);
             this.label11.TabIndex = 31;
             this.label11.Text = "Ürün Adı:";
             // 
@@ -151,48 +151,48 @@
             // 
             this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategoriler.FormattingEnabled = true;
-            this.cmbKategoriler.Location = new System.Drawing.Point(79, 22);
+            this.cmbKategoriler.Location = new System.Drawing.Point(97, 22);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(179, 23);
+            this.cmbKategoriler.Size = new System.Drawing.Size(161, 23);
             this.cmbKategoriler.TabIndex = 29;
             this.cmbKategoriler.Text = "Kategori Seciniz";
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.Location = new System.Drawing.Point(79, 348);
+            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnUrunEkle.Location = new System.Drawing.Point(15, 352);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(179, 42);
+            this.btnUrunEkle.Size = new System.Drawing.Size(241, 42);
             this.btnUrunEkle.TabIndex = 28;
-            this.btnUrunEkle.Text = "Ekle";
+            this.btnUrunEkle.Text = "Ürün Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
             this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // txtUrunAdi
             // 
-            this.txtUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunAdi.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtUrunAdi.Location = new System.Drawing.Point(97, 172);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(161, 21);
+            this.txtUrunAdi.Size = new System.Drawing.Size(161, 24);
             this.txtUrunAdi.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(1, 52);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Location = new System.Drawing.Point(-1, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 15);
+            this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 39;
             this.label1.Text = "Yeni Barkod:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(25, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 40;
             this.label2.Text = "Barkod:";
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.txtYeniBarkod);
             this.Name = "SatisDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SatisDialog";
+            this.Text = "Satış Diyalog";
             this.Load += new System.EventHandler(this.SatisDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.ResumeLayout(false);

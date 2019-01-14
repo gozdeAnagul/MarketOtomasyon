@@ -45,8 +45,8 @@
             // 
             // btnStogaEkle
             // 
-            this.btnStogaEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnStogaEkle.Location = new System.Drawing.Point(480, 299);
+            this.btnStogaEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStogaEkle.Location = new System.Drawing.Point(470, 271);
             this.btnStogaEkle.Name = "btnStogaEkle";
             this.btnStogaEkle.Size = new System.Drawing.Size(81, 34);
             this.btnStogaEkle.TabIndex = 43;
@@ -56,10 +56,10 @@
             // 
             // nuKoli
             // 
-            this.nuKoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nuKoli.Location = new System.Drawing.Point(413, 273);
+            this.nuKoli.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nuKoli.Location = new System.Drawing.Point(403, 241);
             this.nuKoli.Name = "nuKoli";
-            this.nuKoli.Size = new System.Drawing.Size(148, 21);
+            this.nuKoli.Size = new System.Drawing.Size(148, 24);
             this.nuKoli.TabIndex = 41;
             this.nuKoli.Value = new decimal(new int[] {
             1,
@@ -70,27 +70,27 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(353, 275);
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(335, 243);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 15);
+            this.label9.Size = new System.Drawing.Size(62, 15);
             this.label9.TabIndex = 42;
             this.label9.Text = "Koli Adeti:";
             // 
             // lblBarkod
             // 
             this.lblBarkod.AutoSize = true;
-            this.lblBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBarkod.Location = new System.Drawing.Point(430, 82);
+            this.lblBarkod.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBarkod.Location = new System.Drawing.Point(416, 53);
             this.lblBarkod.Name = "lblBarkod";
-            this.lblBarkod.Size = new System.Drawing.Size(52, 15);
+            this.lblBarkod.Size = new System.Drawing.Size(46, 15);
             this.lblBarkod.TabIndex = 38;
             this.lblBarkod.Text = "Barkod";
             // 
             // txtBarkod
             // 
             this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkod.Location = new System.Drawing.Point(346, 100);
+            this.txtBarkod.Location = new System.Drawing.Point(332, 71);
             this.txtBarkod.MaxLength = 7;
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(158, 21);
@@ -99,7 +99,7 @@
             // 
             // pbBarkod
             // 
-            this.pbBarkod.Location = new System.Drawing.Point(346, 126);
+            this.pbBarkod.Location = new System.Drawing.Point(332, 97);
             this.pbBarkod.Name = "pbBarkod";
             this.pbBarkod.Size = new System.Drawing.Size(215, 111);
             this.pbBarkod.TabIndex = 56;
@@ -107,17 +107,17 @@
             // 
             // cmbKategoriler
             // 
-            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbKategoriler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(22, 31);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(174, 23);
+            this.cmbKategoriler.Size = new System.Drawing.Size(213, 23);
             this.cmbKategoriler.TabIndex = 58;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
             // lstUrunler
             // 
-            this.lstUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lstUrunler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lstUrunler.FormattingEnabled = true;
             this.lstUrunler.ItemHeight = 15;
             this.lstUrunler.Location = new System.Drawing.Point(22, 58);
@@ -128,8 +128,8 @@
             // 
             // btnBarkodGetir
             // 
-            this.btnBarkodGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBarkodGetir.Location = new System.Drawing.Point(510, 98);
+            this.btnBarkodGetir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBarkodGetir.Location = new System.Drawing.Point(496, 70);
             this.btnBarkodGetir.Name = "btnBarkodGetir";
             this.btnBarkodGetir.Size = new System.Drawing.Size(51, 23);
             this.btnBarkodGetir.TabIndex = 60;
@@ -140,20 +140,20 @@
             // lblKoliUrunu
             // 
             this.lblKoliUrunu.AutoSize = true;
-            this.lblKoliUrunu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKoliUrunu.Location = new System.Drawing.Point(353, 249);
+            this.lblKoliUrunu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKoliUrunu.Location = new System.Drawing.Point(336, 220);
             this.lblKoliUrunu.Name = "lblKoliUrunu";
-            this.lblKoliUrunu.Size = new System.Drawing.Size(126, 15);
+            this.lblKoliUrunu.Size = new System.Drawing.Size(106, 15);
             this.lblKoliUrunu.TabIndex = 61;
             this.lblKoliUrunu.Text = "Koli içi Ürün Adeti:";
             // 
             // lbIicAdetKoli
             // 
             this.lbIicAdetKoli.AutoSize = true;
-            this.lbIicAdetKoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbIicAdetKoli.Location = new System.Drawing.Point(452, 249);
+            this.lbIicAdetKoli.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbIicAdetKoli.Location = new System.Drawing.Point(448, 220);
             this.lbIicAdetKoli.Name = "lbIicAdetKoli";
-            this.lbIicAdetKoli.Size = new System.Drawing.Size(47, 15);
+            this.lbIicAdetKoli.Size = new System.Drawing.Size(38, 15);
             this.lbIicAdetKoli.TabIndex = 62;
             this.lbIicAdetKoli.Text = "label1";
             // 
@@ -174,7 +174,7 @@
             this.Controls.Add(this.lblBarkod);
             this.Controls.Add(this.txtBarkod);
             this.Name = "MalKabul";
-            this.Text = "MalKabul";
+            this.Text = "Mal Kabul Ekranı";
             this.Load += new System.EventHandler(this.MalKabul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuKoli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();

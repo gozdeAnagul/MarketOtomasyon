@@ -59,10 +59,10 @@
             // 
             // txtBarkod
             // 
-            this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBarkod.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtBarkod.Location = new System.Drawing.Point(21, 94);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(215, 21);
+            this.txtBarkod.Size = new System.Drawing.Size(215, 24);
             this.txtBarkod.TabIndex = 0;
             this.txtBarkod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyUp);
             // 
@@ -76,47 +76,47 @@
             // 
             // lstSepet
             // 
-            this.lstSepet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lstSepet.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lstSepet.FormattingEnabled = true;
-            this.lstSepet.ItemHeight = 16;
+            this.lstSepet.ItemHeight = 15;
             this.lstSepet.Location = new System.Drawing.Point(264, 28);
             this.lstSepet.Name = "lstSepet";
-            this.lstSepet.Size = new System.Drawing.Size(227, 292);
+            this.lstSepet.Size = new System.Drawing.Size(227, 289);
             this.lstSepet.TabIndex = 2;
             // 
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
-            this.rbNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbNakit.Location = new System.Drawing.Point(509, 59);
+            this.rbNakit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.rbNakit.Location = new System.Drawing.Point(667, 85);
             this.rbNakit.Name = "rbNakit";
-            this.rbNakit.Size = new System.Drawing.Size(108, 19);
+            this.rbNakit.Size = new System.Drawing.Size(54, 19);
             this.rbNakit.TabIndex = 3;
             this.rbNakit.TabStop = true;
-            this.rbNakit.Text = "Nakit Ödeme";
+            this.rbNakit.Text = "Nakit";
             this.rbNakit.UseVisualStyleBackColor = true;
             this.rbNakit.CheckedChanged += new System.EventHandler(this.rbNakit_CheckedChanged);
             // 
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbKrediKarti.Location = new System.Drawing.Point(623, 59);
+            this.rbKrediKarti.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.rbKrediKarti.Location = new System.Drawing.Point(531, 85);
             this.rbKrediKarti.Name = "rbKrediKarti";
-            this.rbKrediKarti.Size = new System.Drawing.Size(159, 19);
+            this.rbKrediKarti.Size = new System.Drawing.Size(84, 19);
             this.rbKrediKarti.TabIndex = 4;
             this.rbKrediKarti.TabStop = true;
-            this.rbKrediKarti.Text = "Kredi Kartı ileÖdeme";
+            this.rbKrediKarti.Text = "Kredi Kartı";
             this.rbKrediKarti.UseVisualStyleBackColor = true;
             this.rbKrediKarti.CheckedChanged += new System.EventHandler(this.rbKrediKarti_CheckedChanged);
             // 
             // lblToplamFiyat
             // 
             this.lblToplamFiyat.AutoSize = true;
-            this.lblToplamFiyat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamFiyat.Location = new System.Drawing.Point(264, 347);
+            this.lblToplamFiyat.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToplamFiyat.Location = new System.Drawing.Point(270, 343);
             this.lblToplamFiyat.Name = "lblToplamFiyat";
-            this.lblToplamFiyat.Size = new System.Drawing.Size(136, 22);
+            this.lblToplamFiyat.Size = new System.Drawing.Size(103, 20);
             this.lblToplamFiyat.TabIndex = 5;
             this.lblToplamFiyat.Text = "Toplam Fiyat:";
             // 
@@ -129,7 +129,7 @@
             this.panel1.Controls.Add(this.txtTutar);
             this.panel1.Controls.Add(this.txtAlinan);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel1.Location = new System.Drawing.Point(509, 94);
+            this.panel1.Location = new System.Drawing.Point(509, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 111);
             this.panel1.TabIndex = 6;
@@ -137,57 +137,63 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.Location = new System.Drawing.Point(19, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 15);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Para Üstü";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(3, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 15);
+            this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Toplam Tutar";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.Size = new System.Drawing.Size(71, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Alınan Para";
             // 
             // txtParaUstu
             // 
+            this.txtParaUstu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtParaUstu.Location = new System.Drawing.Point(114, 70);
             this.txtParaUstu.Name = "txtParaUstu";
-            this.txtParaUstu.Size = new System.Drawing.Size(129, 21);
+            this.txtParaUstu.Size = new System.Drawing.Size(129, 24);
             this.txtParaUstu.TabIndex = 2;
             // 
             // txtTutar
             // 
+            this.txtTutar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtTutar.Location = new System.Drawing.Point(114, 43);
             this.txtTutar.Name = "txtTutar";
             this.txtTutar.ReadOnly = true;
-            this.txtTutar.Size = new System.Drawing.Size(129, 21);
+            this.txtTutar.Size = new System.Drawing.Size(129, 24);
             this.txtTutar.TabIndex = 1;
             // 
             // txtAlinan
             // 
+            this.txtAlinan.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtAlinan.Location = new System.Drawing.Point(114, 16);
             this.txtAlinan.Name = "txtAlinan";
-            this.txtAlinan.Size = new System.Drawing.Size(129, 21);
+            this.txtAlinan.Size = new System.Drawing.Size(129, 24);
             this.txtAlinan.TabIndex = 0;
             this.txtAlinan.TextChanged += new System.EventHandler(this.txtNakit_TextChanged);
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.Location = new System.Drawing.Point(21, 266);
+            this.btnUrunEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnUrunEkle.Location = new System.Drawing.Point(21, 284);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(92, 36);
             this.btnUrunEkle.TabIndex = 8;
@@ -197,8 +203,8 @@
             // 
             // btnUrunCikar
             // 
-            this.btnUrunCikar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunCikar.Location = new System.Drawing.Point(144, 266);
+            this.btnUrunCikar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnUrunCikar.Location = new System.Drawing.Point(144, 284);
             this.btnUrunCikar.Name = "btnUrunCikar";
             this.btnUrunCikar.Size = new System.Drawing.Size(92, 36);
             this.btnUrunCikar.TabIndex = 9;
@@ -208,7 +214,7 @@
             // 
             // cmbUrunler
             // 
-            this.cmbUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbUrunler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cmbUrunler.FormattingEnabled = true;
             this.cmbUrunler.Location = new System.Drawing.Point(21, 55);
             this.cmbUrunler.Name = "cmbUrunler";
@@ -218,7 +224,7 @@
             // 
             // cmbKategoriler
             // 
-            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbKategoriler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(21, 28);
             this.cmbKategoriler.Name = "cmbKategoriler";
@@ -228,15 +234,15 @@
             // 
             // nuUrunAdet
             // 
-            this.nuUrunAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nuUrunAdet.Location = new System.Drawing.Point(116, 237);
+            this.nuUrunAdet.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.nuUrunAdet.Location = new System.Drawing.Point(105, 247);
             this.nuUrunAdet.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.nuUrunAdet.Name = "nuUrunAdet";
-            this.nuUrunAdet.Size = new System.Drawing.Size(120, 21);
+            this.nuUrunAdet.Size = new System.Drawing.Size(131, 24);
             this.nuUrunAdet.TabIndex = 12;
             this.nuUrunAdet.Value = new decimal(new int[] {
             1,
@@ -247,28 +253,28 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(35, 239);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.Location = new System.Drawing.Point(31, 249);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 15);
+            this.label5.Size = new System.Drawing.Size(68, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "Ürün Adeti:";
             // 
             // lblTutar
             // 
             this.lblTutar.AutoSize = true;
-            this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(400, 350);
+            this.lblTutar.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutar.Location = new System.Drawing.Point(379, 346);
             this.lblTutar.Name = "lblTutar";
-            this.lblTutar.Size = new System.Drawing.Size(0, 18);
+            this.lblTutar.Size = new System.Drawing.Size(0, 17);
             this.lblTutar.TabIndex = 14;
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdemeYap.Location = new System.Drawing.Point(510, 214);
+            this.btnOdemeYap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnOdemeYap.Location = new System.Drawing.Point(509, 287);
             this.btnOdemeYap.Name = "btnOdemeYap";
-            this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
+            this.btnOdemeYap.Size = new System.Drawing.Size(272, 33);
             this.btnOdemeYap.TabIndex = 15;
             this.btnOdemeYap.Text = "Ödemeyi Tamamla";
             this.btnOdemeYap.UseVisualStyleBackColor = true;
@@ -276,20 +282,20 @@
             // 
             // nuPoset
             // 
-            this.nuPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nuPoset.Location = new System.Drawing.Point(613, 28);
+            this.nuPoset.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.nuPoset.Location = new System.Drawing.Point(609, 29);
             this.nuPoset.Name = "nuPoset";
-            this.nuPoset.Size = new System.Drawing.Size(120, 21);
+            this.nuPoset.Size = new System.Drawing.Size(116, 24);
             this.nuPoset.TabIndex = 16;
             this.nuPoset.ValueChanged += new System.EventHandler(this.nuPoset_ValueChanged);
             // 
             // cbPoset
             // 
             this.cbPoset.AutoSize = true;
-            this.cbPoset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbPoset.Location = new System.Drawing.Point(537, 30);
+            this.cbPoset.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cbPoset.Location = new System.Drawing.Point(543, 31);
             this.cbPoset.Name = "cbPoset";
-            this.cbPoset.Size = new System.Drawing.Size(70, 19);
+            this.cbPoset.Size = new System.Drawing.Size(60, 19);
             this.cbPoset.TabIndex = 17;
             this.cbPoset.Text = "Poşet?";
             this.cbPoset.UseVisualStyleBackColor = true;
@@ -318,7 +324,7 @@
             this.Controls.Add(this.pbBarkod);
             this.Controls.Add(this.txtBarkod);
             this.Name = "SatisForm";
-            this.Text = "Satıs";
+            this.Text = "Satış Ekranı";
             this.Load += new System.EventHandler(this.Satis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).EndInit();
             this.panel1.ResumeLayout(false);

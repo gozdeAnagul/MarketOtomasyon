@@ -39,7 +39,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.malGirişToolStripMenuItem,
             this.satışToolStripMenuItem,
@@ -48,43 +48,43 @@
             this.raporlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(902, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(902, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // malGirişToolStripMenuItem
             // 
-            this.malGirişToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.malGirişToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.malGirişToolStripMenuItem.Name = "malGirişToolStripMenuItem";
-            this.malGirişToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
+            this.malGirişToolStripMenuItem.Size = new System.Drawing.Size(88, 25);
             this.malGirişToolStripMenuItem.Text = "Mal Giriş";
             this.malGirişToolStripMenuItem.Click += new System.EventHandler(this.malGirişToolStripMenuItem_Click);
             // 
             // satışToolStripMenuItem
             // 
             this.satışToolStripMenuItem.Name = "satışToolStripMenuItem";
-            this.satışToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.satışToolStripMenuItem.Size = new System.Drawing.Size(57, 25);
             this.satışToolStripMenuItem.Text = "Satış";
             this.satışToolStripMenuItem.Click += new System.EventHandler(this.satışToolStripMenuItem_Click);
             // 
             // işlemlerToolStripMenuItem
             // 
             this.işlemlerToolStripMenuItem.Name = "işlemlerToolStripMenuItem";
-            this.işlemlerToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.işlemlerToolStripMenuItem.Size = new System.Drawing.Size(80, 25);
             this.işlemlerToolStripMenuItem.Text = "İşlemler";
             this.işlemlerToolStripMenuItem.Click += new System.EventHandler(this.işlemlerToolStripMenuItem_Click);
             // 
             // azalanUrunlerToolStripMenuItem
             // 
             this.azalanUrunlerToolStripMenuItem.Name = "azalanUrunlerToolStripMenuItem";
-            this.azalanUrunlerToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.azalanUrunlerToolStripMenuItem.Size = new System.Drawing.Size(131, 25);
             this.azalanUrunlerToolStripMenuItem.Text = "Azalan Urunler";
             this.azalanUrunlerToolStripMenuItem.Click += new System.EventHandler(this.azalanUrunlerToolStripMenuItem_Click);
             // 
             // raporlarToolStripMenuItem
             // 
             this.raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
-            this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.raporlarToolStripMenuItem.Text = "Raporlar";
             this.raporlarToolStripMenuItem.Click += new System.EventHandler(this.raporlarToolStripMenuItem_Click);
             // 
@@ -99,8 +99,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MarketOtomasyon";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MarketOtomasyon";
+            this.Text = "Market Otomasyonu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MarketOtomasyon_Load);
             this.menuStrip1.ResumeLayout(false);
