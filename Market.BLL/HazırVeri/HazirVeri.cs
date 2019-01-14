@@ -178,7 +178,6 @@ namespace Market.BLL.HazırVeri
                     }
                     new UrunRepo().Insert(urun);
                 }
-
             }
             catch (Exception ex)
             {
