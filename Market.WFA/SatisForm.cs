@@ -135,6 +135,7 @@ namespace Market.WFA
 
         private void TutarHesapla()
         {
+            genelTutar = 0;
             foreach (SatisViewModel item in lstSepet.Items)
             {
                 genelTutar += item.Fiyat;
@@ -311,9 +312,7 @@ namespace Market.WFA
             {
                 lstSepet.Items.Remove(seciliUrun);
                 genelTutar -= (seciliUrun.Adet * seciliUrun.Fiyat);
-
                 TutarHesapla();
-                
                 lstSepet.Refresh();
             }
             catch (Exception ex)
