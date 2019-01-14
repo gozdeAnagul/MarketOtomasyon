@@ -45,6 +45,7 @@
             // 
             // btnStogaEkle
             // 
+            this.btnStogaEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStogaEkle.Location = new System.Drawing.Point(480, 299);
             this.btnStogaEkle.Name = "btnStogaEkle";
             this.btnStogaEkle.Size = new System.Drawing.Size(81, 34);
@@ -55,9 +56,10 @@
             // 
             // nuKoli
             // 
+            this.nuKoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nuKoli.Location = new System.Drawing.Point(413, 273);
             this.nuKoli.Name = "nuKoli";
-            this.nuKoli.Size = new System.Drawing.Size(148, 20);
+            this.nuKoli.Size = new System.Drawing.Size(148, 21);
             this.nuKoli.TabIndex = 41;
             this.nuKoli.Value = new decimal(new int[] {
             1,
@@ -68,27 +70,30 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(353, 275);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.Size = new System.Drawing.Size(72, 15);
             this.label9.TabIndex = 42;
             this.label9.Text = "Koli Adeti:";
             // 
             // lblBarkod
             // 
             this.lblBarkod.AutoSize = true;
+            this.lblBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBarkod.Location = new System.Drawing.Point(430, 82);
             this.lblBarkod.Name = "lblBarkod";
-            this.lblBarkod.Size = new System.Drawing.Size(41, 13);
+            this.lblBarkod.Size = new System.Drawing.Size(52, 15);
             this.lblBarkod.TabIndex = 38;
             this.lblBarkod.Text = "Barkod";
             // 
             // txtBarkod
             // 
+            this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkod.Location = new System.Drawing.Point(346, 100);
             this.txtBarkod.MaxLength = 7;
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(158, 20);
+            this.txtBarkod.Size = new System.Drawing.Size(158, 21);
             this.txtBarkod.TabIndex = 37;
             this.txtBarkod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyUp);
             // 
@@ -102,24 +107,28 @@
             // 
             // cmbKategoriler
             // 
+            this.cmbKategoriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategoriler.FormattingEnabled = true;
             this.cmbKategoriler.Location = new System.Drawing.Point(22, 31);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(174, 21);
+            this.cmbKategoriler.Size = new System.Drawing.Size(174, 23);
             this.cmbKategoriler.TabIndex = 58;
             this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
             // lstUrunler
             // 
+            this.lstUrunler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstUrunler.FormattingEnabled = true;
+            this.lstUrunler.ItemHeight = 15;
             this.lstUrunler.Location = new System.Drawing.Point(22, 58);
             this.lstUrunler.Name = "lstUrunler";
-            this.lstUrunler.Size = new System.Drawing.Size(174, 303);
+            this.lstUrunler.Size = new System.Drawing.Size(213, 289);
             this.lstUrunler.TabIndex = 59;
             this.lstUrunler.SelectedIndexChanged += new System.EventHandler(this.lstUrunler_SelectedIndexChanged);
             // 
             // btnBarkodGetir
             // 
+            this.btnBarkodGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBarkodGetir.Location = new System.Drawing.Point(510, 98);
             this.btnBarkodGetir.Name = "btnBarkodGetir";
             this.btnBarkodGetir.Size = new System.Drawing.Size(51, 23);
@@ -131,18 +140,20 @@
             // lblKoliUrunu
             // 
             this.lblKoliUrunu.AutoSize = true;
+            this.lblKoliUrunu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKoliUrunu.Location = new System.Drawing.Point(353, 249);
             this.lblKoliUrunu.Name = "lblKoliUrunu";
-            this.lblKoliUrunu.Size = new System.Drawing.Size(93, 13);
+            this.lblKoliUrunu.Size = new System.Drawing.Size(126, 15);
             this.lblKoliUrunu.TabIndex = 61;
             this.lblKoliUrunu.Text = "Koli içi Ürün Adeti:";
             // 
             // lbIicAdetKoli
             // 
             this.lbIicAdetKoli.AutoSize = true;
+            this.lbIicAdetKoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbIicAdetKoli.Location = new System.Drawing.Point(452, 249);
             this.lbIicAdetKoli.Name = "lbIicAdetKoli";
-            this.lbIicAdetKoli.Size = new System.Drawing.Size(35, 13);
+            this.lbIicAdetKoli.Size = new System.Drawing.Size(47, 15);
             this.lbIicAdetKoli.TabIndex = 62;
             this.lbIicAdetKoli.Text = "label1";
             // 
