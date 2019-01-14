@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market.BLL.HazırVeri;
+using System;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -70,6 +71,11 @@ namespace Market.WFA
             raporlarForm.MdiParent = this;
             raporlarForm.Show();
             raporlarForm.WindowState = FormWindowState.Maximized;
+        }
+
+        private void MarketOtomasyon_Load(object sender, EventArgs e)
+        {
+            new HazirVeri().VeriUret();
         }
     }
 }

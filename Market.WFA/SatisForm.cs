@@ -118,7 +118,7 @@ namespace Market.WFA
                 {
                     genelTutar += item.Fiyat;
                 }
-                genelTutar += nuPosetSayisi.Value * Convert.ToDecimal(0.25);
+               
                 lblTutar.Text = genelTutar.ToString();
             }
             else
@@ -248,7 +248,5 @@ namespace Market.WFA
                 btnOdemeYap.Enabled = false;
             }
         }
-
-       
     }
 }
