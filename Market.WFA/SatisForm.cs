@@ -29,6 +29,7 @@ namespace Market.WFA
             panel1.Visible = false;
             VerileriGetir();
             btnOdemeYap.Enabled = false;
+            nuPoset.Enabled = false;
 
             poset = new SatisViewModel()
             {
@@ -145,7 +146,7 @@ namespace Market.WFA
             }
         }
 
-        private void TutarHesapla()
+        public void TutarHesapla()
         {
             genelTutar = 0;
             foreach (SatisViewModel item in lstSepet.Items)
@@ -359,21 +360,29 @@ namespace Market.WFA
 
         private void nuPoset_ValueChanged(object sender, EventArgs e)
         {
-            //if (nuPoset.Value == 0)
-            //{
-            //    for (int i = 1; i < lstSepet.Items.Count; i++)
-            //    {
-            //        if (lstSepet[i] == "Poset")
-            //        {
-            //            lstSepet.Items.Remove(poset);
-            //        }
-            //    }
-            //}
+            
+            if (nuPoset.Value == 0) return;
 
-           
-            //var adet = Convert.ToInt32(nuPoset.Value);
-            //poset.Adet = adet;
-            //lstSepet.Items.Add(poset);
+            lstSepet.Items.Remove(poset);
+            var adet = Convert.ToInt32(nuPoset.Value);
+            poset.Adet = adet;
+            poset.Fiyat=Convert.ToDecimal(adet*0.25);
+            lstSepet.Items.Add(poset);
+            TutarHesapla();
+        }
+
+        private void cbPoset_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPoset.Checked == false)
+            {
+                nuPoset.Enabled = false;
+                lstSepet.Items.Remove(poset);
+                TutarHesapla();
+            }
+            else if (cbPoset.Checked)
+            {
+                nuPoset.Enabled = true;
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
             this.lblTutar = new System.Windows.Forms.Label();
             this.btnOdemeYap = new System.Windows.Forms.Button();
             this.nuPoset = new System.Windows.Forms.NumericUpDown();
+            this.cbPoset = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarkod)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuUrunAdet)).BeginInit();
@@ -83,7 +84,7 @@
             // rbNakit
             // 
             this.rbNakit.AutoSize = true;
-            this.rbNakit.Location = new System.Drawing.Point(509, 28);
+            this.rbNakit.Location = new System.Drawing.Point(509, 59);
             this.rbNakit.Name = "rbNakit";
             this.rbNakit.Size = new System.Drawing.Size(87, 17);
             this.rbNakit.TabIndex = 3;
@@ -95,7 +96,7 @@
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Location = new System.Drawing.Point(602, 28);
+            this.rbKrediKarti.Location = new System.Drawing.Point(602, 59);
             this.rbKrediKarti.Name = "rbKrediKarti";
             this.rbKrediKarti.Size = new System.Drawing.Size(120, 17);
             this.rbKrediKarti.TabIndex = 4;
@@ -122,7 +123,7 @@
             this.panel1.Controls.Add(this.txtParaUstu);
             this.panel1.Controls.Add(this.txtTutar);
             this.panel1.Controls.Add(this.txtAlinan);
-            this.panel1.Location = new System.Drawing.Point(509, 51);
+            this.panel1.Location = new System.Drawing.Point(509, 94);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 111);
             this.panel1.TabIndex = 6;
@@ -252,7 +253,7 @@
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Location = new System.Drawing.Point(510, 171);
+            this.btnOdemeYap.Location = new System.Drawing.Point(510, 214);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(213, 33);
             this.btnOdemeYap.TabIndex = 15;
@@ -262,17 +263,29 @@
             // 
             // nuPoset
             // 
-            this.nuPoset.Location = new System.Drawing.Point(116, 311);
+            this.nuPoset.Location = new System.Drawing.Point(602, 28);
             this.nuPoset.Name = "nuPoset";
             this.nuPoset.Size = new System.Drawing.Size(120, 20);
             this.nuPoset.TabIndex = 16;
             this.nuPoset.ValueChanged += new System.EventHandler(this.nuPoset_ValueChanged);
+            // 
+            // cbPoset
+            // 
+            this.cbPoset.AutoSize = true;
+            this.cbPoset.Location = new System.Drawing.Point(537, 30);
+            this.cbPoset.Name = "cbPoset";
+            this.cbPoset.Size = new System.Drawing.Size(59, 17);
+            this.cbPoset.TabIndex = 17;
+            this.cbPoset.Text = "Poşet?";
+            this.cbPoset.UseVisualStyleBackColor = true;
+            this.cbPoset.CheckedChanged += new System.EventHandler(this.cbPoset_CheckedChanged);
             // 
             // SatisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 506);
+            this.Controls.Add(this.cbPoset);
             this.Controls.Add(this.nuPoset);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.lblTutar);
@@ -326,5 +339,6 @@
         private System.Windows.Forms.Label lblTutar;
         private System.Windows.Forms.Button btnOdemeYap;
         private System.Windows.Forms.NumericUpDown nuPoset;
+        private System.Windows.Forms.CheckBox cbPoset;
     }
 }
