@@ -270,17 +270,12 @@ namespace Market.WFA
 
         private void txtBarkod_KeyUp(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void txtBarkod_TextChanged(object sender, EventArgs e)
-        {
             urunlist = new UrunRepo().GetAll();
             if (urunlist == null) return;
-            
+
             foreach (var urun in urunlist)
             {
-                if (txtBarkod.Text==urun.UrunBarkod)
+                if (txtBarkod.Text == urun.UrunBarkod)
                 {
                     BarkoduGetir();
                     btnUrunEkle.PerformClick();

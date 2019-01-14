@@ -63,7 +63,6 @@
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(215, 20);
             this.txtBarkod.TabIndex = 0;
-            this.txtBarkod.TextChanged += new System.EventHandler(this.txtBarkod_TextChanged);
             this.txtBarkod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyUp);
             // 
             // pbBarkod
