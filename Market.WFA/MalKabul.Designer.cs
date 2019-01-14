@@ -59,6 +59,11 @@
             this.nuKoli.Name = "nuKoli";
             this.nuKoli.Size = new System.Drawing.Size(148, 20);
             this.nuKoli.TabIndex = 41;
+            this.nuKoli.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label9
             // 
@@ -84,6 +89,7 @@
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(158, 20);
             this.txtBarkod.TabIndex = 37;
+            this.txtBarkod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyUp);
             // 
             // pbBarkod
             // 
