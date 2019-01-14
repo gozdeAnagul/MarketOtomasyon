@@ -1,6 +1,7 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Market.WFA
@@ -15,6 +16,7 @@ namespace Market.WFA
         private Urun seciliUrun;
         private Kategori seciliKategori;
         public SatisDialog satisDialogForm;
+        public List<Urun> urunlist;
         private void MalKabul_Load(object sender, EventArgs e)
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll();
@@ -104,6 +106,21 @@ namespace Market.WFA
                 pbBarkod.Image = barcode.Draw(seciliBarkod, 100, 2);
             }
             
+        }
+
+        private void txtBarkod_KeyUp(object sender, KeyEventArgs e)
+        {
+            urunlist = new UrunRepo().GetAll();
+            if (urunlist == null) return;
+
+            foreach (var urun in urunlist)
+            {
+                if (txtBarkod.Text == urun.KoliBarkod)
+                {
+                    btnBarkodGetir.PerformClick();
+                    btnStogaEkle.PerformClick();
+                }
+            }
         }
     }
 }

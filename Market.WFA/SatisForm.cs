@@ -19,14 +19,15 @@ namespace Market.WFA
         public Urun seciliUrun;
         public SatisViewModel seciliSatis;
         public decimal genelTutar = 0;
+        public List<Urun> urunlist;
         private void Satis_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            KategorileriGetir();
+            VerileriGetir();
             btnOdemeYap.Enabled = false;
         }
 
-        private void KategorileriGetir()
+        private void VerileriGetir()
         {
             cmbKategoriler.DataSource = new KategoriRepo().GetAll().OrderBy(x => x.KategoriAdi).ToList();
         }
@@ -114,12 +115,7 @@ namespace Market.WFA
                     lstSepet.Items.Add(yeniSatisViewModel);
                 }
 
-                foreach (SatisViewModel item in lstSepet.Items)
-                {
-                    genelTutar += item.Fiyat;
-                }
-               
-                lblTutar.Text = genelTutar.ToString();
+                TutarHesapla();
             }
             else
             {
@@ -132,6 +128,15 @@ namespace Market.WFA
                     MessageBox.Show($"Stokta yeterli sayıda {urun.UrunAdi} yok.");
                 }
             }
+        }
+
+        private void TutarHesapla()
+        {
+            foreach (SatisViewModel item in lstSepet.Items)
+            {
+                genelTutar += item.Fiyat;
+            }
+            lblTutar.Text = genelTutar.ToString();
         }
 
         private void rbNakit_CheckedChanged(object sender, EventArgs e)
@@ -177,6 +182,7 @@ namespace Market.WFA
             var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Peşin : OdemeYontemi.KrediKartı;
 
             Fis fis = new Fis();
+
             List<Satis> satislar = new List<Satis>();
 
             foreach (SatisViewModel item in lstSepet.Items)
@@ -204,13 +210,13 @@ namespace Market.WFA
                     new UrunRepo().Update();
                 }
                 SepetiTemizle();
-
-                FisViewModel fisViewModel = new FisViewModel
-                {
-                    FisId = fis.Id,
-                    SatisListesi = fis.Satislar.ToList()
-                };
-                MessageBox.Show($"{fisViewModel}");
+                
+                //FisViewModel fisViewModel = new FisViewModel()
+                //{
+                //    FisId = fis.Id,
+                //    SatisListesi = fis.Satislar.ToList()
+                //};
+                //MessageBox.Show(fisViewModel.ToString());
             }
             else
             {
@@ -229,12 +235,6 @@ namespace Market.WFA
             btnOdemeYap.Enabled = false;
         }
 
-      
-        private void lstSepet_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void rbKrediKarti_CheckedChanged(object sender, EventArgs e)
         {
             if (rbKrediKarti.Checked == true)
@@ -247,6 +247,46 @@ namespace Market.WFA
             {
                 btnOdemeYap.Enabled = false;
             }
+        }
+
+        private void btnUrunCikar_Click(object sender, EventArgs e)
+        {
+            var seciliUrun = lstSepet.SelectedItem as SatisViewModel;
+            if (seciliUrun == null) return;
+
+            try
+            {
+                lstSepet.Items.Remove(seciliUrun);
+                genelTutar -= (seciliUrun.Adet * seciliUrun.Fiyat);
+
+                TutarHesapla();
+                
+                lstSepet.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtBarkod_KeyUp(object sender, KeyEventArgs e)
+        {
+            urunlist = new UrunRepo().GetAll();
+            if (urunlist == null) return;
+
+            foreach (var urun in urunlist)
+            {
+                if (txtBarkod.Text == urun.UrunBarkod)
+                {
+                    BarkoduGetir();
+                    btnUrunEkle.PerformClick();
+                }
+            }
+        }
+
+        private void nuPosetSayisi_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
