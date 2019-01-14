@@ -112,10 +112,10 @@
             // 
             // txtKategori
             // 
-            this.txtKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKategori.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtKategori.Location = new System.Drawing.Point(236, 270);
             this.txtKategori.Name = "txtKategori";
-            this.txtKategori.Size = new System.Drawing.Size(247, 21);
+            this.txtKategori.Size = new System.Drawing.Size(247, 24);
             this.txtKategori.TabIndex = 3;
             // 
             // btnKatEkle
@@ -142,7 +142,7 @@
             // 
             // txtKategoriAciklama
             // 
-            this.txtKategoriAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKategoriAciklama.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtKategoriAciklama.Location = new System.Drawing.Point(236, 304);
             this.txtKategoriAciklama.Name = "txtKategoriAciklama";
             this.txtKategoriAciklama.Size = new System.Drawing.Size(249, 48);

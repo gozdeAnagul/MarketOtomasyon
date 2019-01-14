@@ -50,7 +50,7 @@ namespace Market.WFA
             {
                 var koli = (int)nuKoli.Value;
                 seciliUrun.KoliAdet += koli;
-                seciliUrun.Stok += (seciliUrun.KoliAdet * seciliUrun.KoliIciAdet);
+                seciliUrun.Stok += (koli * seciliUrun.KoliIciAdet);
                 new UrunRepo().Update();
                 MessageBox.Show($"{seciliUrun.UrunAdi} ürününe {koli} koli eklendi. Stok {seciliUrun.Stok} olarak güncellendi.");
                 ListeyiYenile();
