@@ -1,15 +1,13 @@
 ﻿using Market.BLL.Repository;
 using Market.Models.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Market.BLL.HazırVeri
 {
     public class HazirVeri
     {
+
         public void VeriUret()
         {
             if (new KategoriRepo().GetAll().Any()  || new UrunRepo().GetAll().Any() )
