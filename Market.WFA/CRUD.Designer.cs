@@ -88,6 +88,7 @@
             this.lstUrunler.Name = "lstUrunler";
             this.lstUrunler.Size = new System.Drawing.Size(381, 147);
             this.lstUrunler.TabIndex = 2;
+            this.lstUrunler.SelectedIndexChanged += new System.EventHandler(this.lstUrunler_SelectedIndexChanged);
             // 
             // cmsUrunSil
             // 
