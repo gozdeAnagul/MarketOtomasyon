@@ -25,7 +25,6 @@ namespace Market.WFA
 
         private void VerileriDoldur()
         {
-
             seciliKategori = cmbKategoriler.SelectedItem as Kategori;
             lstUrunler.DataSource = null;
             lstKategori.DataSource = new KategoriRepo().GetAll();
@@ -112,48 +111,60 @@ namespace Market.WFA
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (cevap != DialogResult.Yes) return;
-            try
-            {
-                var silinecekKat = new KategoriRepo();
-                silinecekKat.Delete(lstSeciliKat);
 
-                VerileriDoldur();
-            }
-            catch (DbUpdateException)
+            if (lstKategori.Items.Count == 0)
             {
-                MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                try
+                {
+                    var silinecekKat = new KategoriRepo();
+                    silinecekKat.Delete(lstSeciliKat);
+
+                    VerileriDoldur();
+                }
+                catch (DbUpdateException)
+                {
+                    MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            else
+                MessageBox.Show("Ürünü bulunan kategoriyi silemezsiniz!!!!!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
+        
         private void urunToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lstSeciliUrun = lstUrunler.SelectedItem as Urun;
+            VerileriDoldur();
             if (lstUrunler.SelectedItem == null) return;
 
             var cevap = MessageBox.Show("Secili Ürünü silmek istiyor musunuz?", "Urun silme",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (cevap != DialogResult.Yes) return;
-            try
+            if (lstSeciliUrun.Stok == 0)
             {
-                var silinecekUrun = new UrunRepo();
-                silinecekUrun.Delete(lstSeciliUrun);
-                VerileriDoldur();
+                if (cevap != DialogResult.Yes) return;
+                try
+                {
+                    var silinecekUrun = new UrunRepo();
+                    silinecekUrun.Delete(lstSeciliUrun);
+                    VerileriDoldur();
 
 
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (DbUpdateException ex)
-            {
-                MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            else
+                MessageBox.Show("Stokta Olan Ürünleri Silemezsiniz!!!!!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -181,6 +192,18 @@ namespace Market.WFA
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void lstUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstSeciliUrun = lstUrunler.SelectedItem as Urun;
+            if (lstSeciliUrun == null) return;          
+            txtAlisFiyati.Text = lstSeciliUrun.AlisFiyat.ToString();
+            txtUrunAdi.Text = lstSeciliUrun.UrunAdi.ToString();
+            txtUrunAciklama.Text = lstSeciliUrun.Aciklama.ToString();
+            txtKdv.Text = lstSeciliUrun.Kdv.ToString();
+            txtKoliIciAdet.Text = lstSeciliUrun.KoliIciAdet.ToString();
+
         }
     }
 }
