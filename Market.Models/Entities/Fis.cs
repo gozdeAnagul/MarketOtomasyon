@@ -17,7 +17,7 @@ namespace Market.Models.Entities
 
         public virtual ICollection<Satis> Satislar { get; set; } = new HashSet<Satis>();
 
-        public override string ToString() => $"{Id} {GenelToplam} {Satislar} {FisTarihi}";
+        public override string ToString() => $"{Id} - {GenelToplam} - {FisTarihi}";
 
     }
 }
