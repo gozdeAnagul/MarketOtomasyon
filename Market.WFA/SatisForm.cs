@@ -182,6 +182,7 @@ namespace Market.WFA
             var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Peşin : OdemeYontemi.KrediKartı;
 
             Fis fis = new Fis();
+
             List<Satis> satislar = new List<Satis>();
 
             foreach (SatisViewModel item in lstSepet.Items)
@@ -209,13 +210,13 @@ namespace Market.WFA
                     new UrunRepo().Update();
                 }
                 SepetiTemizle();
-
-                FisViewModel fisViewModel = new FisViewModel
-                {
-                    FisId = fis.Id,
-                    SatisListesi = fis.Satislar.ToList()
-                };
-                MessageBox.Show($"{fisViewModel}");
+                
+                //FisViewModel fisViewModel = new FisViewModel()
+                //{
+                //    FisId = fis.Id,
+                //    SatisListesi = fis.Satislar.ToList()
+                //};
+                //MessageBox.Show(fisViewModel.ToString());
             }
             else
             {
