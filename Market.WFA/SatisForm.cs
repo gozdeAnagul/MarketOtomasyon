@@ -223,12 +223,13 @@ namespace Market.WFA
 
                 string fisS = "";
 
-                fisS += fisViewModel.FisId + "\n";
+                fisS += "Fiş No: "+ fisViewModel.FisId + "\n--------------------------------\n";
                 foreach (var item in fisViewModel.SatisListesi)
                 {
-                    fisS += item.UrunAdi + "X" + item.Adet +"=" + item.Fiyat +"\n";
+                    fisS += item.UrunAdi + "X" + item.Adet +"=" + item.Fiyat + "\n";
                 }
-                fisS += fisViewModel.GenelTutar.ToString();
+
+                fisS += "--------------------------------\nGenel Tutar: "+ fisViewModel.GenelTutar.ToString();
 
                 MessageBox.Show($"{fisS}");
 
@@ -244,7 +245,7 @@ namespace Market.WFA
 
 
                             doc.Add(new Paragraph("Wissen Market A.S \nBesiktas/ISTANBUL \nKuloglu Mh., Barbaros Blv. Yildiz IS Hani No:9"));
-                            doc.Add(new Paragraph($"\nFiş No:{fis.Id}\nTarih:{fis.FisTarihi}\n"));
+                            doc.Add(new Paragraph($"\nFis No:{fis.Id}\nTarih:{fis.FisTarihi}\n"));
                             doc.Add(new Paragraph("\nÜrün Listesi\n------------------------------------------------------\n"));
                             foreach (var item in urunsatis)
                             {
