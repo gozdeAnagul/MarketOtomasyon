@@ -1,10 +1,13 @@
-﻿using Market.BLL.Repository;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Market.BLL.Repository;
 using Market.Models.Entities;
 using Market.Models.Enums;
 using Market.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -220,16 +223,51 @@ namespace Market.WFA
 
                 string fisS = "";
 
+                fisS += fisViewModel.FisId + "\n";
                 foreach (var item in fisViewModel.SatisListesi)
                 {
-                    fisS += fisViewModel.FisId+"\n";
                     fisS += item.UrunAdi + "X" + item.Adet +"=" + item.Fiyat +"\n";
-                    fisS += fisViewModel.GenelTutar.ToString();
                 }
-                MessageBox.Show($"{fisS}");
-                
+                fisS += fisViewModel.GenelTutar.ToString();
 
-                SepetiTemizle();
+                MessageBox.Show($"{fisS}");
+
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        Document doc = new Document(PageSize.A5.Rotate());
+                        try
+                        {
+                            PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                            doc.Open();
+                            var urunsatis = satisViewModels;
+
+
+                            doc.Add(new Paragraph("Wissen Market A.S \nBesiktas/ISTANBUL \nKuloglu Mh., Barbaros Blv. Yildiz IS Hani No:9"));
+                            doc.Add(new Paragraph($"\nFiş No:{fis.Id}\nTarih:{fis.FisTarihi}\n"));
+                            doc.Add(new Paragraph("\nÜrün Listesi\n------------------------------------------------------\n"));
+                            foreach (var item in urunsatis)
+                            {
+                                doc.Add(new Paragraph(item.ToString()));
+                            }
+                            if (rbNakit.Checked == true)
+                            {
+
+                                doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{txtParaUstu.Text:c2}"));
+                            }
+                            doc.Add(new Paragraph($"\nTutar : {fis.GenelToplam:c2}"));
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                        finally
+                        {
+                            doc.Close();
+                        }
+                    }
+                        SepetiTemizle();
             }
             else
             {
