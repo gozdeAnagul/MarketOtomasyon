@@ -3,6 +3,6 @@
     public enum OdemeYontemi : byte
     {
         KrediKartı,
-        Peşin
+        Nakit
     }
 }

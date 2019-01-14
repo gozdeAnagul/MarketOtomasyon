@@ -182,7 +182,7 @@ namespace Market.WFA
 
         private void btnOdemeYap_Click(object sender, EventArgs e)
         {
-            var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Peşin : OdemeYontemi.KrediKartı;
+            var odemeYontemi = (rbNakit.Checked) ? OdemeYontemi.Nakit : OdemeYontemi.KrediKartı;
 
             Fis fis = new Fis();
             List<SatisViewModel> satisViewModels = new List<SatisViewModel>();
@@ -256,6 +256,7 @@ namespace Market.WFA
 
                                 doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{txtParaUstu.Text:c2}"));
                             }
+                            doc.Add(new Paragraph($"\nÖdeme Yöntemi : {fis.OdemeYontemi.ToString()}"));
                             doc.Add(new Paragraph($"\nTutar : {fis.GenelToplam:c2}"));
                         }
                         catch (Exception ex)
