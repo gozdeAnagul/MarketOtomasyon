@@ -10,6 +10,7 @@ namespace Market.BLL.HazırVeri
 {
     public class HazirVeri
     {
+
         public void VeriUret()
         {
             if (new KategoriRepo().GetAll().Any()  || new UrunRepo().GetAll().Any() )
