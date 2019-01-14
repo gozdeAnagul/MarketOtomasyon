@@ -45,11 +45,11 @@ namespace Market.WFA
 
                 if (new KategoriRepo().Insert(kategori) > 0)
                 {
-                    MessageBox.Show("Kategori eklendi.");
+                    MessageBox.Show("Kategori eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Kategori Ekleme hatasi.");
+                    MessageBox.Show("Kategori Ekleme hatasi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -89,11 +89,11 @@ namespace Market.WFA
 
                 if (new UrunRepo().Insert(urun) > 0)
                 {
-                    MessageBox.Show($@"{urun.UrunAdi} ürünü eklendi.");
+                    MessageBox.Show($@"{urun.UrunAdi} ürünü eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Urun Ekleme hatasi.");
+                    MessageBox.Show("Urun Ekleme hatasi.", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 VerileriDoldur();
             }
@@ -119,9 +119,9 @@ namespace Market.WFA
 
                 VerileriDoldur();
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
-                MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz");
+                MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -159,10 +159,10 @@ namespace Market.WFA
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             lstSeciliUrun = lstUrunler.SelectedItem as Urun;
-            var guncellenecekUrun = new UrunRepo().GetById(lstSeciliUrun.Id);           
-            if (lstSeciliUrun == null) return;          
+            var guncellenecekUrun = new UrunRepo().GetById(lstSeciliUrun.Id);
+            if (lstSeciliUrun == null) return;
             try
-            {                 
+            {
                 lstSeciliUrun.KategoriId = seciliKategori.Id;
                 lstSeciliUrun.UrunAdi = txtUrunAdi.Text;
                 lstSeciliUrun.Aciklama = txtUrunAciklama.Text;
@@ -171,7 +171,7 @@ namespace Market.WFA
                 lstSeciliUrun.KoliBarkod = lstSeciliUrun.KoliBarkod;
                 lstSeciliUrun.UrunBarkod = lstSeciliUrun.UrunBarkod;
                 lstSeciliUrun.AlisFiyat = Convert.ToDecimal(txtAlisFiyati.Text);
-                if (new UrunRepo().Update()> 0)
+                if (new UrunRepo().Update() > 0)
                 {
                     MessageBox.Show("Güncelleme Başarılı.");
                     VerileriDoldur();
