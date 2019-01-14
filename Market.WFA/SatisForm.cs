@@ -224,13 +224,13 @@ namespace Market.WFA
 
                 string fisS = "";
 
-                fisS += "Fiş No: "+ fisViewModel.FisId + "\n--------------------------------\n";
+                fisS += "Fiş No: " + fisViewModel.FisId + "\n--------------------------------\n";
                 foreach (var item in fisViewModel.SatisListesi)
                 {
-                    fisS += item.UrunAdi + "X" + item.Adet +"=" + item.Fiyat + "\n";
+                    fisS += item.UrunAdi + "X" + item.Adet + "=" + item.Fiyat + "\n";
                 }
 
-                fisS += "--------------------------------\nGenel Tutar: "+ fisViewModel.GenelTutar.ToString();
+                fisS += "--------------------------------\nGenel Tutar: " + fisViewModel.GenelTutar.ToString();
 
                 MessageBox.Show($"{fisS}");
 
@@ -254,9 +254,20 @@ namespace Market.WFA
                             }
                             if (rbNakit.Checked == true)
                             {
-
-                                doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{Convert.ToDecimal(txtParaUstu.Text):c2}"));
+                                if (txtParaUstu.Text == "Para tam.")
+                                {
+                                    doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{0:c2}"));
+                                }
+                                else
+                                {
+                                    doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{Convert.ToDecimal(txtParaUstu.Text):c2}"));
+                                }
                             }
+                            else if (rbKrediKarti.Checked == true)
+                            {
+                                doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {fis.GenelToplam}"));
+                            }
+                            
                             doc.Add(new Paragraph($"\nÖdeme Yöntemi : {fis.OdemeYontemi.ToString()}"));
                             doc.Add(new Paragraph($"\nTutar : {fis.GenelToplam:c2}"));
                         }
@@ -270,7 +281,8 @@ namespace Market.WFA
                             doc.Close();
                         }
                     }
-                        SepetiTemizle();
+                SepetiTemizle();
+                VerileriGetir();
             }
             else
             {

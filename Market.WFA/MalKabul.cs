@@ -76,14 +76,12 @@ namespace Market.WFA
             if (txtBarkod.Text == null) return;
             
             if (seciliBarkod == null) return;
-
-           
-            YeniBarkodMu();
             
+            YeniBarkodMu();
         }
            
         private void YeniBarkodMu()
-        {          
+        {
             if (txtBarkod != null)
             {
                 var urun = new UrunRepo().GetAll(x => x.KoliBarkod == txtBarkod.Text);
