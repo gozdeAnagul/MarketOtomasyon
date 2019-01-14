@@ -108,7 +108,7 @@
             // 
             this.lblToplamFiyat.AutoSize = true;
             this.lblToplamFiyat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToplamFiyat.Location = new System.Drawing.Point(260, 355);
+            this.lblToplamFiyat.Location = new System.Drawing.Point(264, 347);
             this.lblToplamFiyat.Name = "lblToplamFiyat";
             this.lblToplamFiyat.Size = new System.Drawing.Size(136, 22);
             this.lblToplamFiyat.TabIndex = 5;
@@ -195,6 +195,7 @@
             this.btnUrunCikar.TabIndex = 9;
             this.btnUrunCikar.Text = "Ürün Çıkar";
             this.btnUrunCikar.UseVisualStyleBackColor = true;
+            this.btnUrunCikar.Click += new System.EventHandler(this.btnUrunCikar_Click);
             // 
             // cmbUrunler
             // 
@@ -239,7 +240,7 @@
             // 
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutar.Location = new System.Drawing.Point(396, 358);
+            this.lblTutar.Location = new System.Drawing.Point(400, 350);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(0, 18);
             this.lblTutar.TabIndex = 14;
@@ -257,7 +258,7 @@
             // nuPosetSayisi
             // 
             this.nuPosetSayisi.Location = new System.Drawing.Point(603, 40);
-            this.nuPosetSayisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nuPosetSayisi.Margin = new System.Windows.Forms.Padding(2);
             this.nuPosetSayisi.Name = "nuPosetSayisi";
             this.nuPosetSayisi.Size = new System.Drawing.Size(55, 20);
             this.nuPosetSayisi.TabIndex = 16;

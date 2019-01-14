@@ -114,12 +114,7 @@ namespace Market.WFA
                     lstSepet.Items.Add(yeniSatisViewModel);
                 }
 
-                foreach (SatisViewModel item in lstSepet.Items)
-                {
-                    genelTutar += item.Fiyat;
-                }
-                genelTutar += nuPosetSayisi.Value * Convert.ToDecimal(0.25);
-                lblTutar.Text = genelTutar.ToString();
+                TutarHesapla();
             }
             else
             {
@@ -132,6 +127,15 @@ namespace Market.WFA
                     MessageBox.Show($"Stokta yeterli sayıda {urun.UrunAdi} yok.");
                 }
             }
+        }
+
+        private void TutarHesapla()
+        {
+            foreach (SatisViewModel item in lstSepet.Items)
+            {
+                genelTutar += item.Fiyat;
+            }
+            lblTutar.Text = genelTutar.ToString();
         }
 
         private void rbNakit_CheckedChanged(object sender, EventArgs e)
@@ -229,12 +233,6 @@ namespace Market.WFA
             btnOdemeYap.Enabled = false;
         }
 
-      
-        private void lstSepet_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void rbKrediKarti_CheckedChanged(object sender, EventArgs e)
         {
             if (rbKrediKarti.Checked == true)
@@ -249,6 +247,24 @@ namespace Market.WFA
             }
         }
 
-       
+        private void btnUrunCikar_Click(object sender, EventArgs e)
+        {
+            var seciliUrun = lstSepet.SelectedItem as SatisViewModel;
+            if (seciliUrun == null) return;
+
+            try
+            {
+                lstSepet.Items.Remove(seciliUrun);
+                genelTutar -= (seciliUrun.Adet * seciliUrun.Fiyat);
+
+                TutarHesapla();
+                
+                lstSepet.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
