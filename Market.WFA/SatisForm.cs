@@ -254,7 +254,7 @@ namespace Market.WFA
                             if (rbNakit.Checked == true)
                             {
 
-                                doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{txtParaUstu.Text:c2}"));
+                                doc.Add(new Paragraph($"------------------------------------------------------\nAlınan Para: {txtAlinan.Text}\nPara Üstü:{Convert.ToDecimal(txtParaUstu.Text):c2}"));
                             }
                             doc.Add(new Paragraph($"\nÖdeme Yöntemi : {fis.OdemeYontemi.ToString()}"));
                             doc.Add(new Paragraph($"\nTutar : {fis.GenelToplam:c2}"));
