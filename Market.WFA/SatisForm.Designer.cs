@@ -101,7 +101,7 @@
             // 
             this.rbKrediKarti.AutoSize = true;
             this.rbKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbKrediKarti.Location = new System.Drawing.Point(602, 59);
+            this.rbKrediKarti.Location = new System.Drawing.Point(623, 59);
             this.rbKrediKarti.Name = "rbKrediKarti";
             this.rbKrediKarti.Size = new System.Drawing.Size(159, 19);
             this.rbKrediKarti.TabIndex = 4;
@@ -131,7 +131,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(509, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 111);
+            this.panel1.Size = new System.Drawing.Size(273, 111);
             this.panel1.TabIndex = 6;
             // 
             // label3
@@ -163,14 +163,14 @@
             // 
             // txtParaUstu
             // 
-            this.txtParaUstu.Location = new System.Drawing.Point(99, 70);
+            this.txtParaUstu.Location = new System.Drawing.Point(114, 70);
             this.txtParaUstu.Name = "txtParaUstu";
             this.txtParaUstu.Size = new System.Drawing.Size(129, 21);
             this.txtParaUstu.TabIndex = 2;
             // 
             // txtTutar
             // 
-            this.txtTutar.Location = new System.Drawing.Point(99, 43);
+            this.txtTutar.Location = new System.Drawing.Point(114, 43);
             this.txtTutar.Name = "txtTutar";
             this.txtTutar.ReadOnly = true;
             this.txtTutar.Size = new System.Drawing.Size(129, 21);
@@ -178,7 +178,7 @@
             // 
             // txtAlinan
             // 
-            this.txtAlinan.Location = new System.Drawing.Point(99, 16);
+            this.txtAlinan.Location = new System.Drawing.Point(114, 16);
             this.txtAlinan.Name = "txtAlinan";
             this.txtAlinan.Size = new System.Drawing.Size(129, 21);
             this.txtAlinan.TabIndex = 0;
@@ -299,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 506);
+            this.ClientSize = new System.Drawing.Size(793, 506);
             this.Controls.Add(this.cbPoset);
             this.Controls.Add(this.nuPoset);
             this.Controls.Add(this.btnOdemeYap);
