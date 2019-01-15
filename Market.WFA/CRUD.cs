@@ -136,14 +136,14 @@ namespace Market.WFA
         
         private void urunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lstSeciliUrun = lstUrunler.SelectedItem as Urun;
-            VerileriDoldur();
+          var seciliUrun = lstUrunler.SelectedItem as Urun;
+            
             if (lstUrunler.SelectedItem == null) return;
 
             var cevap = MessageBox.Show("Secili Ürünü silmek istiyor musunuz?", "Urun silme",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (lstSeciliUrun.Stok == 0)
+            if (seciliUrun.Stok <= 0)
             {
                 if (cevap != DialogResult.Yes) return;
                 try
@@ -151,10 +151,8 @@ namespace Market.WFA
                     var silinecekUrun = new UrunRepo();
                     silinecekUrun.Delete(lstSeciliUrun);
                     VerileriDoldur();
-
-
                 }
-                catch (DbUpdateException ex)
+                catch (DbUpdateException)
                 {
                     MessageBox.Show("Silmek istediginiz kayit baska bir tabloda kullanildigi icin silemezsiniz");
                 }
@@ -163,8 +161,10 @@ namespace Market.WFA
                     MessageBox.Show(ex.Message);
                 }
             }
-            else
+            else if (seciliUrun.Stok>0)
+            {
                 MessageBox.Show("Stokta Olan Ürünleri Silemezsiniz!!!!!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -205,5 +205,7 @@ namespace Market.WFA
             txtKoliIciAdet.Text = lstSeciliUrun.KoliIciAdet.ToString();
 
         }
+
+        
     }
 }

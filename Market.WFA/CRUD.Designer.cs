@@ -101,12 +101,12 @@
             this.cmsUrunSil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.urunToolStripMenuItem});
             this.cmsUrunSil.Name = "cmsUrunSil";
-            this.cmsUrunSil.Size = new System.Drawing.Size(118, 26);
+            this.cmsUrunSil.Size = new System.Drawing.Size(181, 48);
             // 
             // urunToolStripMenuItem
             // 
             this.urunToolStripMenuItem.Name = "urunToolStripMenuItem";
-            this.urunToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.urunToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.urunToolStripMenuItem.Text = "Urun_Sil";
             this.urunToolStripMenuItem.Click += new System.EventHandler(this.urunToolStripMenuItem_Click);
             // 
